@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+
+
+/* 
+Purple: #802BB1
+Dark: #2D283E
+Mid: #565F6F
+Grey: #4C495D
+Light: #D1D7E0
+*/
+
+
+
+body {
+	font-family: "Roboto";
+	background-color: #2D283E;
+	font-size: 1em;
+	color: #D1D7E0;
+}
+
+h1, h2, h3 {
+	font-family: "Orbitron";
+	font-weight: bolder;
+	color: #802BB1;
+
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+}
+
+h2 {
+	font-size: 1.5em;		
+}
+
+a:link, a:visited {
+	color: #D1D7E0;
+	text-decoration: underline;
+}
+a:hover {
+	color: #802BB1;
+	text-decoration: none;
+}
+
+nav {
+	padding-top: 1em;
+	text-align: center;
+	background-color: #565F6F;
+}
+
+nav a:link, nav a:visited {
+	color: #D1D7E0;
+	text-decoration: underline;
+}
+nav a:hover {
+	color: #802BB1;
+	text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding-top: 1em;
+  display:flex;
+  align-items:center;
+}
+
+
+header h1 {
+	font-size: 3.5em;
+	line-height: 1em;                   
+}
+header h2 {
+	color: #D1D7E0;
+	font-size: 1em;
+}
+header h2:hover {
+	color: #802BB1;
+}
+
+header {
+}
+
+header p {
+	font-style: italic;
+	padding-top: .5em;
+}
+
+img {
+	padding-top: .75em;
+	padding-bottom: 2.5em;
+}
+
+.tumblr-post {
+}
+
+.nsf {
+	max-width: 250px;
+}
+
+.headshot {
+	padding-top: .75em;
+	padding-bottom: 0em;
+}
+
+.school {
+	padding-top: 0em;
+	padding-bottom: 2.5em;
+}
+
+.stages {
+	color: #2D283E;
+	background-color: #D1D7E0;
+	font-size: .75em;
+	border: 1em solid #2D283E;
+	text-align: center;
+}
+
+.stages h2 {
+	margin-top: 1em;
+}
+
+.bios {
+	text-align: center;
+}
+
+.bios h3 {
+	font-size: 1.25em;
+	line-height: .75em;
+}
+
+footer {
+	padding-top: 1em;
+	background-color: #565F6F;
+	color: #D1D7E0;
+}
+
+footer p {
+	text-align: center;
+}
+
+footer a:link, footer a:visited {
+	color: #D1D7E0;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: #802BB1;
+	text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+	.nsf {
+		max-width: 25%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 0em;
+		padding-bottom: 0em;
+	}
+	header p {
+		margin-bottom: .75em;
+	}
+}

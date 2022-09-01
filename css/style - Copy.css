@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+body {
+	font-family: "Courier New", "monospace";
+	background-color: #eee;
+	font-size: 1em;
+}
+
+h1, h2, h3 {
+	font-weight: bolder;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+}
+
+h2 {
+	font-size: 1.5em;		
+}
+
+a:link, a:visited {
+	color: #333333;
+	text-decoration: underline;
+}
+a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+nav {
+	padding-top: 1em;
+	text-align: center;
+	background-color: #333333;
+}
+
+nav a:link, nav a:visited {
+	color: #eeeeee;
+	text-decoration: underline;
+}
+nav a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding-top: 1em;
+  display:flex;
+  align-items:center;
+}
+
+
+header h1 {
+	font-size: 3.5em;
+	line-height: 1em;
+}
+header h2 {
+	color: #eee;
+	font-size: 1em;
+}
+header h2:hover {
+	color: #f00;
+}
+
+header {
+}
+
+header p {
+	font-style: italic;
+}
+
+img {
+	padding-top: .75em;
+	padding-bottom: 2.5em;
+}
+
+.tumblr-post {
+}
+
+.nsf {
+	max-width: 250px;
+}
+
+.headshot {
+	padding-top: .75em;
+	padding-bottom: 0em;
+}
+
+.school {
+	padding-top: 0em;
+	padding-bottom: 2.5em;
+}
+
+.stages {
+	color: #eee;
+	background-color: #333;
+	font-size: .75em;
+	border: 1em solid #eee;
+	text-align: center;
+}
+
+.stages h2 {
+	margin-top: 1em;
+}
+
+.bios {
+	text-align: center;
+}
+
+.bios h3 {
+	font-size: 1.25em;
+	line-height: .75em;
+}
+
+footer {
+	padding-top: 2.5em;
+	background-color: #333333;
+	color: #eeeeee;
+}
+
+footer p {
+	text-align: center;
+}
+
+footer a:link, footer a:visited {
+	color: #eeeeee;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+	.nsf {
+		max-width: 25%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 0em;
+		padding-bottom: 0em;
+	}
+	header p {
+		margin-bottom: .75em;
+	}
+}
