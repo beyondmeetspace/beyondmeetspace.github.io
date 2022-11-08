@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/**
+// Font family
+$primary-font      : "Outfit";
+$header-font       : "Bowlby One SC";
+
+
+// Color Variables
+Grape: #94618E
+Eggplant: #49274A
+Sand: #F4DECB
+Shell: #F8EEE7
+
+// Grid system
+$grid-columns      : 12 !default;
+$grid-gutter-width : 30px !default;
+**/
+
+body {
+	font-family: "Outfit";
+	background-color: #F8EEE7;
+}
+
+h1, h2, h3 {
+	font-family: "Bowlby One SC";
+}
+
+header {
+}
+
+header p {
+	font-weight: 900;
+	font-size: 1.25em;
+}
+
+header img{
+	max-width: 90%;
+}
+
+.wrapper {
+	width: 100%
+}
+
+.bg-grape {
+	background-color: #94618E;
+    color: #F8EEE7;
+}
+
+.bg-eggplant {
+	background-color: #49274A;
+    color: #F8EEE7;
+}
+
+.bg-eggplant a {
+    color: #F8EEE7;
+	font-family: "Outfit";
+	font-weight: 900;
+}
+
+.bg-eggplant a:hover {
+    color: #94618E;
+}
+
+.bg-sand {
+	background-color: #F4DECB;
+    color: #94618E;
+}
+
+.bg-shell {
+	background-color: #F8EEE7;
+    color: #94618E;
+}
+
+.align-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+nav .nav-link, footer a {
+	font-family: "Bowlby One SC";
+	font-weight: 500;
+	color: #49274A !important;
+}
+
+nav .nav-link:hover, footer a:hover {
+	font-weight: 900;
+	text-decoration: none;
+	color: #94618E !important;
+}
+
+a {
+	font-family: "Bowlby One SC";
+	font-weight: 500;
+	color: #49274A;
+}
+
+a:hover {
+	font-weight: 900;
+	text-decoration: none;
+	color: #94618E;
+}
+
+.align-right {
+	text-align: right;
+}
+
+figure img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+figcaption {
+	text-align: center;
+}
+
+figcaption h5 {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 1em;
+	line-height: .75em;
+}
+
+figcaption small {
+	font-family: "Outfit";
+	font-weight: 900;
+	font-size: .75em;
+	margin-top: 0px;
+}
+
+.wrapper {
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+/** This is an attempt to get filter working **/
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+} */
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #94618E;
+	color: #ffffff;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #49274A;
+   color: white;
+}

@@ -210,7 +210,7 @@ table {
  * Global Styles
  */
 body {
-  color: #927e7e;
+  color: #2D283E;
   font-family: "Outfit";
   font-size: 16px;
   font-weight: 400;
@@ -288,10 +288,9 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
 .feature-title {
   font-size: 24px;
   font-size: 1.5em;
-  color: #6a5b5b;
+  color: #2D283E;
   font-weight: 400;
   margin: 0 0 10px; }
-
 
 .team {
   margin-bottom: 30px;
@@ -306,9 +305,7 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
     background: #2D283E;
     color: white;
     padding: 10px 20px;
-    text-align: center;
-    font-size: .75em; 
-}
+    text-align: center; }
   .team h2 {
     text-transform: uppercase;
     margin: 0;
@@ -317,11 +314,12 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 18px;
     font-size: 1.125em; }
   .team small {
-    font-size: .75em;
+    font-size: 14px;
     font-size: 0.875em;
-    color: #303236; }
+    color: #ffffff; }
 
 .testimonial-slider .slides {
   list-style: none;
@@ -354,7 +352,7 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
         position: relative; } }
 .testimonial-slider blockquote {
   margin: 0;
-  color: #6a5b5b;
+  color: #2D283E;
   font-size: 18px;
   font-size: 1.125em; }
   @media screen and (max-width: 480px) {
@@ -1404,10 +1402,10 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
   background: #2D283E;
   color: white;
   text-align: center;
-  padding: 10px 0; }
+  padding: 50px 0; }
   .page-head h1 {
     font-size: 40px;
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0; }
 
 .hero {
@@ -1422,7 +1420,7 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
     color: white; }
     .hero .hero-content span {
       padding: 10px;
-      background-color: #2D283E;
+      background-color: #b23d3d;
       display: inline-block;
       margin-bottom: 10px;
       font-size: 20px;
@@ -1441,7 +1439,7 @@ a .button, a form input[type="submit"], form a input[type="submit"], a form butt
 .cta {
   background-color: #ede6e6;
   padding: 50px 0;
-  color: #6a5b5b; }
+  color: #2D283E; }
   @media screen and (max-width: 990px) {
     .cta {
       text-align: center; } }
