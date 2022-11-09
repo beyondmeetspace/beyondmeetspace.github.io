@@ -81,12 +81,12 @@ header img{
 
 nav .nav-link, footer a {
 	font-family: "Bowlby One SC";
-	font-weight: 500;
+	font-weight: 300;
 	color: #49274A !important;
 }
 
 nav .nav-link:hover, footer a:hover {
-	font-weight: 900;
+	font-weight: 600;
 	text-decoration: none;
 	color: #94618E !important;
 }
@@ -164,10 +164,16 @@ figcaption small {
 
 /* Content */
 .content {
-  background-color: white;
+  background-color: #F8EEE7;
   padding: 10px;
 }
 
+.content h4 {
+	margin-top: 4px;
+	font-size: 1.25em;
+	font-weight: 900;
+	font-style: italic;
+}
 /* The "show" class is added to the filtered elements */
 .show {
   display: block;
@@ -184,8 +190,13 @@ figcaption small {
 
 /* Add a grey background color on mouse-over */
 .btn:hover {
+  background-color: #49274A;
+	color: #F8EEE7;
+}
+
+img .btn:hover {
   background-color: #94618E;
-	color: #ffffff;
+	color: #F8EEE7;
 }
 
 /* Add a dark background color to the active button */
@@ -193,3 +204,43 @@ figcaption small {
   background-color: #49274A;
    color: white;
 }
+.feature {
+  padding-left: 90px;
+  position: relative;
+  margin-bottom: 30px; }
+  .feature p {
+    line-height: 1.5;
+    margin: 0; }
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #49274A;
+  text-align: center;
+  padding-top: 20px;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.feature-title {
+	font-size: 1.25em;
+}
+
+/**
+// Font family
+$primary-font      : "Outfit";
+$header-font       : "Bowlby One SC";
+
+
+// Color Variables
+Grape: #94618E
+Eggplant: #49274A
+Sand: #F4DECB
+Shell: #F8EEE7
+
+// Grid system
+$grid-columns      : 12 !default;
+$grid-gutter-width : 30px !default;
+**/
