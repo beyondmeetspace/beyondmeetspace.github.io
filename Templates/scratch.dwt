@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- TemplateBeginEditable name="doctitle" -->
+		<title>Home Page - Beyond Meet Space Research Collective</title>
+		<!-- TemplateEndEditable -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Outfit&display=swap" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+		<link href="../css/template.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" type="image/png" href="../favico.png">
+		<!-- TemplateBeginEditable name="head" -->
+		<meta name="description" content="Beyond Meet Space Research Collective - We are a collection of researchers from various universities that are conducting research into the future role of VR in both work and play. Please reach out to any of the principal investigators with your queries.">
+		<!-- TemplateEndEditable -->
+	</head>
+	<body class="bg-shell">
+		<div class="wrapper bg-sand">
+			<div class="container">
+				<nav class="row">
+					<div class="col-md-12 navbar navbar-expand-sm navbar-light">
+						<a class="navbar-brand" href="#">
+							<img src="../images/bms_logo_tiny.png" alt="tiny version of logo" class="mt-1 mb-0">
+						</a>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+							<ul class="navbar-nav mr-auto">
+								<li>
+									<a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="team.html">Team</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="projects.html">Projects</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="media.html">Media</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="wrapper bg-eggplant">
+			<div class="container">
+				<header class="row">
+					<div class="col-md-12">
+						<img src="../images/bms_logo_small.png" alt="small version of logo" class="mt-5 align-center">
+						<p class="text-center mt-4 mb-5">A research collective interested in the future of work and play beyond the limitations of physical space.</p>
+					</div>
+				</header>
+			</div>
+		</div>
+		<!-- TemplateBeginEditable name="MainContent" -->
+		<main>
+			<div class="wrapper bg-grape">
+				<div class="container">
+					<div class="row" id="home">
+						<div class="col-md-12 mt-5 mb-3">
+							<h3>Study Overview:</h3>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="feature">
+								<i class="feature-icon">
+									<img src="../images/nlp.png" alt="">
+								</i>
+								<h2 class="feature-title">Study 1</h2>
+								<p>Natural langauge processing to identify virtual meeting terminology.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="feature">
+								<i class="feature-icon">
+									<img src="../images/survey.png" alt="">
+								</i>
+								<h2 class="feature-title">Study 2</h2>
+								<p>Large survey to explore virtual meeting features' statistical association.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="feature">
+								<i class="feature-icon">
+									<img src="../images/interview.png" alt="">
+								</i>
+								<h2 class="feature-title">Study 3</h2>
+								<p>Worker interviews to contextualize Studies 1 + 2.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="feature">
+								<i class="feature-icon">
+									<img src="../images/video.png" alt="">
+								</i>
+								<h2 class="feature-title">Study 4</h2>
+								<p>Video virtual meeting experiment to test hypotheses derived from Studies 1-3.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="feature">
+								<i class="feature-icon">
+									<img src="../images/vr.png" alt="">
+								</i>
+								<h2 class="feature-title">Study 5</h2>
+								<p>Prototype virtual reality meeting platform to embody adn validate Studies 1-4 insights.</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="feature">
+								<i class="feature-icon">
+									<img src="../images/good.png" alt="">
+								</i>
+								<h2 class="feature-title">Study Outcomes</h2>
+								<p>Increased well-being (e.g., reduced virtual meeting fatigue) and equity (e.g., equal speaking contributions) for workers </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper bg-shell">
+				<div class="container">
+					<div class="row" id="team">
+						<div class="col-md-12 mt-5">
+							<h1 class="mt-2">Principal Investigators</h1>
+						</div>
+						<div class="row team">
+							<div class="col-sm-6 col-md-4 col-lg-2">
+								<div class="team">
+									<a href="https://scholar.google.com/citations?user=jE9vLG0AAAAJ&hl=en&oi=sra" target="_blank">
+										<figure>
+											<img src="../images/robby.jpg" alt="">
+											<figcaption>
+												<h5>Robby Ratan</h5>
+												<small>Michigan State University</small>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg-2">
+								<div class="team">
+									<a href="https://scholar.google.com/citations?hl=en&user=qllCRvcAAAAJ" target="_blank">
+										<figure>
+											<img src="../images/mfoxman.jpg" alt="">
+											<figcaption>
+												<h5>Max Foxman</h5>
+												<small>University of Oregon</small>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg-2">
+								<div class="team">
+									<a href="https://scholar.google.com/citations?hl=en&user=fCWFNPcAAAAJ" target="_blank">
+										<figure>
+											<img src="../images/leith.jpg" alt="">
+											<figcaption>
+												<h5>Alex P. Leith</h5>
+												<small>SIU Edwardsville</small>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg-2">
+								<div class="team">
+									<a href="https://scholar.google.com/citations?user=9n26OV8AAAAJ&hl=en" target="_blank">
+										<figure>
+											<img src="../images/beyea.jpg" alt="">
+											<figcaption>
+												<h5>David Beyea</h5>
+												<small>UW-Whitewater</small>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg-2">
+								<div class="team">
+									<a href="https://scholar.google.com/citations?hl=en&user=bw5My48AAAAJ" target="_blank">
+										<figure>
+											<img src="../images/winn.jpg" alt="">
+											<figcaption>
+												<h5>Brian Winn</h5>
+												<small>Michigan State University</small>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg-2 mb-5">
+								<div class="team">
+									<a href="https://scholar.google.com/citations?hl=en&user=IllkELIAAAAJ" target="_blank">
+										<figure>
+											<img src="../images/Klebig.jpg" alt="">
+											<figcaption>
+												<h5>Brian Klebig</h5>
+												<small>Bethany Lutheran College</small>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper bg-grape">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 mt-5">
+							<h1>Other Personnel</h1>
+						</div>
+						<div class="col-md-6">
+							<h2>Current Members</h2>
+							<p>Dalton Bouzek (University of Oregon)</p>
+							<p>JuYoung Olivia Lee (Michigan State University)</p>
+							<p>Chaeyun Lim (Michigan State University)</p>
+							<p>Mary Onuche (SIU Edwardsville)</p>
+							<p>Jessica Stineman (University of Oregon)</p>
+						</div>
+						<div class="col-md-6 mb-5">
+							<h2>Former Members</h2>
+							<p>Luis Graciano (Michigan State University)</p>
+							<p>Gabriel Hales (Michigan State University)</p>
+							<p>Yiming Skylar Lei (Michigan State University)</p>
+							<p>Hanjie Liu (Michigan State University)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Projects Section -->
+			<div class="wrapper bg-shell">
+				<div class="container">
+					<div class="row" id="projects">
+						<div class="col-md-12 mt-5 mb-3">
+							<h2>Projects</h2>
+						</div>
+						<div id="myBtnContainer1">
+							<button class="btn active" onClick="filterSelection('all')"> Show all</button>
+							<p>Study: <button class="btn" onClick="filterSelection('one')">One</button>
+								<button class="btn" onClick="filterSelection('two')"> Two</button>
+								<button class="btn" onClick="filterSelection('three')"> Three</button>
+								<button class="btn" onClick="filterSelection('four')"> Four</button>
+								<button class="btn" onClick="filterSelection('five')"> Five</button>
+								<button class="btn" onClick="filterSelection('other')"> Other</button>
+							</p>
+							<p>Author: <button class="btn" onClick="filterSelection('beyea')">Beyea</button>
+								<button class="btn" onClick="filterSelection('foxman')"> Foxman</button>
+								<button class="btn" onClick="filterSelection('klebig')"> Klebig</button>
+								<button class="btn" onClick="filterSelection('leith')"> Leith</button>
+								<button class="btn" onClick="filterSelection('ratan')"> Ratan</button>
+								<button class="btn" onClick="filterSelection('winn')"> Winn</button>
+							</p>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="column two ratan">
+									<div class="content">
+										<img src="../images/make_me_feel.jpg" alt="vritual meetings fatigue" style="width:100%">
+										<h4>Virtual meeting fatigue: Differences in gender and race, solutions in avatars</h4>
+									</div>
+								</div>
+							</div>
+							<!--
+						<div class="col-md-4"><div class="column one leith"><div class="content"><img src="images/make_me_feel.jpg" alt="make me feel" style="width:100%"><h4>Make me feel: Public expressions of play following VR play</h4></div></div></div>
+						-->
+							<div class="col-md-4">
+								<div class="column other foxman beyea leith ratan klebig">
+									<div class="content">
+										<img src="../images/classifying_vr.jpg" alt="beyond genre" style="width:100%">
+										<h4>Beyond genre: Classifying virtual reality experiences</h4>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="column one three foxman leith beyea klebig ratan">
+									<div class="content">
+										<img src="../images/vr_tennis.jpg" alt="playing at work" style="width:100%">
+										<h4>Playing at work: Finding and designing play into virtual meetings</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper bg-eggplant">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 mt-5 mb-5">
+							<p>Welcome to the current homepage for the researchers involved in the NSF grant <a href="https://beta.nsf.gov/funding/opportunities/future-work-human-technology-frontier-core-research-fw-htf" target="_blank">FW-HTF-R</a>: <a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22FW-HTF-R%3A+Collaborative+Research%3A+Virtual+Meeting+Support+for+Enhanced+Well-Being+and+Equity+for+Game+Developers%22" target="_blank">Collaborative Research: Virtual Meeting Support for Enhanced Well-Being and Equity for Game Developers</a>. This page will be occasionally updated to express key stages of progress and to present public facing information as outlined in the original project proposed to NSF. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- TemplateEndEditable -->
+		<div class="wrapper bg-sand">
+			<div class="container">
+				<footer class="row">
+					<div class="col-md-12">
+						<p class="align-right mt-3">NSF Award Nos. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128746&HistoricalAwards=false" target="_blank">2128746</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128803&HistoricalAwards=false" target="_blank">2128803</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128813&HistoricalAwards=false" target="_blank">2128813</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128991&HistoricalAwards=false" target="_blank">2128991</a>
+							<a href="https://www.nsf.gov/" target="_blank">
+								<img src="../images/nsf.png" alt="nsf logo" height="25px" class="nsf">
+							</a> &copy; 2022
+						</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- body code goes here -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../js/popper.min.js"></script>
+		<script src="../js/bootstrap-4.4.1.js"></script>
+		<script src="../js/filter.js"></script>
+	</body>
+</html>

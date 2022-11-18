@@ -11,7 +11,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Outfit&display=swap" rel="stylesheet">
 		<!-- Bootstrap -->
-		<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+		<link href="css/bootstrap-4.4.1.css" rel="stylesheet">		
 		<link href="css/template.css" rel="stylesheet" type="text/css">
 		<link rel="shortcut icon" type="image/png" href="favico.png">
 	</head>
@@ -49,16 +49,16 @@
 					<div class="col-md-12">
 						<img src="images/bms_logo_small.png" alt="small version of logo" class="mt-5 align-center">
 						<p class="text-center mt-4 mb-5">A research collective interested in the future of work and play beyond the limitations of physical space.</p>
-						<!-- <a href="#" class="button">Try it now</a> -->
 					</div>
 				</header>
 			</div>
 		</div>
 		
-		<div class="wrapper bg-grape">
-			<div class="container">
-				<div class="row" id="home">
-					<div class="col-md-12 mt-5 mb-3">
+		<main>
+			<div class="wrapper bg-grape">
+				<div class="container">
+					<div class="row" id="home">
+						<div class="col-md-12 mt-5 mb-3">
 						<h3>Study Overview:</h3>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -67,7 +67,7 @@
 								<img src="images/nlp.png" alt="">
 							</i>
 							<h2 class="feature-title">Study 1</h2>
-							<p>Natural langauge processing to identify virtual meeting terminology.&nbsp;</p>
+							<p>Natural langauge processing to identify virtual meeting terminology.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -76,7 +76,7 @@
 								<img src="images/survey.png" alt="">
 							</i>
 							<h2 class="feature-title">Study 2</h2>
-							<p>Large survey to explore virtual meeting features' statistical association.&nbsp;&nbsp;</p>
+							<p>Large survey to explore virtual meeting features' statistical association.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -94,7 +94,7 @@
 								<img src="images/video.png" alt="">
 							</i>
 							<h2 class="feature-title">Study 4</h2>
-							<p>Video virtual meeting experiment to test hypotheses derived from Studies 1-3.&nbsp;&nbsp;</p>
+							<p>Video virtual meeting experiment to test hypotheses derived from Studies 1-3.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -103,7 +103,7 @@
 								<img src="images/vr.png" alt="">
 							</i>
 							<h2 class="feature-title">Study 5</h2>
-							<p>Prototype virtual reality meeting platform to embody adn validate Studies 1-4 insights.&nbsp;&nbsp;</p>
+							<p>Prototype virtual reality meeting platform to embody adn validate Studies 1-4 insights.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
@@ -112,7 +112,7 @@
 								<img src="images/good.png" alt="">
 							</i>
 							<h2 class="feature-title">Study Outcomes</h2>
-							<p>Increased well-being (e.g., reduced virtual meeting fatigue) and equity (e.g., equal speaking contributions) for workers&nbsp;&nbsp; </p>
+							<p>Increased well-being (e.g., reduced virtual meeting fatigue) and equity (e.g., equal speaking contributions) for workers </p>
 						</div>
 					</div>
 				</div>
@@ -221,7 +221,7 @@
 						<p>JuYoung Olivia Lee (Michigan State University)</p>
 						<p>Chaeyun Lim (Michigan State University)</p>
 						<p>Mary Onuche (SIU Edwardsville)</p>
-						<p>Jessica Stineman (Michigan State University)</p>
+						<p>Jessica Stineman (University of Oregon)</p>
 					</div>
 					<div class="col-md-6 mb-5">
 						<h2>Former Members</h2>
@@ -234,22 +234,26 @@
 			</div>
 		</div>
 		
+		
+		<!-- Projects Section -->
 		<div class="wrapper bg-shell">
 			<div class="container">
 				<div class="row" id="projects">
 					<div class="col-md-12 mt-5 mb-3">
 						<h2>Projects</h2>
 					</div>
-					<div id="myBtnContainer">
+					<div id="myBtnContainer1">
 						<button class="btn active" onClick="filterSelection('all')"> Show all</button>
-						<p>Study: <button class="btn" onClick="filterSelection('one')">One</button>
+						<p>Study: 
+							<button class="btn" onClick="filterSelection('one')">One</button>
 							<button class="btn" onClick="filterSelection('two')"> Two</button>
 							<button class="btn" onClick="filterSelection('three')"> Three</button>
 							<button class="btn" onClick="filterSelection('four')"> Four</button>
 							<button class="btn" onClick="filterSelection('five')"> Five</button>
 							<button class="btn" onClick="filterSelection('other')"> Other</button>
 						</p>
-						<p>Author: <button class="btn" onClick="filterSelection('beyea')">Beyea</button>
+						<p>Author: 
+							<button class="btn" onClick="filterSelection('beyea')">Beyea</button>
 							<button class="btn" onClick="filterSelection('foxman')"> Foxman</button>
 							<button class="btn" onClick="filterSelection('klebig')"> Klebig</button>
 							<button class="btn" onClick="filterSelection('leith')"> Leith</button>
@@ -257,50 +261,54 @@
 							<button class="btn" onClick="filterSelection('winn')"> Winn</button>
 						</p>
 					</div>
-					<!-- Portfolio Gallery Grid -->
+					
 					<div class="row">
+						
+						<div class="col-md-4">
+							<div class="column two ratan">
+								<div class="content">
+									<img src="images/make_me_feel.jpg" alt="vritual meetings fatigue" style="width:100%">
+									<h4>Virtual meeting fatigue: Differences in gender and race, solutions in avatars</h4>
+									
+								</div>
+							</div>
+						</div>
+						
+						<!--
 						<div class="col-md-4">
 							<div class="column one leith">
 								<div class="content">
-									<label class="btn" for="modal-1">
-										<img src="images/make_me_feel.jpg" alt="Mountains" style="width:100%">
-									</label>
-									<h4>Make me feel: Public expressions of play following VR play&nbsp;</h4>
+									<img src="images/make_me_feel.jpg" alt="make me feel" style="width:100%">
+									<h4>Make me feel: Public expressions of play following VR play</h4>
 								</div>
 							</div>
-							<!--  
-					<div class="column two"><div class="content"><img src="images/lights.jpg" alt="Lights" style="width:100%"><h4>Lights</h4><p>Lorem ipsum dolor..</p></div></div><div class="column three"><div class="content"><img src="images/nature.jpg" alt="Nature" style="width:100%"><h4>Forest</h4><p>Lorem ipsum dolor..</p></div></div>
-					  
-					  -->
 						</div>
+						-->
+						
 						<div class="col-md-4">
 							<div class="column other foxman beyea leith ratan klebig">
 								<div class="content">
-									<img src="images/classifying_vr.jpg" alt="Car" style="width:100%">
+									<img src="images/classifying_vr.jpg" alt="beyond genre" style="width:100%">
 									<h4>Beyond genre: Classifying virtual reality experiences</h4>
 								</div>
 							</div>
-							<!--  
-
-			        <div class="column five"><div class="content"><img src="images/cars2.jpg" alt="Car" style="width:100%"><h4>Fast</h4><p>Lorem ipsum dolor..</p></div></div><div class="column one"><div class="content"><img src="images/cars3.jpg" alt="Car" style="width:100%"><h4>Classic</h4><p>Lorem ipsum dolor..</p></div></div>
--->
 						</div>
+							
+						
 						<div class="col-md-4">
 							<div class="column one three foxman leith beyea klebig ratan">
 								<div class="content">
-									<img src="images/vr_tennis.jpg" alt="People" style="width:100%">
-									<h4>Playing at work: Finding and designing play into virtual meetings​</h4>
-</div>
+									<img src="images/vr_tennis.jpg" alt="playing at work" style="width:100%">
+									<h4>Playing at work: Finding and designing play into virtual meetings</h4>
+								</div>
 							</div>
-							
-							<!-- <div class="column three"><div class="content"><img src="images/people2.jpg" alt="People" style="width:100%"><h4>Man</h4><p>Lorem ipsum dolor..</p></div></div><div class="column four"><div class="content"><img src="images/people3.jpg" alt="People" style="width:100%"><h4>Woman</h4><p>Lorem ipsum dolor..</p></div></div>
-						</div> -->
-						<!-- END GRID -->
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		
+			
 		<div class="wrapper bg-eggplant">
 			<div class="container">
 				<div class="row">
@@ -309,7 +317,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+			</div>
+		</main>
+		
 		
 		<div class="wrapper bg-sand">
 			<div class="container">
@@ -324,6 +334,8 @@
 				</footer>
 			</div>
 		</div>
+		
+
 		<!-- body code goes here -->
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery-3.4.1.min.js"></script>
