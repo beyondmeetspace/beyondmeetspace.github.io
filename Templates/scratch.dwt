@@ -321,5 +321,6 @@
 		<script src="../js/popper.min.js"></script>
 		<script src="../js/bootstrap-4.4.1.js"></script>
 		<script src="../js/filter.js"></script>
+		<script src="../js/modal.js"></script>
 	</body>
 </html>
