@@ -237,3 +237,15 @@ img .btn:hover {
 #projects {
 }
 
+.media-kit {
+	padding: 50px 0px;
+}
+
+.fact-sheet a:hover{
+	color: var(--sand);
+	font-weight: 400;
+}
+.media-images {
+	text-align: center;
+	font-style: italic;
+}
