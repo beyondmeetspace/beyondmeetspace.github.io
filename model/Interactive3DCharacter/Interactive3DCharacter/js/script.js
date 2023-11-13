@@ -18,7 +18,7 @@
 
   function init() {
 
-    const MODEL_PATH = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy_lightweight.glb';
+    const MODEL_PATH = 'https://beyondmeetspace.github.io/model/Interactive3DCharacter/Interactive3DCharacter/js/Dr_APL-SIUE.glb';
     const canvas = document.querySelector('#c');
     const backgroundColor = 0xf1f1f1;
 
@@ -44,7 +44,7 @@
     camera.position.x = 0;
     camera.position.y = -3;
 
-    let stacy_txt = new THREE.TextureLoader().load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy.jpg');
+    let stacy_txt = new THREE.TextureLoader().load('https://beyondmeet.space/model/Interactive3DCharacter/Interactive3DCharacter/js/BASE_COLOR_TEXTURE_ALPHA.png');
     stacy_txt.flipY = false;
 
     const stacy_mtl = new THREE.MeshPhongMaterial({
