@@ -89,9 +89,10 @@ ul li:after {
 
 
 footer {
-	position: absolute;
+	position: fixed;
+	font-size: .8em;
+	left: 5em;
 	bottom: 0;
-	right: 0;
 
   /* Other styling for your footer */
 	}
@@ -116,6 +117,10 @@ footer {
 		margin-top: 1em;
 		padding-right: 12.5em;
 		margin-left: 1em;
+	}
+	
+	footer {
+		left: 2.5em;
 	}
 	
 }
