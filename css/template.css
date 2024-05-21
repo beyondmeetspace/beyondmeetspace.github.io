@@ -3,21 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Outfit:wght@700&display=swap');
 
 :root {
-	--grape: #94618E;
-	--eggplant: #49274A;
-	--sand: #F4DECB;
-	--shell: #F8EEE7;
-	--outfit: "Outfit";
-	--bowlby: "Bowlby One SC";
+	--c1: #e51147;
+	--c2: #004a82;
+	--c3: #18134e;
+	--c4: #edeae8;
+	--c5: #291b2f;
+	--f1: "Outfit";
+	--f2: "Bowlby One SC";
 }
 
+
 body {
-	font-family: var(--outfit);
-	background-color: var(--shell);
+	font-family: var(--f1);
+	background-color: var(--c4);
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: var(--bowlby);
+	font-family: var(--f2);
 }
 
 header {
@@ -37,33 +39,33 @@ header img{
 }
 
 .bg-grape {
-	background-color: var(--grape);
-    color: var(--sand);
+	background-color: var(--c3);
+    color: var(--c4);
 }
 
 .bg-eggplant {
-	background-color: var(--eggplant);
-    color: var(--shell);
+	background-color: var(--c2);
+    color: var(--c4);
 }
 
 .bg-eggplant a {
-    color: var(--shell);
-	font-family: var(--outfit);
+    color: var(--c4);
+	font-family: var(--f1);
 	font-weight: 900;
 }
 
 .bg-eggplant a:hover {
-    color: var(--grape);
+    color: var(--c1);
 }
 
 .bg-sand {
-	background-color: var(--sand);
-    color: var(--grape);
+	background-color: var(--c2);
+    color: var(--c4);
 }
 
 .bg-shell {
-	background-color: var(--shell);
-    color: var(--grape);
+	background-color: var(--c4);
+    color: var(--c3);
 }
 
 .align-center {
@@ -74,27 +76,27 @@ header img{
 }
 
 nav .nav-link, footer a {
-	font-family: var(--bowlby);
+	font-family: var(--f2);
 	font-weight: 300;
-	color: var(--eggplant) !important;
+	color: var(--c4) !important;
 }
 
 nav .nav-link:hover, footer a:hover {
 	font-weight: 600;
 	text-decoration: none;
-	color: var(--grape) !important;
+	color: var(--c1) !important;
 }
 
 a {
-	font-family: var(--bowlby);
+	font-family: var(--f2);
 	font-weight: 500;
-	color: var(--eggplant);
+	color: var(--c3);
 }
 
 a:hover {
 	font-weight: 900;
 	text-decoration: none;
-	color: var(--grape);
+	color: var(--c2);
 }
 
 .align-right {
@@ -121,7 +123,7 @@ figcaption h5 {
 }
 
 figcaption small {
-	font-family: var(--outfit);
+	font-family: var(--f1);
 	font-weight: 900;
 	font-size: .75em;
 	margin-top: 0px;
@@ -158,7 +160,7 @@ figcaption small {
 
 /* Content */
 .content {
-  background-color: var(--shell);
+  background-color: var(--c4);
   padding: 10px;
 }
 
@@ -172,7 +174,7 @@ figcaption small {
 }
 
 .content a {
-	font-family: var(--outfit);
+	font-family: var(--f1);
 	font-weight: 700;
 }
 /* The "show" class is added to the filtered elements */
@@ -191,18 +193,18 @@ figcaption small {
 
 /* Add a grey background color on mouse-over */
 .btn:hover {
-  background-color: var(--eggplant);
-	color: var(--shell);
+  background-color: var(--c3);
+	color: var(--c4);
 }
 
 img .btn:hover {
-  background-color: var(--grape);
-	color: var(--shell);
+  background-color: var(--c2);
+	color: var(--c4);
 }
 
 /* Add a dark background color to the active button */
 .btn.active {
-  background-color: var(--eggplant);
+  background-color: var(--c3);
    color: white;
 }
 .feature {
@@ -218,7 +220,7 @@ img .btn:hover {
   height: 70px;
   border-radius: 50%;
   display: inline-block;
-  background: var(--eggplant);
+  background: var(--c3);
   text-align: center;
   padding-top: 20px;
   position: absolute;
@@ -242,7 +244,7 @@ img .btn:hover {
 }
 
 .fact-sheet a:hover{
-	color: var(--sand);
+	color: var(--c1);
 	font-weight: 400;
 }
 .media-captions p {
