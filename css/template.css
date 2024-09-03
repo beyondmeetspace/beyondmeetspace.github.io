@@ -3,25 +3,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Outfit:wght@700&display=swap');
 
 :root {
+<<<<<<< HEAD
 	--c4: #edeae8;
 	--c5: #004a82;
 	--c2: #18134e;
 	--c3: #291b2f;
 	--c1: #e51147;
+=======
+	--c1: #e51147;
+	--c2: #004a82;
+	--c3: #18134e;
+	--c4: #edeae8;
+	--c5: #291b2f;
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	--f1: "Outfit";
 	--f2: "Bowlby One SC";
 }
+
 
 body {
 	font-family: var(--f1);
 	background-color: var(--c4);
 }
 
+<<<<<<< HEAD
 h1,
 h2,
 h3,
 h4,
 h5 {
+=======
+h1, h2, h3, h4, h5 {
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	font-family: var(--f2);
 }
 
@@ -119,32 +132,56 @@ header img {
 
 .bg-grape {
 	background-color: var(--c3);
+<<<<<<< HEAD
 	color: var(--c4);
+=======
+    color: var(--c4);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 }
 
 .bg-eggplant {
 	background-color: var(--c2);
+<<<<<<< HEAD
 	color: var(--c4);
 }
 
 .bg-eggplant a {
 	color: var(--c4);
+=======
+    color: var(--c4);
+}
+
+.bg-eggplant a {
+    color: var(--c4);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	font-family: var(--f1);
 	font-weight: 900;
 }
 
 .bg-eggplant a:hover {
+<<<<<<< HEAD
 	color: var(--c1);
+=======
+    color: var(--c1);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 }
 
 .bg-sand {
 	background-color: var(--c2);
+<<<<<<< HEAD
 	color: var(--c4);
+=======
+    color: var(--c4);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 }
 
 .bg-shell {
 	background-color: var(--c4);
+<<<<<<< HEAD
 	color: var(--c3);
+=======
+    color: var(--c3);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 }
 
 .align-center {
@@ -154,8 +191,12 @@ header img {
 	width: auto;
 }
 
+<<<<<<< HEAD
 nav .nav-link,
 footer a {
+=======
+nav .nav-link, footer a {
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	font-family: var(--f2);
 	font-weight: 300;
 	color: var(--c4) !important;
@@ -243,8 +284,13 @@ figcaption small {
 
 /* Content */
 .content {
+<<<<<<< HEAD
 	background-color: var(--c4);
 	padding: 10px;
+=======
+  background-color: var(--c4);
+  padding: 10px;
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 }
 
 .content h4 {
@@ -277,19 +323,32 @@ figcaption small {
 
 /* Add a grey background color on mouse-over */
 .btn:hover {
+<<<<<<< HEAD
 	background-color: var(--c3);
+=======
+  background-color: var(--c3);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	color: var(--c4);
 }
 
 img .btn:hover {
+<<<<<<< HEAD
 	background-color: var(--c2);
+=======
+  background-color: var(--c2);
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	color: var(--c4);
 }
 
 /* Add a dark background color to the active button */
 .btn.active {
+<<<<<<< HEAD
 	background-color: var(--c3);
 	color: white;
+=======
+  background-color: var(--c3);
+   color: white;
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 }
 
 .feature {
@@ -304,6 +363,7 @@ img .btn:hover {
 }
 
 .feature-icon {
+<<<<<<< HEAD
 	width: 70px;
 	height: 70px;
 	border-radius: 50%;
@@ -315,6 +375,18 @@ img .btn:hover {
 	left: 0;
 	top: 0;
 }
+=======
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  background: var(--c3);
+  text-align: center;
+  padding-top: 20px;
+  position: absolute;
+  left: 0;
+  top: 0; }
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 
 .feature-title {
 	font-size: 1.25em;
@@ -331,7 +403,11 @@ img .btn:hover {
 	padding: 50px 0px;
 }
 
+<<<<<<< HEAD
 .fact-sheet a:hover {
+=======
+.fact-sheet a:hover{
+>>>>>>> d2f8d52f7088fb966c5bda7c76563c11416aca47
 	color: var(--c1);
 	font-weight: 400;
 }
