@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Space+Mono&display=swap');
+
+
+body {
+	font-family: 'Space Mono';
+	font-weight: 400;
+    border-right: 15px solid #000000;
+    border-left: 15px solid #000000;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Poppins';
+}
+
+.btn {
+	background-color: #000000 !important;
+}
+.btn-link, a {
+	font-family: 'Poppins';
+	color: #ffffff !important;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.btn-link:hover, a:hover {
+  color: #999999 !important;
+  text-decoration: strikethrough;
+}
+
+.card-text a {
+	font-family: 'Poppins';
+	color: #999999 !important;
+}
+
+.card-text a:hover {
+	color: #000000 !important;
+	font-weight: 900;
+	text-decoration: none;	
+}
+
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link  {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.navbar-nav .nav-item {
+    border: 1px solid #ffffff;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.navbar-brand {
+	margin-top: .5em;
+	width: 150px;
+}
+
+header {
+    background-color: #000000;
+    background-image: url(../images/bubble.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 75%;
+    height: 300px;
+}
+
+header h2 {
+    color: #000000;
+    font-size: 3.75em;
+    text-align: center;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #000000;
+    font-size: .75em;
+    font-weight: 700;
+    text-align: center;
+    line-height: .1em;
+    letter-spacing: 0.15em;
+    font-style: normal;
+}
+
+nav .container {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
+
+
+footer {
+    padding-top: 5px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+address {
+    color: #ffffff;
+}
+
+blockquote {
+	font-size: .9em;
+	font-style: italic;
+}
+
+blockquote cite {
+	text-align: right;
+	display: block;
+	font-weight: bold;
+	font-style: normal;
+}
+
+table {
+	border-bottom: 1px solid #000000;
+}
+
+th {
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	text-align: left;
+}
+
+.year {
+	width: 20%;
+	text-align: center
+}
+
+.sidebar2 {
+	font-size: .9em;
+}

@@ -3,24 +3,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Outfit:wght@700&display=swap');
 
 :root {
-	--grape: #94618E;
-	--eggplant: #49274A;
-	--sand: #F4DECB;
-	--shell: #F8EEE7;
-	--outfit: "Outfit";
-	--bowlby: "Bowlby One SC";
+	--c4: #edeae8;
+	--c5: #004a82;
+	--c2: #18134e;
+	--c3: #291b2f;
+	--c1: #e51147;
+	--f1: "Outfit";
+	--f2: "Bowlby One SC";
 }
 
 body {
-	font-family: var(--outfit);
-	background-color: var(--shell);
+	font-family: var(--f1);
+	background-color: var(--c4);
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: var(--bowlby);
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--f2);
 }
 
 header {
+
 }
 
 header p {
@@ -28,7 +34,7 @@ header p {
 	font-size: 1.25em;
 }
 
-header img{
+header img {
 	max-width: 90%;
 }
 
@@ -36,34 +42,109 @@ header img{
 	width: 100%
 }
 
+.bg-c1 {
+	background-color: var(--c1);
+	color: var(--c4);
+}
+
+.bg-c1 a {
+	color: var(--c4);
+	font-family: var(--f1);
+	font-weight: 900;
+}
+
+.bg-c1 a:hover {
+	color: var(--c2);
+}
+
+.bg-c2 {
+	background-color: var(--c2);
+	color: var(--c4);
+}
+
+.bg-c2 a {
+	color: var(--c4);
+	font-family: var(--f1);
+	font-weight: 900;
+}
+
+.bg-c2 a:hover {
+	color: var(--c1);
+}
+
+.bg-c3 {
+	background-color: var(--c3);
+	color: var(--c4);
+}
+
+.bg-c3 a {
+	color: var(--c4);
+	font-family: var(--f1);
+	font-weight: 900;
+}
+
+.bg-c3 a:hover {
+	color: var(--c1);
+}
+
+.bg-c4 {
+	background-color: var(--c4);
+	color: var(--c3);
+}
+
+.bg-c4 a {
+	color: var(--c3);
+	font-family: var(--f1);
+	font-weight: 900;
+}
+
+.bg-c4 a:hover {
+	color: var(--c1);
+}
+
+.bg-c5 {
+	background-color: var(--c5);
+	color: var(--c4);
+}
+
+.bg-c5 a {
+	color: var(--c4);
+	font-family: var(--f1);
+	font-weight: 900;
+}
+
+.bg-c5 a:hover {
+	color: var(--c1);
+}
+
 .bg-grape {
-	background-color: var(--grape);
-    color: var(--sand);
+	background-color: var(--c3);
+	color: var(--c4);
 }
 
 .bg-eggplant {
-	background-color: var(--eggplant);
-    color: var(--shell);
+	background-color: var(--c2);
+	color: var(--c4);
 }
 
 .bg-eggplant a {
-    color: var(--shell);
-	font-family: var(--outfit);
+	color: var(--c4);
+	font-family: var(--f1);
 	font-weight: 900;
 }
 
 .bg-eggplant a:hover {
-    color: var(--grape);
+	color: var(--c1);
 }
 
 .bg-sand {
-	background-color: var(--sand);
-    color: var(--grape);
+	background-color: var(--c2);
+	color: var(--c4);
 }
 
 .bg-shell {
-	background-color: var(--shell);
-    color: var(--grape);
+	background-color: var(--c4);
+	color: var(--c3);
 }
 
 .align-center {
@@ -73,28 +154,30 @@ header img{
 	width: auto;
 }
 
-nav .nav-link, footer a {
-	font-family: var(--bowlby);
+nav .nav-link,
+footer a {
+	font-family: var(--f2);
 	font-weight: 300;
-	color: var(--eggplant) !important;
+	color: var(--c4) !important;
 }
 
-nav .nav-link:hover, footer a:hover {
+nav .nav-link:hover,
+footer a:hover {
 	font-weight: 600;
 	text-decoration: none;
-	color: var(--grape) !important;
+	color: var(--c1) !important;
 }
 
 a {
-	font-family: var(--bowlby);
+	font-family: var(--f2);
 	font-weight: 500;
-	color: var(--eggplant);
+	color: var(--c3);
 }
 
 a:hover {
 	font-weight: 900;
 	text-decoration: none;
-	color: var(--grape);
+	color: var(--c2);
 }
 
 .align-right {
@@ -121,7 +204,7 @@ figcaption h5 {
 }
 
 figcaption small {
-	font-family: var(--outfit);
+	font-family: var(--f1);
 	font-weight: 900;
 	font-size: .75em;
 	margin-top: 0px;
@@ -131,35 +214,37 @@ figcaption small {
 	margin-top: -10px;
 	margin-bottom: -10px;
 }
+
 /** This is an attempt to get filter working **/
 .row {
-  margin: 8px -16px;
+	margin: 8px -16px;
 }
 
 /* Add padding BETWEEN each column (if you want) */
 .row,
-.row > .column {
-  padding: 8px;
+.row>.column {
+	padding: 8px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 100%;
-  display: none; /* Hide columns by default */
+	float: left;
+	width: 100%;
+	display: none;
+	/* Hide columns by default */
 }
 
 /* Clear floats after rows */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /* Content */
 .content {
-  background-color: var(--shell);
-  padding: 10px;
+	background-color: var(--c4);
+	padding: 10px;
 }
 
 .content h4 {
@@ -172,12 +257,13 @@ figcaption small {
 }
 
 .content a {
-	font-family: var(--outfit);
+	font-family: var(--f1);
 	font-weight: 700;
 }
+
 /* The "show" class is added to the filtered elements */
 .show {
-  display: block;
+	display: block;
 }
 
 /* Style the buttons
@@ -191,60 +277,65 @@ figcaption small {
 
 /* Add a grey background color on mouse-over */
 .btn:hover {
-  background-color: var(--eggplant);
-	color: var(--shell);
+	background-color: var(--c3);
+	color: var(--c4);
 }
 
 img .btn:hover {
-  background-color: var(--grape);
-	color: var(--shell);
+	background-color: var(--c2);
+	color: var(--c4);
 }
 
 /* Add a dark background color to the active button */
 .btn.active {
-  background-color: var(--eggplant);
-   color: white;
+	background-color: var(--c3);
+	color: white;
 }
+
 .feature {
-  padding-left: 90px;
-  position: relative;
-  margin-bottom: 30px; }
-  .feature p {
-    line-height: 1.5;
-    margin: 0; }
+	padding-left: 90px;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.feature p {
+	line-height: 1.5;
+	margin: 0;
+}
 
 .feature-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: inline-block;
-  background: var(--eggplant);
-  text-align: center;
-  padding-top: 20px;
-  position: absolute;
-  left: 0;
-  top: 0; }
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	display: inline-block;
+	background: var(--c3);
+	text-align: center;
+	padding-top: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 
 .feature-title {
 	font-size: 1.25em;
 }
 
 
-#home {
-}
-#team {
-}
-#projects {
-}
+#home {}
+
+#team {}
+
+#projects {}
 
 .media-kit {
 	padding: 50px 0px;
 }
 
-.fact-sheet a:hover{
-	color: var(--sand);
+.fact-sheet a:hover {
+	color: var(--c1);
 	font-weight: 400;
 }
+
 .media-captions p {
 	text-align: center;
 	font-style: italic;
