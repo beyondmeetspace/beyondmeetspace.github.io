@@ -1,42 +1,51 @@
 @charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Varela&display=swap');
 
-
-:root{
+:root {
 	--c1: #4d4c4a;
 	--c2: #263b44;
 	--bgd: #49a7c5;
-	--bgl: #8bd64a;
 	--wh: #ffffff;
-	--none: rgba(255, 0, 0, 0.0);
 	--hf: "Changa One";
 	--bf: "Varela";
 }
 
-:not(:defined)>* {
-	display: none;
-}
-html {
-	height: 100%;
-}
-
+html,
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	height: 100%;
 	font-family: var(--bf);
-	background-size: 50% auto;
 	background-color: var(--wh);
-	max-width: 1200px;
 }
 
-h1, h2, h3, h4 {       
+/* Center the entire page, but not the content */
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	/* This ensures the page is centered with a max width */
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Headings should remain centered as they were */
+h1,
+h2,
+h3,
+h4 {
 	font-family: var(--hf);
 	font-weight: bolder;
 	color: var(--c1);
 	text-align: center;
+	padding: 10px 0;
 }
 
 h1 {
@@ -46,28 +55,83 @@ h1 {
 h2 {
 	font-size: 3em;
 }
-h4 {
+
+h3 {
 	font-size: 2em;
 }
 
+h4 {
+	font-size: 1.75em;
+}
+
+/* Keep paragraphs left-aligned as before */
 p {
 	color: var(--c2);
+	font-size: 1em;
 }
 
-div {
-	padding:5px;
+.team h5 {
+	font-size: .75em;
 }
 
-.bg-white {
+small {
+	font-size: .6em;
 }
 
-.brief {
-	font-size: .9em;
+.members p {
+	line-height: 1em;
 }
 
+/* Navbar and footer */
+.navbar-nav,
+footer {}
+
+nav .container {
+	padding-bottom: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+footer a {
+	color: var(--bgd) !important;
+	padding-top: .5em;
+	font-style: normal;
+	font-weight: 200;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	font-size: 1.5em;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: auto 100%;
+	text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+footer a:hover {
+	color: var(--c2) !important;
+}
+
+.navbar-nav .nav-item {
+	width: 150px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.navbar-brand {
+	margin-top: .5em;
+	width: 150px;
+}
+
+.main {
+	padding-top: 50px;
+}
+
+
+/* The 'model' remains inside the centered page */
 .model {
-	width: 50%;
-	min-height:250px;
+	width: 100%;
+	min-height: 600px;
 	overflow: hidden;
 	/* Ensure anything outside the boundaries is hidden */
 	position: relative;
@@ -76,7 +140,7 @@ div {
 
 model-viewer {
 	width: 100%;
-	height: 200%;
+	height: 100%;
 	/* Make the model twice the height of the container */
 	position: absolute;
 	align-items: center;
@@ -114,140 +178,15 @@ model-viewer {
 	transition: width 0.3s;
 }
 
-@keyframes circle {
-	from {
-		transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
-	}
-
-	to {
-		transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
-	}
-}
-
-@keyframes elongate {
-	from {
-		transform: translateX(100px);
-	}
-
-	to {
-		transform: translateX(-100px);
-	}
-}
-
-.media-kit {
-	padding: 50px 0px;
-}
-
-.fact-sheet a:hover {
-	color: var(--c1);
-	font-weight: 400;
-}
-
-.media-captions p {
-	text-align: center;
-	font-style: italic;
-}
-
-.container {
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.wrapper h2 {
-	padding-top: .25em;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
-	font-weight: 900;
-	text-align: center;
-	height: 1.5em;
-}
-
-.navbar-nav, footer {
-}
-
-nav .container {
-	/*border-bottom: 2px solid #000000;*/
-    padding-bottom: 10px;
-	
-}
-
-
-.navbar-dark .navbar-nav .nav-link, footer a  {
-    color: var(--bgd) !important;
-	padding-top: .5em;
-    font-style: normal;
-    font-weight: 200; 
-}
-
-
-
-.navbar-dark .navbar-nav .nav-link {
-	font-size: 1.5em;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
-	text-align: center;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover, footer a:hover  {
-    color: var(--c2) !important;
-}
-
-.navbar-nav .nav-item {
-    /*border: 1px solid #ffffff;*/
-    width: 150px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-.navbar-brand {
-	margin-top: .5em;
-	width: 150px;
-}
-
-.navbar-toggler {
-	
-}
-
-.navbar-collapse {
-	
-	
-}
-header {
-    
-}
-
-
-header h2 {
-    color: var(--c1);
-    font-size: 7.5em;
-}
-
-header p {
-    color: var(--bgd);
-    font-size: 1em;
-    line-height: .025em;
-    letter-spacing: 0.2em;
-    font-style: normal;
-}
-
-
-main a {
-	font-size: 1em;
-}
-
+/* Feature section */
 .feature {
-	padding-left: 90px;
 	position: relative;
 	margin-bottom: 30px;
 }
 
 .feature p {
 	line-height: 1.5;
-	margin: 0;
+	padding-right: 25%;
 }
 
 .feature-icon {
@@ -257,19 +196,15 @@ main a {
 	display: inline-block;
 	background: var(--c3);
 	text-align: center;
-	padding-top: 20px;
+	padding-top: .5em;
 	position: absolute;
-	left: 0;
+	left: -20%;
 	top: 0;
 }
 
 .feature-title {
 	font-size: 1.25em;
-}
-.center {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+	text-align: left;
 }
 
 figure img {
@@ -280,134 +215,98 @@ figure img {
 	margin-bottom: 5px;
 }
 
-figcaption {
+figcaption, figcaption h5, figcaption small, figcaption a {
 	text-align: center;
+	font-family: var(--hf);
+	line-height: .75em;
+	padding-bottom: 0px;
 }
 
 figcaption h5 {
-	margin-top: 10px;
-	margin-bottom: 0px;
-	font-size: 1em;
-	line-height: .75em;
+	padding-top: 5px;
 }
 
-figcaption small {
-	font-family: var(--f1);
-	font-weight: 900;
-	font-size: .75em;
-	margin-top: 0px;
-}
 
-.btn, .card, .btn:hover {
+
+/* General link styles */
+.btn,
+.card,
+.btn:hover {
 	background-color: var(--none);
 }
-.btn-link, a, .card-title {
+
+.btn-link,
+a,
+.card-title {
 	font-family: var(--hf);
 	color: var(--c1) !important;
 	text-decoration: none;
-	font-size: 1.5em;
-    letter-spacing: 0.1em;
+	font-size: 1.25em;
+	letter-spacing: 0.1em;
 	line-height: .8em;
 }
 
-.divider {
-	background-repeat: no-repeat;
-	background-position: center center;
-	height: 5em;
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-
-.card-body {
-}
-
-.card-body h5{
-	padding-top: .5em;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
-	font-weight: 900;
-	text-align: center;
-	height: 1.5em;
-}
-
-.btn-link:hover, a:hover {
-  color: var(--c2) !important;
-  text-decoration: none;
-}
-
-.card-text p {
-	color: var(--c2);
-}
-
-.card-text a {
-	font-family: var(--hf);
-	color: var(--c1) !important;
-}
-
-.card-text a:hover {
+.navbar-dark .navbar-nav .nav-link:hover,
+footer a:hover {
 	color: var(--c2) !important;
-	font-weight: 900;
-	text-decoration: none;	
-}
-
-.media-body h5 {
-	color: var(--bgd);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
-	font-weight: 900;
-	text-align: center;
-	height: 1.5em;
-}
-
-.bg-dark {
-    background-color: var(--none) !important;
-	background-size: 25% auto;
-}
-
-
-footer {
 }
 
 footer p {
-	color: var(--bgd);
-	text-align: left;
+	color: var(--c2);
+	text-align: center;
+	font-size: 1em;
 }
-
 
 footer a {
-	font-size: 1.5em;
-	padding-top: 1em;
-	text-align: left;
-}
-
-footer .row {
-    font-weight: 200; 
-	font-size: 1.5em;
-	background-repeat: no-repeat;
-	background-size: 100% auto;
+	font-size: 1.1em;
+	color: var(--c2) !important;
 	text-align: center;
-	background-position: center center;
 }
 
-
-address {
-    color: #ffffff;
+footer a:hover {
+	color: var(--c2) !important;
 }
 
+/* Progress bar styles for model viewer */
+.progress-bar {
+	display: block;
+	width: 33%;
+	height: 10%;
+	max-height: 2%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	border-radius: 25px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.update-bar {
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 0%;
+	height: 100%;
+	border-radius: 25px;
+	transition: width 0.3s;
+}
+
+/* Quotes */
 blockquote {
 	font-size: .9em;
 	font-style: italic;
+	text-align: center;
 }
 
 blockquote cite {
-	text-align: right;
 	display: block;
 	font-weight: bold;
-	font-style: normal;
+	text-align: right;
 }
 
+address {
+	color: #ffffff;
+}
+
+/* Table styles */
 table {
 	border-bottom: 1px solid var(--bgd);
 }
@@ -415,41 +314,38 @@ table {
 th {
 	border-bottom: 1px solid var(--bgd);
 	border-top: 1px solid var(--bgd);
-	text-align: left;
 }
 
 table {
 	font-size: .9em;
 }
 
-.middle {
-    display: flex;
-    align-items: center;
+/* Anchor link styles */
+a {
+	color: var(--bgd);
+	text-decoration: none; 
 }
 
-.stage {
-	width: 20%;
-	text-align: center
+a:hover {
+	color: var(--c1);
+	text-decoration: underline;
 }
 
-.sidebar2 {
-	font-size: .9em;
+.media-captions p {
+	text-align: center;
+	margin: .5em;
 }
 
-
-
+/* Responsive Design */
 @media (max-width: 576px) {
-	header {
-		height: 300px;
+	h1 {
+		font-size: 3em;
 	}
+}
 
-	header h2 {
-    font-size: 1em;
-    margin-top: 3.1em;
-	}
-
-	header p {
-		font-size: .5em;
-		margin-top: -.25em;
+@media only screen and (max-width: 600px) {
+	h1 {
+		padding-top: 4em;
+		font-size: 3.5em;
 	}
 }
