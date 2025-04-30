@@ -42,8 +42,8 @@ h2,
 h3,
 h4 {
 	font-family: var(--hf);
-	font-weight: bolder;
-	color: var(--c1);
+	font-weight: 500;
+	color: var(--bgd);
 	text-align: center;
 	padding: 10px 0;
 }
@@ -90,23 +90,23 @@ nav .container {
 	padding-bottom: 10px;
 }
 
-.navbar-dark .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link,
 footer a {
 	color: var(--bgd) !important;
 	padding-top: .5em;
 	font-style: normal;
-	font-weight: 200;
+	font-weight: 500;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-	font-size: 1.5em;
+.navbar-light .navbar-nav .nav-link {
+	font-size: 1.25em;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: auto 100%;
 	text-align: center;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:hover,
 footer a:hover {
 	color: var(--c2) !important;
 }
@@ -150,11 +150,14 @@ model-viewer {
 }
 
 .doi a:link{
-	color: var(--bgd) !important;
+	color: var(--c1) !important;
+	font-family: var(--bf);
 	text-decoration: none;
 	font-style: italic;
 	font-size: 1em;
+	letter-spacing: .02em;
 }
+
 .progress-bar {
 	display: block;
 	width: 33%;
@@ -171,7 +174,7 @@ model-viewer {
 }
 
 .progress-bar.hide {
-	visibility: hidden;
+	visibility: hidden; 
 	transition: visibility 0.3s;
 }
 
@@ -232,8 +235,6 @@ figcaption h5 {
 	padding-top: 5px;
 }
 
-
-
 /* General link styles */
 .btn,
 .card,
@@ -265,12 +266,13 @@ footer p {
 
 footer a {
 	font-size: 1.1em;
-	color: var(--c2) !important;
+	color: var(--bgd) !important;
 	text-align: center;
 }
 
 footer a:hover {
 	color: var(--c2) !important;
+	text-decoration: none;
 }
 
 /* Progress bar styles for model viewer */
@@ -340,6 +342,7 @@ a:hover {
 .media-captions p {
 	text-align: center;
 	margin: .5em;
+	font-size: .8em;
 }
 
 /* Responsive Design */
