@@ -149,6 +149,12 @@ model-viewer {
 	/* Moves the model up by half its height to center it within the div */
 }
 
+.doi a:link{
+	color: var(--bgd) !important;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 1em;
+}
 .progress-bar {
 	display: block;
 	width: 33%;
