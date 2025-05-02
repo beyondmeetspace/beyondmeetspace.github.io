@@ -149,7 +149,7 @@ model-viewer {
 	/* Moves the model up by half its height to center it within the div */
 }
 
-.doi a:link{
+.doi a:link, .doi a:visited{
 	color: var(--c1) !important;
 	font-family: var(--bf);
 	text-decoration: none;
@@ -158,6 +158,9 @@ model-viewer {
 	letter-spacing: .02em;
 }
 
+.doi a:hover{
+	color: var(--bgd) !important;
+}
 .progress-bar {
 	display: block;
 	width: 33%;
