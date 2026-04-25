@@ -32,12 +32,21 @@
         @media (min-width: 900px) { .bms-team-grid--5 { grid-template-columns: repeat(5, 1fr); } }
         .bms-team-card {
             text-align: center;
+            color: var(--c-text);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .bms-team-card__link {
+            display: block;
             text-decoration: none;
             color: var(--c-text);
             transition: transform var(--transition);
-            display: block;
         }
-        .bms-team-card:hover { transform: translateY(-4px); text-decoration: none; color: var(--c-text); }
+        .bms-team-card__link:hover { transform: translateY(-4px); text-decoration: none; color: var(--c-text); }
+        a.bms-team-card { display: block; text-decoration: none; transition: transform var(--transition); }
+        a.bms-team-card:hover { transform: translateY(-4px); text-decoration: none; color: var(--c-text); }
+        a.bms-team-card:hover .bms-team-card__photo { box-shadow: var(--shadow-lg); }
         .bms-team-card__photo {
             width: 100%;
             aspect-ratio: 1;
@@ -49,7 +58,7 @@
             transition: box-shadow var(--transition);
             image-rendering: auto;
         }
-        .bms-team-card:hover .bms-team-card__photo { box-shadow: var(--shadow-lg); }
+        .bms-team-card__link:hover .bms-team-card__photo { box-shadow: var(--shadow-lg); }
         .bms-team-card h5 {
             font-family: var(--font-display);
             font-size: var(--fs-base);
@@ -189,43 +198,51 @@
             <p class="lead">Faculty collaborators who have been integral to specific Beyond Meet Space research products, special-issue editing, and ongoing intellectual exchange.</p>
         </div>
         <div class="bms-team-grid bms-team-grid--4 mt-8">
-            <a class="bms-team-card bms-fade-in" href="https://scholar.google.com/citations?user=ufwnoccAAAAJ" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/chen.jpg" alt="Vivian H. H. Chen">
-                <h5>Vivian H. H. Chen</h5>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://scholar.google.com/citations?user=ufwnoccAAAAJ" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/chen.jpg" alt="Vivian H. H. Chen">
+                    <h5>Vivian H. H. Chen</h5>
+                </a>
                 <small>Erasmus University Rotterdam</small>
                 <span class="bms-team-card__role">Co-editor, JMP special issue</span>
                 <span class="bms-team-links">
                     <a href="https://scholar.google.com/citations?user=ufwnoccAAAAJ" target="_blank" rel="noopener">scholar</a>
                     <a href="https://orcid.org/0000-0003-3818-4784" target="_blank" rel="noopener">orcid</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://vhil.stanford.edu/people/jeremy-bailenson" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/bailenson.jpg" alt="Jeremy Bailenson">
-                <h5>Jeremy Bailenson</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://vhil.stanford.edu/people/jeremy-bailenson" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/bailenson.jpg" alt="Jeremy Bailenson">
+                    <h5>Jeremy Bailenson</h5>
+                </a>
                 <small>Stanford University &middot; Virtual Human Interaction Lab</small>
                 <span class="bms-team-card__role">Co-author, foundational papers</span>
                 <span class="bms-team-links">
                     <a href="https://vhil.stanford.edu/people/jeremy-bailenson" target="_blank" rel="noopener">vhil</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://comartsci.msu.edu/our-people/dar-meshi" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/meshi.png" alt="Dar Meshi">
-                <h5>Dar Meshi</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/dar-meshi" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/meshi.png" alt="Dar Meshi">
+                    <h5>Dar Meshi</h5>
+                </a>
                 <small>Michigan State University &middot; ComArtSci</small>
                 <span class="bms-team-card__role">Co-author, avatar &amp; play research</span>
                 <span class="bms-team-links">
                     <a href="https://comartsci.msu.edu/our-people/dar-meshi" target="_blank" rel="noopener">profile</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://www.researchgate.net/profile/Oskar-Milik" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/milik.jpg" alt="Oskar Milik">
-                <h5>Oskar Milik</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://www.researchgate.net/profile/Oskar-Milik" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/milik.jpg" alt="Oskar Milik">
+                    <h5>Oskar Milik</h5>
+                </a>
                 <small>Michigan State University</small>
                 <span class="bms-team-card__role">First author, FG Methods (AoIR 2024)</span>
                 <span class="bms-team-links">
                     <a href="https://www.researchgate.net/profile/Oskar-Milik" target="_blank" rel="noopener">researchgate</a>
                 </span>
-            </a>
+            </article>
         </div>
     </div>
 </section>
@@ -239,24 +256,28 @@
             <p class="lead">Researchers who completed their doctoral training while contributing to Beyond Meet Space, now leading their own work as postdocs and faculty.</p>
         </div>
         <div class="bms-team-grid bms-team-grid--4 mt-8" style="max-width: 720px;">
-            <a class="bms-team-card bms-fade-in" href="https://scholar.google.com/citations?user=hodrDYIAAAAJ" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/lim.png" alt="Chaeyun Lim">
-                <h5>Chaeyun Lim</h5>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://scholar.google.com/citations?user=hodrDYIAAAAJ" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/lim.png" alt="Chaeyun Lim">
+                    <h5>Chaeyun Lim</h5>
+                </a>
                 <small>Northwestern University &middot; Kellogg School of Management</small>
                 <span class="bms-team-card__role">Postdoctoral Research Fellow</span>
                 <span class="bms-team-links">
                     <a href="https://scholar.google.com/citations?user=hodrDYIAAAAJ" target="_blank" rel="noopener">scholar</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://www.salina.k-state.edu/" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/bouzek.jpg" alt="Dalton Bouzek">
-                <h5>Dalton Bouzek</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://www.salina.k-state.edu/" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/bouzek.jpg" alt="Dalton Bouzek">
+                    <h5>Dalton Bouzek</h5>
+                </a>
                 <small>Kansas State University Salina &middot; Department of Integrated Studies</small>
                 <span class="bms-team-card__role">Assistant Teaching Professor, Communications</span>
                 <span class="bms-team-links">
                     <a href="https://www.salina.k-state.edu/" target="_blank" rel="noopener">k-state salina</a>
                 </span>
-            </a>
+            </article>
         </div>
     </div>
 </section>
@@ -270,54 +291,64 @@
             <p class="lead">Doctoral researchers actively contributing to Beyond Meet Space publications and platform development.</p>
         </div>
         <div class="bms-team-grid bms-team-grid--5 mt-8">
-            <a class="bms-team-card bms-fade-in" href="https://comartsci.msu.edu/our-people/dayeoun-jang" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/jang.jpg" alt="Dayeoun Jang">
-                <h5>Dayeoun Jang</h5>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/dayeoun-jang" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/jang.jpg" alt="Dayeoun Jang">
+                    <h5>Dayeoun Jang</h5>
+                </a>
                 <small>Michigan State University &middot; ComArtSci</small>
                 <span class="bms-team-card__role">Doctoral Researcher</span>
                 <span class="bms-team-links">
                     <a href="https://comartsci.msu.edu/our-people/dayeoun-jang" target="_blank" rel="noopener">profile</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://comartsci.msu.edu/our-people/alex-lover" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/lover.png" alt="Alex Lover">
-                <h5>Alex Lover</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/alex-lover" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/lover.png" alt="Alex Lover">
+                    <h5>Alex Lover</h5>
+                </a>
                 <small>Michigan State University &middot; ComArtSci</small>
                 <span class="bms-team-card__role">Doctoral Researcher</span>
                 <span class="bms-team-links">
                     <a href="https://comartsci.msu.edu/our-people/alex-lover" target="_blank" rel="noopener">profile</a>
                     <a href="https://scholar.google.com/citations?user=HWTkx_IAAAAJ" target="_blank" rel="noopener">scholar</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://sites.google.com/msu.edu/hanjieliu" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/liu.jpg" alt="Hanjie Liu">
-                <h5>Hanjie Liu</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://sites.google.com/msu.edu/hanjieliu" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/liu.jpg" alt="Hanjie Liu">
+                    <h5>Hanjie Liu</h5>
+                </a>
                 <small>Michigan State University</small>
                 <span class="bms-team-card__role">Doctoral Researcher</span>
                 <span class="bms-team-links">
                     <a href="https://sites.google.com/msu.edu/hanjieliu" target="_blank" rel="noopener">site</a>
                     <a href="https://scholar.google.com/citations?user=l-gzhnkAAAAJ" target="_blank" rel="noopener">scholar</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://comartsci.msu.edu/our-people/yiming-skylar-lei" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/lei.jpg" alt="Yiming Skylar Lei">
-                <h5>Yiming Skylar Lei</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/yiming-skylar-lei" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/lei.jpg" alt="Yiming Skylar Lei">
+                    <h5>Yiming Skylar Lei</h5>
+                </a>
                 <small>Michigan State University &middot; ComArtSci</small>
                 <span class="bms-team-card__role">Doctoral Researcher</span>
                 <span class="bms-team-links">
                     <a href="https://comartsci.msu.edu/our-people/yiming-skylar-lei" target="_blank" rel="noopener">profile</a>
                     <a href="https://scholar.google.com/citations?user=eX1_2NMAAAAJ" target="_blank" rel="noopener">scholar</a>
                 </span>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://scholar.google.com/citations?user=n2OJ_jIAAAAJ" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/collaborators/lin.jpg" alt="Qiyang Minnie Lin">
-                <h5>Qiyang &ldquo;Minnie&rdquo; Lin</h5>
+            </article>
+            <article class="bms-team-card bms-fade-in">
+                <a class="bms-team-card__link" href="https://scholar.google.com/citations?user=n2OJ_jIAAAAJ" target="_blank" rel="noopener">
+                    <img class="bms-team-card__photo" src="images/collaborators/lin.jpg" alt="Qiyang Minnie Lin">
+                    <h5>Qiyang &ldquo;Minnie&rdquo; Lin</h5>
+                </a>
                 <small>Michigan State University</small>
                 <span class="bms-team-card__role">Doctoral Researcher</span>
                 <span class="bms-team-links">
                     <a href="https://scholar.google.com/citations?user=n2OJ_jIAAAAJ" target="_blank" rel="noopener">scholar</a>
                 </span>
-            </a>
+            </article>
         </div>
     </div>
 </section>
