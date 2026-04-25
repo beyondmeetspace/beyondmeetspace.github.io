@@ -1,99 +1,213 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BMS - Home</title>
-  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <meta name="description"
-    content="Beyond Meet Space Research Collective - We are a collection of researchers from various universities that are conducting research into the future role of VR in both work and play. Please reach out to any of the principal investigators with your queries.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beyond Meet Space — Research Collective</title>
+
+    <meta name="description" content="Beyond Meet Space is a research collective studying the future of work and play beyond the limitations of physical space. NSF-supported virtual-meeting research, a publicly accessible VR platform, and the Meaningful XR conference.">
+    <meta property="og:title" content="Beyond Meet Space">
+    <meta property="og:description" content="A research collective interested in the future of work and play beyond the limitations of physical space.">
+    <meta property="og:url" content="https://beyondmeet.space/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://beyondmeet.space/images/aerial/aerial_01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beyond Meet Space">
+    <meta name="twitter:description" content="A research collective interested in the future of work and play beyond the limitations of physical space.">
+    <meta name="twitter:image" content="https://beyondmeet.space/images/aerial/aerial_01.png">
+
+    <link rel="shortcut icon" type="image/png" href="favico.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link href="css/bms-modern.css" rel="stylesheet">
 </head>
-
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto nav-fill w-100">
-              <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-              <li class="nav-item"><a class="nav-link" href="info.html">INFO</a></li>
-              <li class="nav-item"><a class="nav-link" href="team.html">TEAM</a></li>
-              <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
-              <li class="nav-item"><a class="nav-link" href="meaningfulxr.html">MEANINGFUL XR</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
+<nav class="bms-nav" aria-label="Primary">
+    <div class="bms-nav__inner">
+        <a href="index.html" class="bms-nav__brand">
+            <img src="images/bms_logo_tiny.png" alt="">
+            Beyond Meet Space
+        </a>
+        <button class="bms-nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <ul class="bms-nav__links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="info.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="platform.html">Platform</a></li>
+            <li><a href="meaningfulxr.html">Meaningful XR</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
     </div>
-    <div class="container">
-      <main class="row align-items-center justify-content-center" style="min-height: 80vh;">
-        <div class="col-md-4 text-center">
-          <h1>BEYOND MEET SPACE</h1>
-          <p>A research collective interested in the future of work and play beyond the limitations of physical space.</p>
-        </div>
-        <div class="col-md-4 text-center pt-3 model">
-          <model-viewer src="thankful_mod.glb" poster="images/poster.png" shadow-intensity="1" autoplay
-            environment-image="legacy" exposure=".5">
-            <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
+</nav>
+
+<header class="bms-hero">
+    <div class="bms-container">
+        <div class="bms-hero__grid">
+            <div class="bms-fade-in">
+                <span class="eyebrow">Research Collective &middot; Est. 2019</span>
+                <h1 class="bms-hero__title">Beyond Meet Space</h1>
+                <p class="bms-hero__lede">A research collective studying the future of work and play beyond the limitations of physical space. We investigate why virtual meetings tire us, design platforms that don't, and build the research tools to prove the difference.</p>
+                <div class="bms-hero__ctas">
+                    <a href="platform.html" class="btn-bms btn-bms--primary btn-bms--lg">Explore the Platform &rarr;</a>
+                    <a href="research.html" class="btn-bms btn-bms--ghost btn-bms--lg">Read the Research</a>
+                </div>
             </div>
-          </model-viewer>
+            <div class="bms-hero__model bms-fade-in">
+                <model-viewer src="thankful_mod.glb" poster="images/poster.png" shadow-intensity="1" autoplay
+                    environment-image="legacy" exposure=".5" camera-controls touch-action="pan-y"
+                    ar-status="not-presenting">
+                    <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+                </model-viewer>
+            </div>
         </div>
-        <div class="col-md-4 px-5">
-          <p>
-            Welcome to the current homepage for the researchers involved in the NSF grant
-            <a href="https://beta.nsf.gov/funding/opportunities/future-work-human-technology-frontier-core-research-fw-htf"
-              target="_blank">
-              FW-HTF-R
-            </a>:
-            <a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=%22FW-HTF-R%3A+Collaborative+Research%3A+Virtual+Meeting+Support+for+Enhanced+Well-Being+and+Equity+for+Game+Developers%22"
-              target="_blank">
-              Collaborative Research: Virtual Meeting Support for Enhanced Well-Being and Equity for Game Developers
-            </a>.
-            This page will be occasionally updated to express key stages of progress and to present public-facing
-            information as outlined in the original project proposed to NSF.
-          </p>
-        </div>
-      </main>
     </div>
-    <div class="container"></div>
-      <footer class="row">
-        <div class="col-md-12">
-          <p class="align-right mt-3">NSF Award Nos. <a
-              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128746&HistoricalAwards=false"
-              target="_blank">2128746</a>, <a
-              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128803&HistoricalAwards=false"
-              target="_blank">2128803</a>, <a
-              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128813&HistoricalAwards=false"
-              target="_blank">2128813</a>, <a
-              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128991&HistoricalAwards=false"
-              target="_blank">2128991</a>
-            <a href="https://www.nsf.gov/" target="_blank">
-              <img src="images/nsf.png" alt="nsf logo" height="25px" class="nsf">
-            </a> &copy; 2024
-          </p>
-        </div>
-      </footer>
-    </div>
-  </div>
+</header>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
-  <!-- <model-viewer> HTML element -->
-  <script src="script.js"></script>
-  <!-- Loads <model-viewer> for browsers -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<section class="bms-section bms-section--muted">
+    <div class="bms-container">
+        <div class="bms-fade-in" style="max-width: 60ch;">
+            <span class="eyebrow">What we've shown</span>
+            <h2>Three findings that frame the work.</h2>
+            <p class="lead">Our contribution across a five-study research program on virtual meetings, well-being, and equity.</p>
+        </div>
+        <div class="bms-grid bms-grid--3 mt-8">
+            <article class="bms-card bms-card--hover bms-fade-in">
+                <span class="bms-card__eyebrow">Finding 01</span>
+                <h3 class="bms-card__title">Feeling trapped drives fatigue</h3>
+                <p class="bms-card__body">A meta-analysis of 38 studies identified "feeling trapped" as the strongest predictor of videoconferencing fatigue (<em>r</em> = .33), outpacing audio issues, camera problems, and meeting length.</p>
+                <p><a href="https://doi.org/10.1016/j.chbr.2024.100571" target="_blank" rel="noopener" class="btn-bms btn-bms--link">Beyea et al., 2025 &rarr;</a></p>
+            </article>
+            <article class="bms-card bms-card--hover bms-fade-in">
+                <span class="bms-card__eyebrow">Finding 02</span>
+                <h3 class="bms-card__title">Avatar customization is an equity tool</h3>
+                <p class="bms-card__body">Women and people of color place significantly higher value on avatar customization in virtual workplaces, a measurable equity signal that reframes customization as infrastructure, not aesthetic.</p>
+                <p><a href="https://doi.org/10.1016/j.chb.2024.108309" target="_blank" rel="noopener" class="btn-bms btn-bms--link">Lim et al., 2024 &rarr;</a></p>
+            </article>
+            <article class="bms-card bms-card--hover bms-fade-in">
+                <span class="bms-card__eyebrow">Finding 03</span>
+                <h3 class="bms-card__title">Play reduces fatigue</h3>
+                <p class="bms-card__body">Playful design elements (gesture tools, stylized environments, ambient virtual objects) reduce fatigue and increase engagement, shifting virtual meetings from endurance to participation.</p>
+                <p><a href="research.html" class="btn-bms btn-bms--link">See DiGRA 2024 papers &rarr;</a></p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section">
+    <div class="bms-container">
+        <div class="bms-fade-in" style="max-width: 60ch;">
+            <span class="eyebrow">Where to go next</span>
+            <h2>The work, in three directions.</h2>
+        </div>
+        <div class="bms-grid bms-grid--3 mt-8">
+            <article class="bms-card bms-card--hover bms-fade-in">
+                <span class="bms-card__eyebrow">Built</span>
+                <h3 class="bms-card__title">The Platform</h3>
+                <p class="bms-card__body">A publicly accessible virtual meeting platform in VRChat, implementing five research-grounded design principles. Open to researchers, educators, and collaborators.</p>
+                <p><a href="platform.html" class="btn-bms btn-bms--link">Step inside &rarr;</a></p>
+            </article>
+            <article class="bms-card bms-card--hover bms-fade-in">
+                <span class="bms-card__eyebrow">Ongoing</span>
+                <h3 class="bms-card__title">Meaningful XR 2026</h3>
+                <p class="bms-card__body"><strong>May 30&ndash;31, 2026</strong> &middot; University of Oregon Portland Campus, hybrid via VRChat. Our annual conference for scholars, practitioners, and students.</p>
+                <p><a href="meaningfulxr.html" class="btn-bms btn-bms--link">Conference info &rarr;</a></p>
+            </article>
+            <article class="bms-card bms-card--hover bms-fade-in">
+                <span class="bms-card__eyebrow">Editorial</span>
+                <h3 class="bms-card__title">Special Issues</h3>
+                <p class="bms-card__body">Guest-edited volumes in <em>Journal of Media Psychology</em> (published) and <em>Frontiers in Virtual Reality</em> (wrapping up).</p>
+                <p><a href="special-issues.html" class="btn-bms btn-bms--link">Read the issues &rarr;</a></p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section bms-section--muted">
+    <div class="bms-container">
+        <div class="bms-grid bms-grid--2" style="align-items: center;">
+            <div class="bms-fade-in">
+                <span class="eyebrow">What's next</span>
+                <h2>We're between grants, and open.</h2>
+                <p>The NSF FW-HTF-R grant that powered most of our work (2021&ndash;2025) is complete. The research continues. The questions that drew us together in 2019 (about equity, presence, play, and human well-being in mediated work) have only grown more urgent as AI agents, spatial computing, and hybrid work continue to reshape the landscape.</p>
+                <p>If you're a scholar, platform designer, or funding organization thinking about the next generation of virtual meeting research, we'd like to hear from you.</p>
+                <p><a href="info.html" class="btn-bms btn-bms--link">Read more about the collective &rarr;</a></p>
+            </div>
+            <div class="bms-fade-in">
+                <div class="bms-grid bms-grid--2">
+                    <div class="bms-stat">
+                        <div class="bms-stat__value">15+</div>
+                        <p class="bms-stat__label">peer-reviewed publications</p>
+                    </div>
+                    <div class="bms-stat">
+                        <div class="bms-stat__value">6</div>
+                        <p class="bms-stat__label">principal investigators across 6 institutions</p>
+                    </div>
+                    <div class="bms-stat">
+                        <div class="bms-stat__value">2</div>
+                        <p class="bms-stat__label">guest-edited journal special issues</p>
+                    </div>
+                    <div class="bms-stat">
+                        <div class="bms-stat__value">3</div>
+                        <p class="bms-stat__label">annual Meaningful XR conferences to date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bms-footer">
+    <div class="bms-container">
+        <div class="bms-footer__top">
+            <div class="bms-footer__brand">
+                <h3>Beyond Meet Space</h3>
+                <p>A research collective interested in the future of work and play beyond the limitations of physical space.</p>
+            </div>
+            <div>
+                <h6>Explore</h6>
+                <ul>
+                    <li><a href="info.html">About the collective</a></li>
+                    <li><a href="research.html">Research &amp; publications</a></li>
+                    <li><a href="platform.html">The BMS platform</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6>Outputs</h6>
+                <ul>
+                    <li><a href="special-issues.html">Special issues</a></li>
+                    <li><a href="meaningfulxr.html">Meaningful XR</a></li>
+                    <li><a href="media-kit.html">Media kit</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6>Connect</h6>
+                <ul>
+                    <li><a href="https://github.com/beyondmeetspace" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://vrchat.com/home/launch?worldId=wrld_6c18bfa4-c47f-4bb3-91da-9d2493583d8c" target="_blank" rel="noopener">Launch in VRChat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bms-footer__bottom">
+            <div class="bms-footer__awards">
+                <span>NSF Award Nos.</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128746" target="_blank" rel="noopener">2128746</a>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128803" target="_blank" rel="noopener">2128803</a>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128813" target="_blank" rel="noopener">2128813</a>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128991" target="_blank" rel="noopener">2128991</a>
+                <a href="https://www.nsf.gov/" target="_blank" rel="noopener" aria-label="NSF"><img src="images/nsf.png" alt="NSF"></a>
+            </div>
+            <div>&copy; 2026 Beyond Meet Space</div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/bms-modern.js"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </body>
-
 </html>
