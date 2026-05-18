@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BMS Site Redesign — Vote on a direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#0E0E12;color:#F0ECE8;font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:980px;margin:0 auto;padding:64px 32px}
+.kicker{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#A8A39B;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px}
+h1{font-size:44px;line-height:1.1;letter-spacing:-0.02em;font-weight:600;margin:0 0 24px;max-width:22ch}
+.lede{font-size:20px;color:#C8C2BA;max-width:60ch;margin:0 0 40px;line-height:1.5}
+.context{font-size:15px;color:#A8A39B;border-left:3px solid #444;padding:12px 0 12px 20px;margin:0 0 56px;max-width:60ch;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.card{background:#1A1A22;border:1px solid #2A2A34;border-radius:12px;padding:28px;text-decoration:none;color:#F0ECE8;display:flex;flex-direction:column;transition:transform .15s ease, border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:#5A5A6A}
+.card .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:#0A0A0A;color:#F0ECE8;padding:4px 8px;border-radius:3px;margin-bottom:24px;align-self:flex-start}
+.card h3{font-size:22px;line-height:1.2;letter-spacing:-0.01em;font-weight:600;margin:0 0 12px}
+.card p{font-size:14px;color:#A8A39B;margin:0 0 24px;line-height:1.5}
+.swatches{display:flex;gap:6px;margin-bottom:20px}
+.sw{width:36px;height:36px;border-radius:6px;border:1px solid rgba(255,255,255,0.08)}
+.card .open{font-family:'JetBrains Mono',monospace;font-size:12px;color:#F0ECE8;letter-spacing:0.04em;border-bottom:1px solid #5A5A6A;padding-bottom:2px;align-self:flex-start;margin-top:auto}
+.howto{background:#15151C;border:1px solid #2A2A34;border-radius:12px;padding:28px;margin-bottom:32px}
+.howto h2{font-size:18px;margin:0 0 16px;font-weight:600}
+.howto ol{margin:0;padding-left:20px;color:#C8C2BA}
+.howto li{margin-bottom:8px;font-size:15px}
+.howto code{background:#0A0A0A;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#F0ECE8}
+.foot{font-family:'JetBrains Mono',monospace;font-size:12px;color:#71717A;letter-spacing:0.04em;border-top:1px solid #2A2A34;padding-top:24px;margin-top:48px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot a{color:#A8A39B;text-decoration:none;border-bottom:1px solid #444}
+.foot a:hover{color:#F0ECE8}
+@media (max-width:720px){.grid{grid-template-columns:1fr}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="kicker">Internal · BMS team only · Not linked from main site</div>
+  <h1>Three directions for the BMS site redesign.</h1>
+  <p class="lede">We're refreshing beyondmeet.space to read clearly as a research collective chasing multi-institution grants — and to look distinct from other lab/group sites in our orbit. Below are three palette + typography directions on the same content. Pick a favorite, or tell us what's missing.</p>
+
+  <p class="context">Constraints: must signal "serious research collective" to NSF program officers and partner PIs; must visibly differentiate from a typical AI-startup aesthetic; must not look like a single-PI lab page. All three options share the same layout, content, and structure — only color and typography vary.</p>
+
+  <div class="grid">
+    <a class="card" href="a.html">
+      <div class="tag">Option A</div>
+      <div class="swatches">
+        <div class="sw" style="background:#F5F1E8"></div>
+        <div class="sw" style="background:#7A1F2B"></div>
+        <div class="sw" style="background:#1A1A1A"></div>
+      </div>
+      <h3>Warm cream + oxblood</h3>
+      <p>Fraunces serif on warm paper. Reads <em>Quanta Magazine</em> / longform-journalism. The institutional move.</p>
+      <span class="open">Open A →</span>
+    </a>
+    <a class="card" href="b.html">
+      <div class="tag">Option B</div>
+      <div class="swatches">
+        <div class="sw" style="background:#F1F1EE"></div>
+        <div class="sw" style="background:#C6F432"></div>
+        <div class="sw" style="background:#1F2937"></div>
+      </div>
+      <h3>Cool paper + chartreuse</h3>
+      <p>GT Sectra Display on cool paper with electric chartreuse accent. Reads <em>Pentagram</em> / MIT Media Lab annual report. The design-press move.</p>
+      <span class="open">Open B →</span>
+    </a>
+    <a class="card" href="c.html">
+      <div class="tag">Option C</div>
+      <div class="swatches">
+        <div class="sw" style="background:#FAFAF7"></div>
+        <div class="sw" style="background:#1E3A2B"></div>
+        <div class="sw" style="background:#C8553D"></div>
+      </div>
+      <h3>Off-white + forest + terracotta</h3>
+      <p>Source Serif on off-white with forest + terracotta. Reads <em>The Atlantic</em> / serious-press online. The generalist-magazine move.</p>
+      <span class="open">Open C →</span>
+    </a>
+  </div>
+
+  <div class="howto">
+    <h2>How to give feedback</h2>
+    <ol>
+      <li>Open each option. There's a switcher in the top-right of every page to flip between them.</li>
+      <li>Reply on the Discord thread (or wherever Alex shared this) with: <code>A</code>, <code>B</code>, or <code>C</code> — plus a sentence on what worked or didn't.</li>
+      <li>If none of these land, say so. Hybrids and "this part of X with that part of Y" are welcome.</li>
+    </ol>
+  </div>
+
+  <div class="foot">
+    <span>BMS site redesign · preview only · not indexed</span>
+    <a href="https://beyondmeet.space/">← Back to current site</a>
+  </div>
+
+</div>
+</body>
+</html>

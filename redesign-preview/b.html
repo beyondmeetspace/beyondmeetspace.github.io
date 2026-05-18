@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BMS Redesign — Option B · Cool paper + chartreuse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GT+Sectra+Display&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#F1F1EE;
+  --paper:#E8E8E2;
+  --ink:#1F2937;
+  --ink-2:#52525B;
+  --rule:#C9C9C0;
+  --accent:#C6F432;     /* electric chartreuse */
+  --accent-ink:#0F1414;
+  --serif:'GT Sectra Display','Times New Roman',serif;
+  --sans:'Inter', system-ui, sans-serif;
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--canvas);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 32px}
+
+nav{padding:24px 0;font-family:var(--mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid var(--ink)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+nav .brand{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:-0.01em;text-transform:none}
+nav .brand .dot{display:inline-block;width:10px;height:10px;background:var(--accent);margin-right:10px;vertical-align:middle}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{background:var(--accent);color:var(--accent-ink)}
+
+/* Hero — asymmetric */
+.hero{padding:80px 0 64px;border-bottom:1px solid var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:32px}
+.eyebrow .dot{display:inline-block;width:8px;height:8px;background:var(--accent);margin-right:8px;vertical-align:middle}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:104px;line-height:0.92;letter-spacing:-0.035em;margin:0 0 24px}
+.hero h1 .mark{background:var(--accent);padding:0 8px;display:inline-block}
+.hero .lede{font-family:var(--sans);font-size:21px;line-height:1.45;color:var(--ink);max-width:44ch;font-weight:400;margin:0}
+.hero .meta-block{border-top:2px solid var(--ink);padding-top:24px}
+.hero .meta-row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--ink-2);padding:8px 0;border-bottom:1px solid var(--rule);letter-spacing:0.04em}
+.hero .meta-row strong{color:var(--ink);font-weight:600}
+
+/* Findings */
+.findings{padding:96px 0;border-bottom:1px solid var(--ink)}
+.findings-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:72px;align-items:end}
+.findings h2{font-family:var(--serif);font-weight:400;font-size:64px;line-height:1;letter-spacing:-0.025em;margin:0}
+.findings-head p{font-family:var(--sans);font-size:17px;color:var(--ink-2);margin:0;max-width:46ch;line-height:1.55}
+.findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink);background:var(--ink)}
+.finding{background:var(--canvas);padding:40px}
+.finding .num{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:32px;display:flex;justify-content:space-between}
+.finding .num .tag{background:var(--accent);color:var(--accent-ink);padding:2px 8px}
+.finding h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;letter-spacing:-0.015em;margin:0 0 24px}
+.finding .stat{font-family:var(--serif);font-size:88px;font-weight:400;color:var(--ink);line-height:0.9;margin:16px 0;letter-spacing:-0.03em}
+.finding .stat sub{font-family:var(--mono);font-size:13px;color:var(--ink-2);font-weight:400;vertical-align:baseline;margin-left:10px;letter-spacing:0.06em}
+.finding p{font-size:14px;line-height:1.55;color:var(--ink-2);margin:0 0 20px}
+.finding .cite{font-family:var(--mono);font-size:11px;color:var(--ink);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;padding-bottom:2px;border-bottom:2px solid var(--accent)}
+
+/* Partners */
+.partners{padding:80px 0;border-bottom:1px solid var(--ink);background:var(--paper)}
+.partners h3{font-family:var(--serif);font-weight:400;font-size:44px;letter-spacing:-0.02em;margin:0 0 8px;max-width:24ch;line-height:1.05}
+.partners .sub{font-family:var(--mono);font-size:12px;color:var(--ink-2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:48px}
+.partner-row{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.partner{font-family:var(--mono);font-size:12px;color:var(--ink);text-transform:uppercase;letter-spacing:0.06em;padding:24px 16px;border-right:1px solid var(--rule)}
+.partner:last-child{border-right:none;background:var(--accent);color:var(--accent-ink);font-weight:600}
+
+/* Pubs */
+.pubs{padding:96px 0;border-bottom:1px solid var(--ink)}
+.pubs h2{font-family:var(--serif);font-weight:400;font-size:64px;letter-spacing:-0.025em;margin:0 0 56px;line-height:1}
+.pub{display:grid;grid-template-columns:90px 1fr 200px;gap:32px;padding:32px 0;border-top:1px solid var(--ink);align-items:start}
+.pub:last-child{border-bottom:1px solid var(--ink)}
+.pub .year{font-family:var(--mono);font-size:14px;color:var(--ink);letter-spacing:0.04em;font-weight:500}
+.pub .title{font-family:var(--serif);font-size:24px;line-height:1.2;color:var(--ink);font-weight:400;letter-spacing:-0.01em}
+.pub .title em{font-style:normal;color:var(--ink-2);font-weight:400;display:block;margin-top:8px;font-size:13px;font-family:var(--sans);letter-spacing:0}
+.pub .venue{font-family:var(--mono);font-size:11px;color:var(--ink-2);text-align:right;letter-spacing:0.06em;text-transform:uppercase;padding-top:8px}
+
+/* Footer */
+footer{padding:96px 0 48px;background:var(--ink);color:var(--canvas)}
+footer .container{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px}
+footer h4{font-family:var(--serif);font-size:48px;font-weight:400;margin:0 0 24px;letter-spacing:-0.025em;line-height:1.05;color:var(--canvas)}
+footer h4 .mark{background:var(--accent);color:var(--accent-ink);padding:0 8px}
+footer p{color:#A8A8A2;max-width:42ch;font-size:15px}
+footer ul{list-style:none;padding:0;margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase}
+footer li{margin-bottom:12px}
+footer a{color:var(--canvas);text-decoration:none;padding-bottom:2px;border-bottom:1px solid #444}
+footer a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.fcap{font-family:var(--mono);font-size:10px;color:#7A7A72;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px}
+</style>
+</head>
+<body>
+
+<div class="mockup-switcher" style="position:fixed;top:16px;right:16px;z-index:9999;background:#0A0A0A;color:#FAFAF7;font-family:'JetBrains Mono',monospace;font-size:11px;padding:8px 10px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.25);display:flex;gap:4px;align-items:center;letter-spacing:0.04em">
+  <a href="./" style="color:#FAFAF7;text-decoration:none;opacity:0.5;margin-right:6px;text-transform:uppercase">&larr; Vote</a>
+  <a href="a.html" style="color:#FAFAF7;text-decoration:none;padding:4px 8px;border-radius:3px;opacity:0.7">A</a>
+  <a href="b.html" style="color:#0A0A0A;background:#FAFAF7;text-decoration:none;padding:4px 8px;border-radius:3px;font-weight:600">B</a>
+  <a href="c.html" style="color:#FAFAF7;text-decoration:none;padding:4px 8px;border-radius:3px;opacity:0.7">C</a>
+</div>
+
+<nav>
+  <div class="container">
+    <div class="brand"><span class="dot"></span>Beyond Meet Space</div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Platform</a></li>
+      <li><a href="#">Meaningful XR</a></li>
+      <li><a href="#">Team</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>Research Collective &nbsp;·&nbsp; Est. 2019</div>
+        <h1>The future of <span class="mark">socialization</span>, studied at full scale.</h1>
+        <p class="lede">A multi-institution collective investigating how people meet, work, and play across virtual environments — and building the platforms and methods that make rigorous study of those questions possible.</p>
+      </div>
+      <div class="meta-block">
+        <div class="meta-row"><strong>PI Network</strong><span>6 Institutions</span></div>
+        <div class="meta-row"><strong>Active Grants</strong><span>NSF FW-HTF #2128803</span></div>
+        <div class="meta-row"><strong>Publications</strong><span>15+ Peer-Reviewed</span></div>
+        <div class="meta-row"><strong>Platform</strong><span>VRChat · 64-User Capacity</span></div>
+        <div class="meta-row"><strong>Status</strong><span>Seeking FY26–28 Partners</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="findings">
+  <div class="container">
+    <div class="findings-head">
+      <h2>Three findings that frame the work.</h2>
+      <p>Our contribution across a five-study research program on virtual meetings, well-being, and equity in synchronous mediated interaction.</p>
+    </div>
+    <div class="findings-grid">
+      <article class="finding">
+        <div class="num"><span>Finding 01</span><span class="tag">Meta-analysis</span></div>
+        <h3>Feeling trapped drives fatigue.</h3>
+        <div class="stat">.33<sub>r</sub></div>
+        <p>A meta-analysis of 38 studies identified "feeling trapped" as the strongest predictor of videoconferencing fatigue, outpacing audio issues, camera problems, and meeting length.</p>
+        <a class="cite" href="#">Beyea et al., 2025 →</a>
+      </article>
+      <article class="finding">
+        <div class="num"><span>Finding 02</span><span class="tag">Survey · N=812</span></div>
+        <h3>Avatar customization is an equity tool.</h3>
+        <div class="stat">+18<sub>%Δ</sub></div>
+        <p>Women and people of color place significantly higher value on avatar customization in virtual workplaces — a measurable equity signal that reframes customization as infrastructure.</p>
+        <a class="cite" href="#">Lim et al., 2024 →</a>
+      </article>
+      <article class="finding">
+        <div class="num"><span>Finding 03</span><span class="tag">In-world study</span></div>
+        <h3>Play reduces fatigue.</h3>
+        <div class="stat">64<sub>cap</sub></div>
+        <p>Playful design — gesture tools, stylized environments, ambient virtual objects — reduces fatigue and increases engagement, shifting virtual meetings from endurance to participation.</p>
+        <a class="cite" href="#">DiGRA 2024 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <h3>A six-institution collective.</h3>
+    <div class="sub">Open to collaborators · FY26–FY28</div>
+    <div class="partner-row">
+      <div class="partner">SIUE</div>
+      <div class="partner">Michigan State</div>
+      <div class="partner">UC Davis</div>
+      <div class="partner">U Oregon</div>
+      <div class="partner">Indiana U</div>
+      <div class="partner">+ Industry</div>
+    </div>
+  </div>
+</section>
+
+<section class="pubs">
+  <div class="container">
+    <h2>Recent publications.</h2>
+    <div class="pub">
+      <div class="year">2025</div>
+      <div class="title">Predictors of videoconferencing fatigue: A meta-analysis<em>Beyea, Leith, Williams, et al.</em></div>
+      <div class="venue">Computers in Human Behavior Reports</div>
+    </div>
+    <div class="pub">
+      <div class="year">2024</div>
+      <div class="title">Avatar customization as an equity intervention in virtual workplaces<em>Lim, Leith, et al.</em></div>
+      <div class="venue">Computers in Human Behavior</div>
+    </div>
+    <div class="pub">
+      <div class="year">2024</div>
+      <div class="title">Playful design and the reframing of synchronous mediated meetings<em>Leith, Jang, Saqib, et al.</em></div>
+      <div class="venue">DiGRA Proceedings</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="fcap">Beyond Meet Space — Research Collective</div>
+      <h4>The future of <span class="mark">socialization</span>, studied at full scale.</h4>
+      <p>A multi-institution collective. Reach out if your institution is building a proposal in synchronous mediated interaction, social VR, or virtual-meeting research and you're looking for collaborators.</p>
+    </div>
+    <div>
+      <div class="fcap">Site</div>
+      <ul>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Platform</a></li>
+        <li><a href="#">Meaningful XR</a></li>
+        <li><a href="#">Team</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcap">Contact</div>
+      <ul>
+        <li><a href="#">collaborate@beyondmeet.space</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Bluesky</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
