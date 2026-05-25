@@ -1,37 +1,39 @@
 /* =========================================================
    Beyond Meet Space — modern design system
    Built: 2026-04-24
+   Repaletted: 2026-05-25 (Option C — off-white + forest + terracotta,
+   Atlantic vibe; vote source: bms-redesign-mockups/option-c-*.html).
    Overlays on Bootstrap 4.4.1 (grid only). Takes precedence via specificity.
    Works alongside styles.css; intended to replace it for modern pages.
    ========================================================= */
 
 /* --- 1. Design tokens ---------------------------------- */
 :root {
-    /* Colors: light */
-    --c-bg:            #ffffff;
-    --c-bg-soft:       #f7f8fb;
-    --c-bg-muted:      #eef1f6;
-    --c-surface:       #ffffff;
-    --c-surface-2:     #f1f5f9;
-    --c-border:        #e2e8f0;
-    --c-border-strong: #cbd5e1;
+    /* Colors: light (Option C — Atlantic-vibe editorial-newsprint palette) */
+    --c-bg:            #FAFAF7;   /* canvas (off-white) */
+    --c-bg-soft:       #F2F1EB;   /* paper (warm muted) */
+    --c-bg-muted:      #F2F1EB;   /* paper */
+    --c-surface:       #FAFAF7;   /* canvas */
+    --c-surface-2:     #F2F1EB;   /* paper */
+    --c-border:        #D6D5CE;   /* rule */
+    --c-border-strong: #737373;   /* ink-3 */
 
-    --c-text:          #0f172a;
-    --c-text-muted:    #475569;
-    --c-text-subtle:   #64748b;
+    --c-text:          #0A0A0A;   /* ink */
+    --c-text-muted:    #3F3F3F;   /* ink-2 */
+    --c-text-subtle:   #737373;   /* ink-3 */
 
-    --c-primary:       #4f46e5;   /* indigo-600 */
-    --c-primary-hover: #3730a3;   /* indigo-800 */
-    --c-primary-soft:  #eef2ff;   /* indigo-50 */
-    --c-accent:        #06b6d4;   /* cyan-500 */
-    --c-accent-hover:  #0891b2;   /* cyan-600 */
+    --c-primary:       #1E3A2B;   /* forest */
+    --c-primary-hover: #2D5440;   /* forest, lifted */
+    --c-primary-soft:  #E8EFEA;   /* forest tint */
+    --c-accent:        #C8553D;   /* terracotta */
+    --c-accent-hover:  #A04330;   /* terracotta, deepened */
 
-    --c-success:       #059669;
-    --c-warning:       #d97706;
+    --c-success:       #1E3A2B;   /* forest, doubles as success */
+    --c-warning:       #C8553D;   /* terracotta, doubles as warning */
 
-    /* Type scale */
+    /* Type scale (Option C — serif display, sans body, mono detail) */
     --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
     --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
 
     --fs-xs:  0.8125rem;  /* 13px */
@@ -89,26 +91,26 @@
     --transition-slow: 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Dark mode */
+/* Dark mode (Option C — forest-night variant of the editorial-newsprint palette) */
 @media (prefers-color-scheme: dark) {
     :root {
-        --c-bg:            #0a0e1a;
-        --c-bg-soft:       #0f1424;
-        --c-bg-muted:      #161b2e;
-        --c-surface:       #151a2e;
-        --c-surface-2:     #1c2340;
-        --c-border:        #2a3350;
-        --c-border-strong: #3b4568;
+        --c-bg:            #14201A;   /* forest, near-black */
+        --c-bg-soft:       #1A2820;   /* forest, slightly lifted */
+        --c-bg-muted:      #1F2F26;   /* forest, muted surface */
+        --c-surface:       #1A2820;
+        --c-surface-2:     #1F2F26;
+        --c-border:        #2D4338;
+        --c-border-strong: #3F5849;
 
-        --c-text:          #f1f5f9;
-        --c-text-muted:    #cbd5e1;
-        --c-text-subtle:   #94a3b8;
+        --c-text:          #F4F0E8;   /* warm paper (footer base color from mockup) */
+        --c-text-muted:    #C9C2B2;
+        --c-text-subtle:   #7A8A7E;
 
-        --c-primary:       #818cf8;
-        --c-primary-hover: #a5b4fc;
-        --c-primary-soft:  #1e1b4b;
-        --c-accent:        #22d3ee;
-        --c-accent-hover:  #67e8f9;
+        --c-primary:       #6FA889;   /* forest, lightened for dark-canvas contrast */
+        --c-primary-hover: #8EC4A6;
+        --c-primary-soft:  #1F3327;
+        --c-accent:        #E8755A;   /* terracotta, lifted */
+        --c-accent-hover:  #F2967F;
 
         --shadow-sm:  0 1px 2px 0 rgba(0, 0, 0, 0.3);
         --shadow:     0 4px 12px -2px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
@@ -146,15 +148,25 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 var(--s-4);
 }
 
-h1 { font-size: clamp(var(--fs-4xl), 5vw, var(--fs-6xl)); letter-spacing: -0.03em; font-weight: var(--fw-bold); }
-h2 { font-size: clamp(var(--fs-2xl), 3.5vw, var(--fs-4xl)); letter-spacing: -0.025em; }
-h3 { font-size: clamp(var(--fs-xl), 2.5vw, var(--fs-2xl)); }
+h1 { font-size: clamp(var(--fs-4xl), 5vw, var(--fs-6xl)); letter-spacing: -0.025em; font-weight: var(--fw-medium); line-height: 1.02; }
+h2 { font-size: clamp(var(--fs-2xl), 3.5vw, var(--fs-4xl)); letter-spacing: -0.02em; font-weight: var(--fw-medium); }
+h3 { font-size: clamp(var(--fs-xl), 2.5vw, var(--fs-2xl)); font-weight: var(--fw-semibold); }
 h4 { font-size: var(--fs-lg); }
 h5 { font-size: var(--fs-base); font-weight: var(--fw-semibold); }
 h6 { font-size: var(--fs-sm); font-weight: var(--fw-semibold); text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-text-subtle); }
 
+/* Editorial-style italic-in-headline accent (Atlantic / NYT Magazine convention).
+   Apply <em> to one or two words in a headline to push emphasis into forest italic
+   while the surrounding head stays ink + medium-weight. */
+h1 em, h2 em, h3 em {
+    font-style: italic;
+    font-weight: var(--fw-regular);
+    color: var(--c-primary);   /* forest */
+}
+
 p { margin: 0 0 var(--s-4); color: var(--c-text-muted); }
 p.lead { font-size: var(--fs-xl); color: var(--c-text); line-height: var(--lh-snug); }
+p.lead em { font-style: italic; color: var(--c-primary); font-weight: var(--fw-regular); }
 
 a {
     color: var(--c-primary);
@@ -200,17 +212,77 @@ hr {
 
 .eyebrow {
     display: inline-block;
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: var(--fs-xs);
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-medium);
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--c-primary);
+    letter-spacing: 0.08em;
+    color: var(--c-accent);   /* terracotta — mockup kicker convention */
     margin-bottom: var(--s-3);
 }
 
 .stack > * + * { margin-top: var(--s-4); }
 .stack-lg > * + * { margin-top: var(--s-8); }
+
+/* Editorial detail utilities (Option C — Atlantic-vibe).
+   Additive; existing components are unaffected. Apply these to push
+   pages further from generic SaaS-card grids. */
+
+/* Kicker row: magazine-style two-piece header. Terracotta kicker on left,
+   ink-3 flag (issue / date / volume) on right, mono throughout. */
+.bms-kicker-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--s-6);
+    margin-bottom: var(--s-6);
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.bms-kicker-row__kicker { color: var(--c-accent); font-weight: var(--fw-medium); }
+.bms-kicker-row__flag { color: var(--c-text-subtle); font-weight: var(--fw-regular); }
+
+/* Byline: mono caption with a thin top rule. Use after a hero lede,
+   under a section head, or as a section attribution line. */
+.bms-byline {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--c-text-subtle);
+    letter-spacing: 0.04em;
+    border-top: 1px solid var(--c-border);
+    padding-top: var(--s-3);
+    margin-top: var(--s-4);
+}
+
+/* Pull-quote: paper background with a terracotta left-rule.
+   Sized to sit beside a hero or break up a long section. */
+.bms-pull {
+    background: var(--c-bg-soft);
+    border-left: 3px solid var(--c-accent);
+    padding: var(--s-6) var(--s-8);
+}
+.bms-pull__label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--c-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--s-3);
+    font-weight: var(--fw-medium);
+}
+.bms-pull__body {
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    line-height: 1.35;
+    color: var(--c-primary);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* Forest top-rule for grids that should read as editorial tables, not cards. */
+.bms-ruled-top { border-top: 2px solid var(--c-primary); padding-top: var(--s-6); }
 
 /* --- 4. Top navigation -------------------------------- */
 .bms-nav {
@@ -323,8 +395,8 @@ hr {
     position: relative;
     padding: var(--s-20) 0 var(--s-16);
     background:
-        radial-gradient(1200px 600px at 15% -10%, rgba(79, 70, 229, 0.08), transparent 60%),
-        radial-gradient(1000px 500px at 100% 20%, rgba(6, 182, 212, 0.06), transparent 60%),
+        radial-gradient(1200px 600px at 15% -10%, rgba(30, 58, 43, 0.06), transparent 60%),
+        radial-gradient(1000px 500px at 100% 20%, rgba(200, 85, 61, 0.05), transparent 60%),
         var(--c-bg);
     overflow: hidden;
 }
@@ -374,7 +446,7 @@ hr {
 .bms-page-hero {
     padding: var(--s-16) 0 var(--s-10);
     background:
-        radial-gradient(800px 400px at 20% 0%, rgba(79, 70, 229, 0.06), transparent 60%),
+        radial-gradient(800px 400px at 20% 0%, rgba(30, 58, 43, 0.05), transparent 60%),
         var(--c-bg);
     border-bottom: 1px solid var(--c-border);
 }
@@ -536,11 +608,13 @@ hr {
     color: var(--c-primary);
     margin-bottom: var(--s-2);
 }
-.bms-pub__kind--editorial { background: #fef3c7; color: #92400e; }
-.bms-pub__kind--proceedings { background: #ecfeff; color: #0e7490; }
+/* Default pub-kind (journal article) inherits forest-on-tint from .bms-pub__kind above.
+   Editorial and proceedings get terracotta-tint and rule-tint differentiation. */
+.bms-pub__kind--editorial { background: #F4DDD5; color: #A04330; } /* terra-soft + terra-hover */
+.bms-pub__kind--proceedings { background: #ECEAE2; color: #3F3F3F; } /* paper + ink-2 */
 @media (prefers-color-scheme: dark) {
-    .bms-pub__kind--editorial { background: #422006; color: #fbbf24; }
-    .bms-pub__kind--proceedings { background: #083344; color: #67e8f9; }
+    .bms-pub__kind--editorial { background: #3A1E14; color: #E8755A; }
+    .bms-pub__kind--proceedings { background: #1F2F26; color: #C9C2B2; }
 }
 .bms-pub__title {
     font-family: var(--font-display);
@@ -623,9 +697,9 @@ hr {
 .bms-stat__value {
     font-family: var(--font-display);
     font-size: var(--fs-5xl);
-    font-weight: var(--fw-bold);
-    letter-spacing: -0.035em;
-    color: var(--c-primary);
+    font-weight: var(--fw-medium);
+    letter-spacing: -0.02em;
+    color: var(--c-accent);   /* terracotta — mockup convention: stat numerals as accent */
     line-height: 1;
     margin-bottom: var(--s-2);
 }
