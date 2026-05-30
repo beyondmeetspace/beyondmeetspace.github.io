@@ -3,103 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beyond Meet Space — Collaborate (VR screen)</title>
+<title>Beyond Meet Space — Collaborate Poster (VR screen)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <style>
 :root{
-  --canvas:#FAFAF7; --paper:#F2F1EB; --ink:#0A0A0A; --ink2:#3F3F3F; --ink3:#737373;
-  --rule:#D6D5CE; --forest:#1E3A2B; --forest2:#2D4338; --terra:#C8553D; --terra-soft:#F4DDD5;
+  --canvas:#FAFAF7; --ink:#0A0A0A; --forest:#14201A; --forest2:#1E3A2B; --forest3:#2D4338;
+  --paper:#F4F0E8; --mute:#9db3a4; --soft:#cdd6cf; --terra:#C8553D; --terra-soft:#F4DDD5; --amber:#E69F00;
   --serif:'Source Serif 4',Georgia,serif; --sans:'Atkinson Hyperlegible',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
 }
-.reveal{font-family:var(--sans);font-size:42px;color:var(--ink);}
+.reveal{font-family:var(--sans);font-size:38px;}
 .reveal .slides{text-align:left;}
-.reveal .slides section{padding:0 4%;}
-.reveal h1,.reveal h2,.reveal h3{font-family:var(--serif);color:var(--ink);font-weight:500;letter-spacing:-0.025em;line-height:1.02;margin:0 0 .35em;text-transform:none;}
-.reveal h1{font-size:2.2em;font-weight:500;}
-.reveal h2{font-size:1.55em;font-weight:500;}
-.reveal em{font-style:italic;color:var(--forest);font-weight:400;}
-.reveal p{line-height:1.45;color:var(--ink2);}
-.kicker-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.42em;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.2em;border-bottom:1px solid var(--rule);padding-bottom:.5em;}
-.kicker-row .k{color:var(--terra);font-weight:500;}
-.lede{font-family:var(--serif);font-size:.92em;line-height:1.4;color:var(--ink2);max-width:32ch;}
-.num{font-family:var(--mono);font-size:.4em;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:.5em;}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.05em 1.2em;border-top:3px solid var(--forest);padding-top:.6em;}
-.metric{padding:.4em 0;}
-.metric .v{font-family:var(--serif);font-weight:600;font-size:1.9em;color:var(--terra);line-height:1;}
-.metric .l{font-family:var(--mono);font-size:.34em;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);margin-top:.4em;}
-.want{font-family:var(--serif);font-size:1.05em;font-weight:500;color:var(--ink);line-height:1.4;}
-.want .dot{color:var(--terra);margin-right:.4em;}
-.cta{font-family:var(--mono);font-size:.5em;letter-spacing:.04em;color:var(--forest);margin-top:1em;}
-.cta b{color:var(--terra);}
-.reveal section:not(.title)::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--terra),var(--forest) 60%,#E69F00);}
-.reveal .title h1{color:#F4F0E8;}
-.reveal .title em{color:var(--terra-soft);}
-.reveal .title .kicker-row{color:#9db3a4;border-bottom-color:var(--forest2);}
-.reveal .title .kicker-row .k{color:var(--terra-soft);}
-.reveal .title .lede{color:#cdd6cf;}
-.reveal .title .foot{font-family:var(--mono);font-size:.4em;color:#cdd6cf;letter-spacing:.05em;margin-top:1.3em;}
-.reveal .title .foot b{color:var(--terra-soft);}
+/* disableLayout is on: we control sizing, reveal does not scale/center. Poster fills the viewport. */
+.reveal .slides{position:absolute;inset:0;width:100%;height:100%;transform:none!important;left:0;top:0;}
+.reveal .slides > section.poster{position:absolute;inset:0;width:100%;height:100%;padding:0;display:block;}
+.poster{position:relative;display:grid;grid-template-rows:auto auto 1fr auto auto;gap:1.6vh;
+  height:100%;width:100%;padding:64px 88px 52px;overflow:hidden;color:var(--paper);
+  background:linear-gradient(135deg,#11181f 0%,var(--forest2) 55%,var(--forest3) 100%);}
+.glow{position:absolute;border-radius:50%;filter:blur(80px);z-index:0;pointer-events:none;}
+.glow.g1{width:820px;height:820px;background:radial-gradient(circle,rgba(200,85,61,.22),transparent 65%);top:-220px;right:-160px;animation:driftA 12s ease-in-out infinite;}
+.glow.g2{width:680px;height:680px;background:radial-gradient(circle,rgba(230,159,0,.12),transparent 65%);bottom:-220px;left:-140px;animation:driftB 12s ease-in-out infinite;}
+.poster > *{z-index:1;}
+.topbar{position:relative;overflow:hidden;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--terra),var(--amber) 60%,var(--terra-soft));}
+.topbar::after{content:'';position:absolute;top:0;left:0;height:100%;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-160%);animation:glint 12s linear infinite;}
+.kicker{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:16px 0 8px;}
+.kicker .k{color:var(--terra-soft);font-weight:500;}
+.kicker .k .dot{color:var(--terra);animation:pulse 3s ease-in-out infinite;display:inline-block;}
+h1{font-family:var(--serif);font-weight:500;font-size:88px;line-height:1.0;letter-spacing:-0.03em;margin:0 0 14px;color:var(--paper);}
+h1 em{font-style:italic;color:var(--terra-soft);font-weight:400;}
+.lede{font-family:var(--serif);font-size:26px;line-height:1.35;color:var(--soft);max-width:48ch;margin:0;}
+.ask{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-self:center;border-top:1px solid rgba(244,240,232,.16);padding-top:26px;}
+.ask .num{font-family:var(--mono);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--terra-soft);margin-bottom:14px;}
+.ask h2{font-family:var(--serif);font-weight:500;font-size:40px;line-height:1.08;letter-spacing:-0.02em;margin:0 0 16px;color:var(--paper);}
+.lanes{font-family:var(--serif);font-size:27px;line-height:1.55;color:var(--paper);}
+.lanes .dot{color:var(--terra);margin-right:.4em;}
+.ask .bring{font-size:21px;line-height:1.5;color:var(--soft);}
+.ask .bring b{color:var(--terra-soft);font-weight:700;}
+.numbers{display:flex;border-top:1px solid rgba(244,240,232,.16);border-bottom:1px solid rgba(244,240,232,.16);}
+.metric{flex:1;padding:16px 8px;border-right:1px solid rgba(244,240,232,.12);}
+.metric:last-child{border-right:none;}
+.metric .v{font-family:var(--serif);font-weight:700;font-size:42px;line-height:1;color:var(--terra-soft);}
+.metric .l{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-top:7px;}
+.cta{display:flex;justify-content:space-between;align-items:center;}
+.cta .big{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;color:var(--terra-soft);}
+.cta .links{font-family:var(--mono);font-size:20px;letter-spacing:.04em;color:var(--soft);}
+.cta .links b{color:var(--terra-soft);}
+.foot{font-family:var(--mono);font-size:14px;letter-spacing:.05em;color:var(--mute);text-align:right;}
+@keyframes driftA{0%,100%{transform:translate(0,0)}50%{transform:translate(-66px,48px)}}
+@keyframes driftB{0%,100%{transform:translate(0,0)}50%{transform:translate(58px,-44px)}}
+@keyframes glint{0%{transform:translateX(-160%)}100%{transform:translateX(420%)}}
+@keyframes pulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
 </style>
 </head>
 <body>
 <div class="reveal"><div class="slides">
-
-  <section class="title" data-background-gradient="linear-gradient(135deg,#1a1a2e 0%,#1E3A2B 55%,#2D4338 100%)" data-autoslide="8000">
-    <div class="kicker-row"><span class="k">Collaboration · FY26–28</span><span>Beyond Meet Space</span></div>
-    <h1>We're between grants, <em>and open.</em></h1>
-    <p class="lede">The NSF program that powered our work is complete. The research continues — and we're looking for the next team to build it with.</p>
-    <p class="foot"><b>beyondmeet.space</b></p>
-  </section>
-
-  <section data-autoslide="9500">
-    <div class="num">Who we are</div>
-    <h2>A multi-institution research collective.</h2>
-    <div class="grid" style="margin-top:.4em;">
-      <div class="metric"><div class="v">15+</div><div class="l">peer-reviewed publications</div></div>
-      <div class="metric"><div class="v">6</div><div class="l">PIs across 6 institutions</div></div>
-      <div class="metric"><div class="v">4</div><div class="l">NSF FW-HTF-R awards (2021–2025)</div></div>
+  <section class="poster">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="topbar"></div>
+    <div class="kicker"><span class="k"><span class="dot">●</span> Collaboration · FY26–28</span><span>Beyond Meet Space · Research Collective</span></div>
+    <div>
+      <h1>We're between grants, <em>and open.</em></h1>
+      <p class="lede">The NSF program that powered our work is complete. The research continues — and we're looking for the next team to build it with.</p>
     </div>
-  </section>
-
-  <section data-autoslide="10000">
-    <div class="num">What we're looking for</div>
-    <h2 style="margin-bottom:.5em;">Seeking FY26–28 <em>multi-institution partners.</em></h2>
-    <div class="want">
-      <div style="margin-bottom:.3em;"><span class="dot">·</span>Social VR &amp; virtual presence</div>
-      <div style="margin-bottom:.3em;"><span class="dot">·</span>Virtual-meeting research &amp; well-being</div>
-      <div><span class="dot">·</span>Synchronous mediated interaction, broadly</div>
+    <div class="ask">
+      <div>
+        <div class="num">What we're looking for</div>
+        <h2>Seeking FY26–28 multi-institution partners.</h2>
+        <div class="lanes">
+          <div><span class="dot">·</span>Social VR &amp; virtual presence</div>
+          <div><span class="dot">·</span>Virtual-meeting research &amp; well-being</div>
+          <div><span class="dot">·</span>Synchronous mediated interaction</div>
+        </div>
+      </div>
+      <div>
+        <div class="num">What we bring</div>
+        <p class="bring">An <b>open VRChat research platform</b>, a mixed computational-plus-close-reading method, and a <b>five-study evidence base</b> on fatigue, equity, and play in mediated interaction. Bring a question, a population, or a platform need.</p>
+      </div>
     </div>
-    <p style="font-size:.78em;margin-top:.7em;">We work best with teams building toward proposals — bring a question, a population, or a platform need.</p>
+    <div class="numbers">
+      <div class="metric"><div class="v">15+</div><div class="l">publications</div></div>
+      <div class="metric"><div class="v">6</div><div class="l">PIs · 6 institutions</div></div>
+      <div class="metric"><div class="v">4</div><div class="l">NSF FW-HTF-R awards</div></div>
+      <div class="metric"><div class="v">3</div><div class="l">Meaningful XR confs</div></div>
+    </div>
+    <div class="cta">
+      <span class="big">Let's build the next study together.</span>
+      <span class="links">Reach out &nbsp;·&nbsp; <b>beyondmeet.space</b> &nbsp;·&nbsp; <b>github.com/beyondmeetspace</b></span>
+    </div>
+    <div class="foot">NSF #2128746 / #2128803 / #2128813 / #2128991</div>
   </section>
-
-  <section data-autoslide="9500">
-    <div class="num">What we bring</div>
-    <h2>An open platform and a proven method.</h2>
-    <p>A publicly accessible virtual-meeting platform in VRChat, a mixed computational-plus-close-reading method, and a five-study evidence base on fatigue, equity, and play in mediated interaction.</p>
-  </section>
-
-  <section class="title" data-background-gradient="linear-gradient(135deg,#1E3A2B 0%,#2D4338 100%)" data-autoslide="8500">
-    <div class="kicker-row"><span class="k">Let's talk</span><span>FY26–28</span></div>
-    <h1>Let's build the <em>next study</em> together.</h1>
-    <p class="cta" style="color:#F4F0E8;">Reach out: &nbsp; <b>beyondmeet.space</b> &nbsp;·&nbsp; <b>github.com/beyondmeetspace</b></p>
-    <p class="foot">NSF #2128746 / #2128803 / #2128813 / #2128991</p>
-  </section>
-
 </div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
 <script>
 Reveal.initialize({
-  width:1920, height:1080, margin:0.045, minScale:0.2, maxScale:2.0,
+  disableLayout:true, center:false,
   controls:false, progress:false, slideNumber:false, hash:false, keyboard:false, touch:false,
-  loop:true, autoSlide:9000, autoSlideStoppable:false, fragments:true,
-  transition:'slide', transitionSpeed:'default', backgroundTransition:'fade',
-  autoAnimateDuration:0.8, autoAnimateEasing:'cubic-bezier(0.22,1,0.36,1)',
+  loop:false, autoSlide:0, transition:'none', backgroundTransition:'none',
 });
-Reveal.on('paused', () => Reveal.togglePause(false));
+window.BMS_LOOP_MS = 12000; /* all keyframe periods (12/3) divide 12s -> seamless loop */
 </script>
 </body>
 </html>

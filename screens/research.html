@@ -3,121 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beyond Meet Space — Research Overview (VR screen)</title>
+<title>Beyond Meet Space — Research Poster (VR screen)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <style>
 :root{
   --canvas:#FAFAF7; --paper:#F2F1EB; --ink:#0A0A0A; --ink2:#3F3F3F; --ink3:#737373;
-  --rule:#D6D5CE; --forest:#1E3A2B; --forest2:#2D4338; --terra:#C8553D; --terra-soft:#F4DDD5;
+  --rule:#D6D5CE; --forest:#1E3A2B; --forest2:#2D4338; --terra:#C8553D; --terra-soft:#F4DDD5; --amber:#E69F00;
   --serif:'Source Serif 4',Georgia,serif; --sans:'Atkinson Hyperlegible',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
 }
-/* Base — large for VR distance legibility (canvas is 1920x1080) */
-.reveal{font-family:var(--sans);font-size:42px;color:var(--ink);}
+.reveal{font-family:var(--sans);font-size:38px;color:var(--ink);}
 .reveal .slides{text-align:left;}
-.reveal .slides section{padding:0 4%;}
-.reveal h1,.reveal h2,.reveal h3{font-family:var(--serif);color:var(--ink);font-weight:500;letter-spacing:-0.025em;line-height:1.02;margin:0 0 .35em;text-transform:none;}
-.reveal h1{font-size:2.1em;font-weight:500;}
-.reveal h2{font-size:1.55em;font-weight:500;}
-.reveal h3{font-size:1.05em;font-weight:600;color:var(--forest);}
-.reveal em{font-style:italic;color:var(--forest);font-weight:400;}
-.reveal p{line-height:1.45;color:var(--ink2);}
-.kicker-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.42em;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.2em;border-bottom:1px solid var(--rule);padding-bottom:.5em;}
-.kicker-row .k{color:var(--terra);font-weight:500;}
-.lede{font-family:var(--serif);font-size:.92em;line-height:1.4;color:var(--ink2);max-width:30ch;}
-.num{font-family:var(--mono);font-size:.4em;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:.5em;}
-.stat{font-family:var(--serif);font-weight:500;font-size:3.4em;line-height:1;color:var(--terra);letter-spacing:-0.02em;margin:.1em 0 .25em;}
-.stat sub{font-family:var(--mono);font-size:.22em;color:var(--ink3);vertical-align:baseline;margin-left:.4em;letter-spacing:.04em;}
-.cite{font-family:var(--mono);font-size:.36em;letter-spacing:.04em;color:var(--forest);border-bottom:2px solid var(--terra);padding-bottom:2px;}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.05em 1.2em;border-top:3px solid var(--forest);padding-top:.6em;}
-.metric{padding:.4em 0;}
-.metric .v{font-family:var(--serif);font-weight:600;font-size:1.9em;color:var(--terra);line-height:1;}
-.metric .l{font-family:var(--mono);font-size:.34em;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);margin-top:.4em;}
-/* Top accent bar on content slides */
-.reveal section:not(.title)::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--terra),var(--forest) 60%,#E69F00);}
-/* Title slide — forest */
-.reveal .title h1{color:#F4F0E8;font-size:2.4em;}
-.reveal .title em{color:var(--terra-soft);}
-.reveal .title .kicker-row{color:#9db3a4;border-bottom-color:var(--forest2);}
-.reveal .title .kicker-row .k{color:var(--terra-soft);}
-.reveal .title .lede{color:#cdd6cf;}
-.reveal .title .foot{font-family:var(--mono);font-size:.36em;color:#7A8A7E;letter-spacing:.05em;margin-top:1.4em;}
+/* disableLayout is on: we control sizing, reveal does not scale/center. Poster fills the viewport. */
+.reveal .slides{position:absolute;inset:0;width:100%;height:100%;transform:none!important;left:0;top:0;}
+.reveal .slides > section.poster{position:absolute;inset:0;width:100%;height:100%;padding:0;display:block;}
+.poster{position:relative;display:grid;grid-template-rows:auto auto 1fr auto;gap:1.4vh;
+  height:100%;width:100%;padding:64px 84px 48px;background:var(--canvas);overflow:hidden;}
+/* drifting ambient glows (seamless loop) */
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;pointer-events:none;}
+.glow.g1{width:760px;height:760px;background:radial-gradient(circle,rgba(30,58,43,.16),transparent 65%);top:-180px;left:-140px;animation:driftA 12s ease-in-out infinite;}
+.glow.g2{width:640px;height:640px;background:radial-gradient(circle,rgba(200,85,61,.14),transparent 65%);bottom:-200px;right:-120px;animation:driftB 12s ease-in-out infinite;}
+.poster > *{z-index:1;}
+/* animated top accent bar — static gradient + a glint that sweeps across once per 12s loop
+   (off-screen at both 0% and 100%, so the loop wrap is invisible = seamless) */
+.topbar{position:relative;overflow:hidden;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--terra),var(--forest) 60%,var(--amber));}
+.topbar::after{content:'';position:absolute;top:0;left:0;height:100%;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-160%);animation:glint 12s linear infinite;}
+header .kicker{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin:14px 0 10px;}
+header .kicker .k{color:var(--terra);font-weight:500;}
+header .kicker .k .dot{color:var(--terra);animation:pulse 3s ease-in-out infinite;display:inline-block;}
+header h1{font-family:var(--serif);font-weight:500;font-size:74px;line-height:1.0;letter-spacing:-0.03em;margin:0 0 14px;color:var(--ink);}
+header h1 em{font-style:italic;color:var(--forest);font-weight:400;}
+header .lede{font-family:var(--serif);font-size:25px;line-height:1.35;color:var(--ink2);max-width:60ch;margin:0;}
+.findings{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid var(--forest);align-self:center;}
+.finding{padding:26px 34px 8px 0;border-right:1px solid var(--rule);}
+.finding:last-child{border-right:none;padding-right:0;padding-left:34px;}
+.finding:nth-child(2){padding-left:34px;}
+.finding .num{font-family:var(--mono);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--terra);margin-bottom:14px;}
+.finding h3{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.12;letter-spacing:-0.01em;color:var(--forest);margin:0 0 12px;}
+.finding .stat{font-family:var(--serif);font-weight:500;font-size:66px;line-height:.95;color:var(--terra);letter-spacing:-0.02em;margin:6px 0 14px;animation:float 4s ease-in-out infinite;}
+.finding .stat.sm{font-size:34px;line-height:1.05;}
+.finding .stat sub{font-family:var(--mono);font-size:18px;color:var(--ink3);vertical-align:baseline;margin-left:8px;}
+.finding p{font-size:20px;line-height:1.45;color:var(--ink2);margin:0 0 12px;}
+.finding .cite{font-family:var(--mono);font-size:15px;letter-spacing:.03em;color:var(--forest);border-bottom:2px solid var(--terra);padding-bottom:2px;}
+.numbers{display:flex;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.metric{flex:1;padding:18px 8px;border-right:1px solid var(--rule);}
+.metric:last-child{border-right:none;}
+.metric .v{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1;color:var(--terra);}
+.metric .l{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);margin-top:7px;line-height:1.3;}
+footer{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:16px;letter-spacing:.05em;color:var(--ink3);}
+footer .brand{color:var(--forest);font-weight:500;}
+@keyframes driftA{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,50px)}}
+@keyframes driftB{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,-44px)}}
+@keyframes glint{0%{transform:translateX(-160%)}100%{transform:translateX(420%)}}
+@keyframes pulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 </style>
 </head>
 <body>
 <div class="reveal"><div class="slides">
-
-  <section class="title" data-background-gradient="linear-gradient(135deg,#1a1a2e 0%,#1E3A2B 55%,#2D4338 100%)" data-autoslide="7000">
-    <div class="kicker-row"><span class="k">Research Collective · Est. 2019</span><span>Vol. VI · 2026</span></div>
-    <h1>The future of <em>socialization</em>, studied at full scale.</h1>
-    <p class="lede">How people meet, work, and play across virtual environments — and the platforms and methods that make rigorous study of those questions possible.</p>
-    <p class="foot">Beyond Meet Space · beyondmeet.space</p>
-  </section>
-
-  <section data-autoslide="9000">
-    <div class="num">Program findings · 2021–2025</div>
-    <h2>Three findings that frame the work.</h2>
-    <p class="lede" style="max-width:34ch;font-size:.8em;margin-top:.4em;">From a five-study program on virtual meetings, well-being, and equity in synchronous mediated interaction.</p>
-  </section>
-
-  <section data-auto-animate data-autoslide="9500">
-    <div class="num">Finding 01 · Meta-analysis</div>
-    <h2 data-id="fh">Feeling trapped drives fatigue.</h2>
-    <div class="stat" data-id="fs">.33<sub>r</sub></div>
-    <p>Across 38 studies, "feeling trapped" was the strongest predictor of videoconferencing fatigue — ahead of audio issues, camera problems, and meeting length.</p>
-    <p style="margin-top:.5em;"><span class="cite">Beyea et al., 2025 · Computers in Human Behavior Reports</span></p>
-  </section>
-
-  <section data-auto-animate data-autoslide="9500">
-    <div class="num">Finding 02 · Survey</div>
-    <h2 data-id="fh">Avatar customization is an equity tool.</h2>
-    <div class="stat" data-id="fs" style="font-size:2.2em;line-height:1.05;">Equity<br>signal</div>
-    <p>Women and people of color place significantly higher value on avatar customization in virtual workplaces — reframing customization as infrastructure, not decoration.</p>
-    <p style="margin-top:.5em;"><span class="cite">Lim et al., 2024 · Computers in Human Behavior</span></p>
-  </section>
-
-  <section data-auto-animate data-autoslide="9500">
-    <div class="num">Finding 03 · In-world study</div>
-    <h2 data-id="fh">Play reduces fatigue.</h2>
-    <div class="stat" data-id="fs" style="font-size:2.2em;line-height:1.05;">Play as<br>countermeasure</div>
-    <p>Gesture tools, stylized environments, and ambient virtual objects reduce fatigue and increase engagement — shifting virtual meetings from endurance to participation.</p>
-    <p style="margin-top:.5em;"><span class="cite">Foxman et al., DiGRA 2024</span></p>
-  </section>
-
-  <section data-autoslide="10000">
-    <div class="num">The program, by the numbers</div>
-    <div class="grid">
-      <div class="metric"><div class="v">15+</div><div class="l">peer-reviewed publications</div></div>
-      <div class="metric"><div class="v">6</div><div class="l">PIs across 6 institutions</div></div>
-      <div class="metric"><div class="v">4</div><div class="l">NSF FW-HTF-R awards</div></div>
-      <div class="metric"><div class="v">2</div><div class="l">guest-edited special issues</div></div>
-      <div class="metric"><div class="v">3</div><div class="l">Meaningful XR conferences</div></div>
-      <div class="metric"><div class="v">1</div><div class="l">open VRChat research platform</div></div>
+  <section class="poster">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="topbar"></div>
+    <header>
+      <div class="kicker"><span class="k"><span class="dot">●</span> Beyond Meet Space · Research Collective</span><span>Est. 2019 · Vol. VI</span></div>
+      <h1>The future of <em>socialization</em>, studied at full scale.</h1>
+      <p class="lede">How people meet, work, and play across virtual environments — and the platforms and methods that make rigorous study of those questions possible.</p>
+    </header>
+    <div class="findings">
+      <article class="finding">
+        <div class="num">Finding 01 · Meta-analysis</div>
+        <h3>Feeling trapped drives fatigue.</h3>
+        <div class="stat">.33<sub>r</sub></div>
+        <p>Across 38 studies, "feeling trapped" was the strongest predictor of videoconferencing fatigue.</p>
+        <span class="cite">Beyea et al., 2025</span>
+      </article>
+      <article class="finding">
+        <div class="num">Finding 02 · Survey</div>
+        <h3>Avatar customization is an equity tool.</h3>
+        <div class="stat sm">Equity<br>signal</div>
+        <p>Women and people of color value avatar customization significantly more in virtual workplaces.</p>
+        <span class="cite">Lim et al., 2024</span>
+      </article>
+      <article class="finding">
+        <div class="num">Finding 03 · In-world study</div>
+        <h3>Play reduces fatigue.</h3>
+        <div class="stat sm">Play as<br>countermeasure</div>
+        <p>Playful design shifts virtual meetings from endurance to participation.</p>
+        <span class="cite">Foxman et al., DiGRA 2024</span>
+      </article>
     </div>
+    <div class="numbers">
+      <div class="metric"><div class="v">15+</div><div class="l">publications</div></div>
+      <div class="metric"><div class="v">6</div><div class="l">PIs · 6 institutions</div></div>
+      <div class="metric"><div class="v">4</div><div class="l">NSF FW-HTF-R awards</div></div>
+      <div class="metric"><div class="v">2</div><div class="l">special issues</div></div>
+      <div class="metric"><div class="v">3</div><div class="l">Meaningful XR confs</div></div>
+      <div class="metric"><div class="v">1</div><div class="l">open VRChat platform</div></div>
+    </div>
+    <footer>
+      <span class="brand">beyondmeet.space</span>
+      <span>NSF #2128746 / #2128803 / #2128813 / #2128991</span>
+    </footer>
   </section>
-
-  <section class="title" data-background-gradient="linear-gradient(135deg,#1E3A2B 0%,#2D4338 100%)" data-autoslide="8000">
-    <div class="kicker-row"><span class="k">Beyond Meet Space</span><span>Research Collective</span></div>
-    <h1>Built and studied <em>in the open.</em></h1>
-    <p class="lede">A publicly accessible virtual-meeting platform and the research that grounds it.</p>
-    <p class="foot">beyondmeet.space · NSF #2128746 / #2128803 / #2128813 / #2128991</p>
-  </section>
-
 </div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
 <script>
 Reveal.initialize({
-  width:1920, height:1080, margin:0.045, minScale:0.2, maxScale:2.0,
+  disableLayout:true, center:false,
   controls:false, progress:false, slideNumber:false, hash:false, keyboard:false, touch:false,
-  loop:true, autoSlide:9000, autoSlideStoppable:false, fragments:true,
-  transition:'fade', transitionSpeed:'default', backgroundTransition:'fade',
-  autoAnimateDuration:0.8, autoAnimateEasing:'cubic-bezier(0.22,1,0.36,1)',
+  loop:false, autoSlide:0, transition:'none', backgroundTransition:'none',
 });
-// VR/kiosk: never let it sit idle; restart the autoslide loop if it ever pauses.
-Reveal.on('paused', () => Reveal.togglePause(false));
+/* Loop period for the ambient CSS motion = 12s (all keyframe periods 12/8/4/3 divide 12s
+   so t=12000ms == t=0; the render captures exactly one 12s period for a seamless video loop). */
+window.BMS_LOOP_MS = 12000;
 </script>
 </body>
 </html>
