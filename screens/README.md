@@ -16,5 +16,9 @@ Two self-contained, auto-looping reveal.js presentations for the two screens in 
 ## Content provenance
 All facts (r = .33 / 38 studies, the two DOIs, 15+ pubs, 6 PIs / 6 institutions, NSF FW-HTF-R awards) are verified against the live site — nothing fabricated. Edit copy inline in each file's `<section>` blocks.
 
-## If a screen only accepts video (not a web URL)
-Screen-record the looping deck once (a full loop) to an mp4 and point the in-world video player at that file.
+## Video renders (committed) — for VR players that take a video, not live HTML
+Pre-rendered 1920×1080 h264 mp4s of one full loop of each deck are in `screens/video/`:
+- `screens/video/research.mp4` → https://beyondmeet.space/screens/video/research.mp4 (~71s loop)
+- `screens/video/recruiting.mp4` → https://beyondmeet.space/screens/video/recruiting.mp4 (~54s loop)
+
+Point the in-world video player at the URL (it loops the file). Rendered frame-by-frame (crisp per slide, hard cuts between slides — the live HTML keeps the sub-second fade/auto-animate transitions). To re-render after editing a deck: serve the repo locally, then run the Playwright frame-capture → ffmpeg concat pass (`bms_render.py`).
