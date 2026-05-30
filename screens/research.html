@@ -17,11 +17,14 @@
 }
 .reveal{font-family:var(--sans);font-size:38px;color:var(--ink);}
 .reveal .slides{text-align:left;}
-/* disableLayout is on: we control sizing, reveal does not scale/center. Poster fills the viewport. */
-.reveal .slides{position:absolute;inset:0;width:100%;height:100%;transform:none!important;left:0;top:0;}
-.reveal .slides > section.poster{position:absolute;inset:0;width:100%;height:100%;padding:0;display:block;}
-.poster{position:relative;display:grid;grid-template-rows:auto auto 1fr auto;gap:1.4vh;
-  height:100%;width:100%;padding:64px 84px 48px;background:var(--canvas);overflow:hidden;}
+/* disableLayout is on: we own sizing. Poster = full-viewport flex column; the findings zone grows
+   so content distributes top-to-bottom. Padding lives on the high-specificity rule so it can't be
+   clobbered, and height is 100vh (definite) so flex distribution actually works. */
+html,body,.reveal{height:100%;}
+.reveal .slides{position:absolute!important;inset:0!important;width:100vw;height:100vh;transform:none!important;}
+.reveal .slides > section.poster{position:absolute;inset:0;box-sizing:border-box;overflow:hidden;
+  display:flex!important;flex-direction:column;gap:26px;width:100vw;height:100vh;padding:64px 100px 58px;background:var(--canvas);}
+.poster{position:relative;}
 /* drifting ambient glows (seamless loop) */
 .glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;pointer-events:none;}
 .glow.g1{width:760px;height:760px;background:radial-gradient(circle,rgba(30,58,43,.16),transparent 65%);top:-180px;left:-140px;animation:driftA 12s ease-in-out infinite;}
@@ -37,7 +40,7 @@ header .kicker .k .dot{color:var(--terra);animation:pulse 3s ease-in-out infinit
 header h1{font-family:var(--serif);font-weight:500;font-size:74px;line-height:1.0;letter-spacing:-0.03em;margin:0 0 14px;color:var(--ink);}
 header h1 em{font-style:italic;color:var(--forest);font-weight:400;}
 header .lede{font-family:var(--serif);font-size:25px;line-height:1.35;color:var(--ink2);max-width:60ch;margin:0;}
-.findings{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid var(--forest);align-self:center;}
+.findings{flex:1 1 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid var(--forest);align-content:center;}
 .finding{padding:26px 34px 8px 0;border-right:1px solid var(--rule);}
 .finding:last-child{border-right:none;padding-right:0;padding-left:34px;}
 .finding:nth-child(2){padding-left:34px;}

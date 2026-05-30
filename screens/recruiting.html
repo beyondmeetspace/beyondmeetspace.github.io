@@ -17,12 +17,14 @@
 }
 .reveal{font-family:var(--sans);font-size:38px;}
 .reveal .slides{text-align:left;}
-/* disableLayout is on: we control sizing, reveal does not scale/center. Poster fills the viewport. */
-.reveal .slides{position:absolute;inset:0;width:100%;height:100%;transform:none!important;left:0;top:0;}
-.reveal .slides > section.poster{position:absolute;inset:0;width:100%;height:100%;padding:0;display:block;}
-.poster{position:relative;display:grid;grid-template-rows:auto auto 1fr auto auto;gap:1.6vh;
-  height:100%;width:100%;padding:64px 88px 52px;overflow:hidden;color:var(--paper);
+/* disableLayout is on: we own sizing. Full-viewport flex column; the ask zone grows so content
+   distributes top-to-bottom. Padding on the high-specificity rule (can't be clobbered); 100vh definite. */
+html,body,.reveal{height:100%;}
+.reveal .slides{position:absolute!important;inset:0!important;width:100vw;height:100vh;transform:none!important;}
+.reveal .slides > section.poster{position:absolute;inset:0;box-sizing:border-box;overflow:hidden;color:var(--paper);
+  display:flex!important;flex-direction:column;gap:26px;width:100vw;height:100vh;padding:64px 100px 56px;
   background:linear-gradient(135deg,#11181f 0%,var(--forest2) 55%,var(--forest3) 100%);}
+.poster{position:relative;}
 .glow{position:absolute;border-radius:50%;filter:blur(80px);z-index:0;pointer-events:none;}
 .glow.g1{width:820px;height:820px;background:radial-gradient(circle,rgba(200,85,61,.22),transparent 65%);top:-220px;right:-160px;animation:driftA 12s ease-in-out infinite;}
 .glow.g2{width:680px;height:680px;background:radial-gradient(circle,rgba(230,159,0,.12),transparent 65%);bottom:-220px;left:-140px;animation:driftB 12s ease-in-out infinite;}
@@ -35,7 +37,7 @@
 h1{font-family:var(--serif);font-weight:500;font-size:88px;line-height:1.0;letter-spacing:-0.03em;margin:0 0 14px;color:var(--paper);}
 h1 em{font-style:italic;color:var(--terra-soft);font-weight:400;}
 .lede{font-family:var(--serif);font-size:26px;line-height:1.35;color:var(--soft);max-width:48ch;margin:0;}
-.ask{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-self:center;border-top:1px solid rgba(244,240,232,.16);padding-top:26px;}
+.ask{flex:1 1 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-content:center;border-top:1px solid rgba(244,240,232,.16);padding-top:30px;}
 .ask .num{font-family:var(--mono);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--terra-soft);margin-bottom:14px;}
 .ask h2{font-family:var(--serif);font-weight:500;font-size:40px;line-height:1.08;letter-spacing:-0.02em;margin:0 0 16px;color:var(--paper);}
 .lanes{font-family:var(--serif);font-size:27px;line-height:1.55;color:var(--paper);}
