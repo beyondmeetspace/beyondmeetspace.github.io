@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond Meet Space — Research Overview (VR screen)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<style>
+:root{
+  --canvas:#FAFAF7; --paper:#F2F1EB; --ink:#0A0A0A; --ink2:#3F3F3F; --ink3:#737373;
+  --rule:#D6D5CE; --forest:#1E3A2B; --forest2:#2D4338; --terra:#C8553D; --terra-soft:#F4DDD5;
+  --serif:'Source Serif 4',Georgia,serif; --sans:'Atkinson Hyperlegible',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+/* Base — large for VR distance legibility (canvas is 1920x1080) */
+.reveal{font-family:var(--sans);font-size:42px;color:var(--ink);}
+.reveal .slides{text-align:left;}
+.reveal .slides section{padding:0 4%;}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--serif);color:var(--ink);font-weight:500;letter-spacing:-0.025em;line-height:1.02;margin:0 0 .35em;text-transform:none;}
+.reveal h1{font-size:2.1em;font-weight:500;}
+.reveal h2{font-size:1.55em;font-weight:500;}
+.reveal h3{font-size:1.05em;font-weight:600;color:var(--forest);}
+.reveal em{font-style:italic;color:var(--forest);font-weight:400;}
+.reveal p{line-height:1.45;color:var(--ink2);}
+.kicker-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.42em;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.2em;border-bottom:1px solid var(--rule);padding-bottom:.5em;}
+.kicker-row .k{color:var(--terra);font-weight:500;}
+.lede{font-family:var(--serif);font-size:.92em;line-height:1.4;color:var(--ink2);max-width:30ch;}
+.num{font-family:var(--mono);font-size:.4em;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:.5em;}
+.stat{font-family:var(--serif);font-weight:500;font-size:3.4em;line-height:1;color:var(--terra);letter-spacing:-0.02em;margin:.1em 0 .25em;}
+.stat sub{font-family:var(--mono);font-size:.22em;color:var(--ink3);vertical-align:baseline;margin-left:.4em;letter-spacing:.04em;}
+.cite{font-family:var(--mono);font-size:.36em;letter-spacing:.04em;color:var(--forest);border-bottom:2px solid var(--terra);padding-bottom:2px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.05em 1.2em;border-top:3px solid var(--forest);padding-top:.6em;}
+.metric{padding:.4em 0;}
+.metric .v{font-family:var(--serif);font-weight:600;font-size:1.9em;color:var(--terra);line-height:1;}
+.metric .l{font-family:var(--mono);font-size:.34em;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);margin-top:.4em;}
+/* Top accent bar on content slides */
+.reveal section:not(.title)::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--terra),var(--forest) 60%,#E69F00);}
+/* Title slide — forest */
+.reveal .title h1{color:#F4F0E8;font-size:2.4em;}
+.reveal .title em{color:var(--terra-soft);}
+.reveal .title .kicker-row{color:#9db3a4;border-bottom-color:var(--forest2);}
+.reveal .title .kicker-row .k{color:var(--terra-soft);}
+.reveal .title .lede{color:#cdd6cf;}
+.reveal .title .foot{font-family:var(--mono);font-size:.36em;color:#7A8A7E;letter-spacing:.05em;margin-top:1.4em;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+  <section class="title" data-background-gradient="linear-gradient(135deg,#1a1a2e 0%,#1E3A2B 55%,#2D4338 100%)" data-autoslide="7000">
+    <div class="kicker-row"><span class="k">Research Collective · Est. 2019</span><span>Vol. VI · 2026</span></div>
+    <h1>The future of <em>socialization</em>, studied at full scale.</h1>
+    <p class="lede">How people meet, work, and play across virtual environments — and the platforms and methods that make rigorous study of those questions possible.</p>
+    <p class="foot">Beyond Meet Space · beyondmeet.space</p>
+  </section>
+
+  <section data-autoslide="9000">
+    <div class="num">Program findings · 2021–2025</div>
+    <h2>Three findings that frame the work.</h2>
+    <p class="lede" style="max-width:34ch;font-size:.8em;margin-top:.4em;">From a five-study program on virtual meetings, well-being, and equity in synchronous mediated interaction.</p>
+  </section>
+
+  <section data-auto-animate data-autoslide="9500">
+    <div class="num">Finding 01 · Meta-analysis</div>
+    <h2 data-id="fh">Feeling trapped drives fatigue.</h2>
+    <div class="stat" data-id="fs">.33<sub>r</sub></div>
+    <p>Across 38 studies, "feeling trapped" was the strongest predictor of videoconferencing fatigue — ahead of audio issues, camera problems, and meeting length.</p>
+    <p style="margin-top:.5em;"><span class="cite">Beyea et al., 2025 · Computers in Human Behavior Reports</span></p>
+  </section>
+
+  <section data-auto-animate data-autoslide="9500">
+    <div class="num">Finding 02 · Survey</div>
+    <h2 data-id="fh">Avatar customization is an equity tool.</h2>
+    <div class="stat" data-id="fs" style="font-size:2.2em;line-height:1.05;">Equity<br>signal</div>
+    <p>Women and people of color place significantly higher value on avatar customization in virtual workplaces — reframing customization as infrastructure, not decoration.</p>
+    <p style="margin-top:.5em;"><span class="cite">Lim et al., 2024 · Computers in Human Behavior</span></p>
+  </section>
+
+  <section data-auto-animate data-autoslide="9500">
+    <div class="num">Finding 03 · In-world study</div>
+    <h2 data-id="fh">Play reduces fatigue.</h2>
+    <div class="stat" data-id="fs" style="font-size:2.2em;line-height:1.05;">Play as<br>countermeasure</div>
+    <p>Gesture tools, stylized environments, and ambient virtual objects reduce fatigue and increase engagement — shifting virtual meetings from endurance to participation.</p>
+    <p style="margin-top:.5em;"><span class="cite">Foxman et al., DiGRA 2024</span></p>
+  </section>
+
+  <section data-autoslide="10000">
+    <div class="num">The program, by the numbers</div>
+    <div class="grid">
+      <div class="metric"><div class="v">15+</div><div class="l">peer-reviewed publications</div></div>
+      <div class="metric"><div class="v">6</div><div class="l">PIs across 6 institutions</div></div>
+      <div class="metric"><div class="v">4</div><div class="l">NSF FW-HTF-R awards</div></div>
+      <div class="metric"><div class="v">2</div><div class="l">guest-edited special issues</div></div>
+      <div class="metric"><div class="v">3</div><div class="l">Meaningful XR conferences</div></div>
+      <div class="metric"><div class="v">1</div><div class="l">open VRChat research platform</div></div>
+    </div>
+  </section>
+
+  <section class="title" data-background-gradient="linear-gradient(135deg,#1E3A2B 0%,#2D4338 100%)" data-autoslide="8000">
+    <div class="kicker-row"><span class="k">Beyond Meet Space</span><span>Research Collective</span></div>
+    <h1>Built and studied <em>in the open.</em></h1>
+    <p class="lede">A publicly accessible virtual-meeting platform and the research that grounds it.</p>
+    <p class="foot">beyondmeet.space · NSF #2128746 / #2128803 / #2128813 / #2128991</p>
+  </section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  width:1920, height:1080, margin:0.045, minScale:0.2, maxScale:2.0,
+  controls:false, progress:false, slideNumber:false, hash:false, keyboard:false, touch:false,
+  loop:true, autoSlide:9000, autoSlideStoppable:false, fragments:true,
+  transition:'fade', transitionSpeed:'default', backgroundTransition:'fade',
+  autoAnimateDuration:0.8, autoAnimateEasing:'cubic-bezier(0.22,1,0.36,1)',
+});
+// VR/kiosk: never let it sit idle; restart the autoslide loop if it ever pauses.
+Reveal.on('paused', () => Reveal.togglePause(false));
+</script>
+</body>
+</html>

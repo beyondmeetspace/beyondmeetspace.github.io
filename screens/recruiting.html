@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond Meet Space — Collaborate (VR screen)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<style>
+:root{
+  --canvas:#FAFAF7; --paper:#F2F1EB; --ink:#0A0A0A; --ink2:#3F3F3F; --ink3:#737373;
+  --rule:#D6D5CE; --forest:#1E3A2B; --forest2:#2D4338; --terra:#C8553D; --terra-soft:#F4DDD5;
+  --serif:'Source Serif 4',Georgia,serif; --sans:'Atkinson Hyperlegible',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.reveal{font-family:var(--sans);font-size:42px;color:var(--ink);}
+.reveal .slides{text-align:left;}
+.reveal .slides section{padding:0 4%;}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--serif);color:var(--ink);font-weight:500;letter-spacing:-0.025em;line-height:1.02;margin:0 0 .35em;text-transform:none;}
+.reveal h1{font-size:2.2em;font-weight:500;}
+.reveal h2{font-size:1.55em;font-weight:500;}
+.reveal em{font-style:italic;color:var(--forest);font-weight:400;}
+.reveal p{line-height:1.45;color:var(--ink2);}
+.kicker-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:.42em;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.2em;border-bottom:1px solid var(--rule);padding-bottom:.5em;}
+.kicker-row .k{color:var(--terra);font-weight:500;}
+.lede{font-family:var(--serif);font-size:.92em;line-height:1.4;color:var(--ink2);max-width:32ch;}
+.num{font-family:var(--mono);font-size:.4em;letter-spacing:.06em;text-transform:uppercase;color:var(--terra);margin-bottom:.5em;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.05em 1.2em;border-top:3px solid var(--forest);padding-top:.6em;}
+.metric{padding:.4em 0;}
+.metric .v{font-family:var(--serif);font-weight:600;font-size:1.9em;color:var(--terra);line-height:1;}
+.metric .l{font-family:var(--mono);font-size:.34em;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);margin-top:.4em;}
+.want{font-family:var(--serif);font-size:1.05em;font-weight:500;color:var(--ink);line-height:1.4;}
+.want .dot{color:var(--terra);margin-right:.4em;}
+.cta{font-family:var(--mono);font-size:.5em;letter-spacing:.04em;color:var(--forest);margin-top:1em;}
+.cta b{color:var(--terra);}
+.reveal section:not(.title)::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--terra),var(--forest) 60%,#E69F00);}
+.reveal .title h1{color:#F4F0E8;}
+.reveal .title em{color:var(--terra-soft);}
+.reveal .title .kicker-row{color:#9db3a4;border-bottom-color:var(--forest2);}
+.reveal .title .kicker-row .k{color:var(--terra-soft);}
+.reveal .title .lede{color:#cdd6cf;}
+.reveal .title .foot{font-family:var(--mono);font-size:.4em;color:#cdd6cf;letter-spacing:.05em;margin-top:1.3em;}
+.reveal .title .foot b{color:var(--terra-soft);}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+  <section class="title" data-background-gradient="linear-gradient(135deg,#1a1a2e 0%,#1E3A2B 55%,#2D4338 100%)" data-autoslide="8000">
+    <div class="kicker-row"><span class="k">Collaboration · FY26–28</span><span>Beyond Meet Space</span></div>
+    <h1>We're between grants, <em>and open.</em></h1>
+    <p class="lede">The NSF program that powered our work is complete. The research continues — and we're looking for the next team to build it with.</p>
+    <p class="foot"><b>beyondmeet.space</b></p>
+  </section>
+
+  <section data-autoslide="9500">
+    <div class="num">Who we are</div>
+    <h2>A multi-institution research collective.</h2>
+    <div class="grid" style="margin-top:.4em;">
+      <div class="metric"><div class="v">15+</div><div class="l">peer-reviewed publications</div></div>
+      <div class="metric"><div class="v">6</div><div class="l">PIs across 6 institutions</div></div>
+      <div class="metric"><div class="v">4</div><div class="l">NSF FW-HTF-R awards (2021–2025)</div></div>
+    </div>
+  </section>
+
+  <section data-autoslide="10000">
+    <div class="num">What we're looking for</div>
+    <h2 style="margin-bottom:.5em;">Seeking FY26–28 <em>multi-institution partners.</em></h2>
+    <div class="want">
+      <div style="margin-bottom:.3em;"><span class="dot">·</span>Social VR &amp; virtual presence</div>
+      <div style="margin-bottom:.3em;"><span class="dot">·</span>Virtual-meeting research &amp; well-being</div>
+      <div><span class="dot">·</span>Synchronous mediated interaction, broadly</div>
+    </div>
+    <p style="font-size:.78em;margin-top:.7em;">We work best with teams building toward proposals — bring a question, a population, or a platform need.</p>
+  </section>
+
+  <section data-autoslide="9500">
+    <div class="num">What we bring</div>
+    <h2>An open platform and a proven method.</h2>
+    <p>A publicly accessible virtual-meeting platform in VRChat, a mixed computational-plus-close-reading method, and a five-study evidence base on fatigue, equity, and play in mediated interaction.</p>
+  </section>
+
+  <section class="title" data-background-gradient="linear-gradient(135deg,#1E3A2B 0%,#2D4338 100%)" data-autoslide="8500">
+    <div class="kicker-row"><span class="k">Let's talk</span><span>FY26–28</span></div>
+    <h1>Let's build the <em>next study</em> together.</h1>
+    <p class="cta" style="color:#F4F0E8;">Reach out: &nbsp; <b>beyondmeet.space</b> &nbsp;·&nbsp; <b>github.com/beyondmeetspace</b></p>
+    <p class="foot">NSF #2128746 / #2128803 / #2128813 / #2128991</p>
+  </section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  width:1920, height:1080, margin:0.045, minScale:0.2, maxScale:2.0,
+  controls:false, progress:false, slideNumber:false, hash:false, keyboard:false, touch:false,
+  loop:true, autoSlide:9000, autoSlideStoppable:false, fragments:true,
+  transition:'slide', transitionSpeed:'default', backgroundTransition:'fade',
+  autoAnimateDuration:0.8, autoAnimateEasing:'cubic-bezier(0.22,1,0.36,1)',
+});
+Reveal.on('paused', () => Reveal.togglePause(false));
+</script>
+</body>
+</html>
