@@ -1,11 +1,15 @@
 # Beyond Meet Space — in-world VR screen posters
 
-Two **single-slide reveal.js "digital posters"** for the two in-world screens, each with a seamless looping ambient animation, plus pre-rendered seamless-loop videos for players that take a video URL.
+**Single-slide reveal.js "digital posters"** for the in-world screens, each with a seamless looping ambient animation, plus pre-rendered seamless-loop videos for players that take a video URL.
 
 | Screen | Poster (HTML) | Video | Look |
 |---|---|---|---|
 | Research overview | `research.html` | `video/research.mp4` | Light editorial |
 | Collaboration / recruiting | `recruiting.html` | `video/recruiting.mp4` | Dark forest |
+| Platform (Beyond Skeuomorphic VM) | `platform.html` | `video/platform.mp4` *(pending render)* | Light editorial |
+| Well-being study (current) | `wellbeing.html` | `video/wellbeing.mp4` *(pending render)* | Light editorial |
+
+The `platform` and `wellbeing` posters were authored 2026-05-31 for MXR 2026 (ACAD side); their mp4s are produced by the LLC instance via `bms_render.py` (orator venv). See the handoff at `life-os/meta/handoffs/session/2026-05-31-ACAD010-to-LLC-bms-poster-render.md`.
 
 URLs (once deployed): `https://beyondmeet.space/screens/research.html` (or `…/video/research.mp4`), and the recruiting equivalents.
 

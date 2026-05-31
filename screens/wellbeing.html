@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond Meet Space — Well-Being Study Poster (VR screen)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<style>
+:root{
+  --canvas:#FAFAF7; --paper:#F2F1EB; --ink:#0A0A0A; --ink2:#3F3F3F; --ink3:#737373;
+  --rule:#D6D5CE; --forest:#1E3A2B; --forest2:#2D4338; --terra:#C8553D; --terra-soft:#F4DDD5; --amber:#E69F00;
+  --serif:'Source Serif 4',Georgia,serif; --sans:'Atkinson Hyperlegible',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+.reveal{font-family:var(--sans);font-size:38px;color:var(--ink);}
+.reveal .slides{text-align:left;}
+html,body,.reveal{height:100%;}
+.reveal .slides{position:absolute!important;inset:0!important;width:100vw;height:100vh;transform:none!important;}
+.reveal .slides > section.poster{position:absolute;inset:0;box-sizing:border-box;overflow:hidden;
+  display:flex!important;flex-direction:column;gap:26px;width:100vw;height:100vh;padding:64px 100px 58px;background:var(--canvas);}
+.poster{position:relative;}
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;pointer-events:none;}
+.glow.g1{width:760px;height:760px;background:radial-gradient(circle,rgba(30,58,43,.16),transparent 65%);top:-180px;left:-140px;animation:driftA 12s ease-in-out infinite;}
+.glow.g2{width:640px;height:640px;background:radial-gradient(circle,rgba(200,85,61,.14),transparent 65%);bottom:-200px;right:-120px;animation:driftB 12s ease-in-out infinite;}
+.poster > *{z-index:1;}
+.topbar{position:relative;overflow:hidden;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--terra),var(--forest) 60%,var(--amber));}
+.topbar::after{content:'';position:absolute;top:0;left:0;height:100%;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-160%);animation:glint 12s linear infinite;}
+header .kicker{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin:14px 0 10px;}
+header .kicker .k{color:var(--terra);font-weight:500;}
+header .kicker .k .dot{color:var(--terra);animation:pulse 3s ease-in-out infinite;display:inline-block;}
+header h1{font-family:var(--serif);font-weight:500;font-size:74px;line-height:1.0;letter-spacing:-0.03em;margin:0 0 14px;color:var(--ink);}
+header h1 em{font-style:italic;color:var(--forest);font-weight:400;}
+header .lede{font-family:var(--serif);font-size:25px;line-height:1.35;color:var(--ink2);max-width:62ch;margin:0;}
+.findings{flex:1 1 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid var(--forest);align-content:center;}
+.finding{padding:26px 34px 8px 0;border-right:1px solid var(--rule);}
+.finding:last-child{border-right:none;padding-right:0;padding-left:34px;}
+.finding:nth-child(2){padding-left:34px;}
+.finding .num{font-family:var(--mono);font-size:16px;letter-spacing:.07em;text-transform:uppercase;color:var(--terra);margin-bottom:14px;}
+.finding h3{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.12;letter-spacing:-0.01em;color:var(--forest);margin:0 0 12px;}
+.finding .stat{font-family:var(--serif);font-weight:500;font-size:60px;line-height:.95;color:var(--terra);letter-spacing:-0.02em;margin:6px 0 14px;animation:float 4s ease-in-out infinite;}
+.finding .stat.sm{font-size:34px;line-height:1.05;}
+.finding .stat sub{font-family:var(--mono);font-size:18px;color:var(--ink3);vertical-align:baseline;margin-left:8px;}
+.finding p{font-size:20px;line-height:1.45;color:var(--ink2);margin:0 0 12px;}
+.finding .cite{font-family:var(--mono);font-size:15px;letter-spacing:.03em;color:var(--forest);border-bottom:2px solid var(--terra);padding-bottom:2px;}
+.numbers{display:flex;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.metric{flex:1;padding:18px 8px;border-right:1px solid var(--rule);}
+.metric:last-child{border-right:none;}
+.metric .v{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1;color:var(--terra);}
+.metric .l{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);margin-top:7px;line-height:1.3;}
+footer{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:16px;letter-spacing:.05em;color:var(--ink3);}
+footer .brand{color:var(--forest);font-weight:500;}
+@keyframes driftA{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,50px)}}
+@keyframes driftB{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,-44px)}}
+@keyframes glint{0%{transform:translateX(-160%)}100%{transform:translateX(420%)}}
+@keyframes pulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+  <section class="poster">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="topbar"></div>
+    <header>
+      <div class="kicker"><span class="k"><span class="dot">●</span> Beyond Meet Space · Research Collective</span><span>MXR 2026 · Current Study</span></div>
+      <h1>Designing meetings for <em>well-being</em>.</h1>
+      <p class="lede">A mixed-method study connecting how remote workers actually feel in virtual meetings — fatigue, equity, engagement — to the specific, designable features that help. Evidence measured at three scales, feeding the Beyond Meet Space platform.</p>
+    </header>
+    <div class="findings">
+      <article class="finding">
+        <div class="num">Lens 01 · Survey</div>
+        <h3>Felt experience, at scale.</h3>
+        <div class="stat">2,448</div>
+        <p>A U.S. sample reporting on meeting fatigue, feature preferences, and well-being across formats.</p>
+        <span class="cite">Leith et al., in progress</span>
+      </article>
+      <article class="finding">
+        <div class="num">Lens 02 · Interviews</div>
+        <h3>What sustains, what drains.</h3>
+        <div class="stat">32</div>
+        <p>In-depth accounts of what helps and hinders workers across remote and hybrid collaboration.</p>
+        <span class="cite">Leith et al., in progress</span>
+      </article>
+      <article class="finding">
+        <div class="num">Lens 03 · Social listening</div>
+        <h3>The public conversation.</h3>
+        <div class="stat">70,559</div>
+        <p>Posts on virtual-meeting experience analyzed with NLP and sentiment to surface widespread patterns.</p>
+        <span class="cite">Leith et al., in progress</span>
+      </article>
+    </div>
+    <div class="numbers">
+      <div class="metric"><div class="v">3</div><div class="l">triangulated data streams</div></div>
+      <div class="metric"><div class="v">U.S.</div><div class="l">nationally stratified sample</div></div>
+      <div class="metric"><div class="v">CSCW</div><div class="l">target venue</div></div>
+      <div class="metric"><div class="v">FW-HTF</div><div class="l">NSF future of work</div></div>
+      <div class="metric"><div class="v">→</div><div class="l">feeds platform design</div></div>
+      <div class="metric"><div class="v">2026</div><div class="l">study in progress</div></div>
+    </div>
+    <footer>
+      <span class="brand">beyondmeet.space</span>
+      <span>NSF FW-HTF-R #2128746 / #2128803 / #2128813 / #2128991</span>
+    </footer>
+  </section>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  disableLayout:true, center:false,
+  controls:false, progress:false, slideNumber:false, hash:false, keyboard:false, touch:false,
+  loop:false, autoSlide:0, transition:'none', backgroundTransition:'none',
+});
+/* Loop period for the ambient CSS motion = 12s (all keyframe periods 12/8/4/3 divide 12s
+   so t=12000ms == t=0; the render captures exactly one 12s period for a seamless video loop). */
+window.BMS_LOOP_MS = 12000;
+</script>
+</body>
+</html>
