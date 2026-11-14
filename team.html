@@ -1,438 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Team — Beyond Meet Space</title>
-
-    <meta name="description" content="The Beyond Meet Space team: principal investigators, faculty collaborators, doctoral alumni, current doctoral researchers, and other personnel across six universities.">
-    <meta property="og:title" content="Team — Beyond Meet Space">
-    <meta property="og:description" content="The research collective's principal investigators, faculty collaborators, doctoral alumni, and current researchers.">
-    <meta property="og:url" content="https://beyondmeet.space/team.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://beyondmeet.space/images/aerial/aerial_06.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://beyondmeet.space/images/aerial/aerial_06.png">
-
-    <link rel="shortcut icon" type="image/png" href="favico.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link href="css/bms-modern.css" rel="stylesheet">
-    <style>
-        .bms-team-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--s-6);
-        }
-        @media (min-width: 640px) { .bms-team-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (min-width: 900px) { .bms-team-grid--6 { grid-template-columns: repeat(6, 1fr); } }
-        @media (min-width: 900px) { .bms-team-grid--4 { grid-template-columns: repeat(4, 1fr); } }
-        @media (min-width: 900px) { .bms-team-grid--5 { grid-template-columns: repeat(5, 1fr); } }
-        .bms-team-card {
-            text-align: center;
-            color: var(--c-text);
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .bms-team-card__link {
-            display: block;
-            text-decoration: none;
-            color: var(--c-text);
-            transition: transform var(--transition);
-        }
-        .bms-team-card__link:hover { transform: translateY(-4px); text-decoration: none; color: var(--c-text); }
-        a.bms-team-card { display: block; text-decoration: none; transition: transform var(--transition); }
-        a.bms-team-card:hover { transform: translateY(-4px); text-decoration: none; color: var(--c-text); }
-        a.bms-team-card:hover .bms-team-card__photo { box-shadow: var(--shadow-lg); }
-        .bms-team-card__photo {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: var(--radius);
-            background: var(--c-bg-muted);
-            margin-bottom: var(--s-3);
-            box-shadow: var(--shadow-sm);
-            transition: box-shadow var(--transition);
-            image-rendering: auto;
-        }
-        .bms-team-card__link:hover .bms-team-card__photo { box-shadow: var(--shadow-lg); }
-        .bms-team-card h5 {
-            font-family: var(--font-display);
-            font-size: var(--fs-base);
-            font-weight: var(--fw-semibold);
-            margin: 0 0 var(--s-1);
-            color: var(--c-text);
-            line-height: var(--lh-tight);
-        }
-        .bms-team-card small {
-            font-size: var(--fs-xs);
-            color: var(--c-text-subtle);
-            display: block;
-            line-height: var(--lh-snug);
-        }
-        .bms-team-card__role {
-            font-family: var(--font-display);
-            font-size: var(--fs-xs);
-            font-weight: var(--fw-medium);
-            color: var(--c-primary);
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin: var(--s-1) 0 0;
-            display: block;
-        }
-        .bms-team-links {
-            display: flex;
-            gap: var(--s-2);
-            justify-content: center;
-            margin-top: var(--s-2);
-            font-size: var(--fs-xs);
-        }
-        .bms-team-links a {
-            color: var(--c-text-subtle);
-            font-family: var(--font-mono);
-            text-transform: lowercase;
-        }
-        .bms-team-links a:hover { color: var(--c-primary); }
-        .bms-roster {
-            background: var(--c-surface);
-            border: 1px solid var(--c-border);
-            border-radius: var(--radius);
-            padding: var(--s-6) var(--s-8);
-        }
-        .bms-roster h4 {
-            font-family: var(--font-display);
-            font-size: var(--fs-lg);
-            margin: 0 0 var(--s-4);
-            color: var(--c-text);
-        }
-        .bms-roster ul { list-style: none; padding: 0; margin: 0; }
-        .bms-roster li {
-            padding: var(--s-2) 0;
-            border-bottom: 1px solid var(--c-border);
-            font-size: var(--fs-sm);
-        }
-        .bms-roster li:last-child { border-bottom: 0; }
-        .bms-roster li strong { color: var(--c-text); font-weight: var(--fw-semibold); }
-        .bms-roster li span { color: var(--c-text-subtle); margin-left: var(--s-2); }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team | Beyond Meet Space</title>
+<meta name="description" content="The six principal investigators of Beyond Meet Space, with faculty collaborators, doctoral alumni, doctoral researchers, and members.">
+<meta property="og:title" content="Team | Beyond Meet Space">
+<meta property="og:description" content="The six principal investigators of Beyond Meet Space, with faculty collaborators, doctoral alumni, doctoral researchers, and members.">
+<meta property="og:url" content="https://beyondmeet.space/team.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://beyondmeet.space/images/world.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favico.png">
+<link rel="stylesheet" href="css/overprint.css">
 </head>
 <body>
-
-<nav class="bms-nav" aria-label="Primary">
-    <div class="bms-nav__inner">
-        <a href="index.html" class="bms-nav__brand">
-            <img src="images/bms_logo_tiny.png" alt="">
-            Beyond Meet Space
-        </a>
-        <button class="bms-nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
-        <ul class="bms-nav__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="info.html">About</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="platform.html">Platform</a></li>
-            <li><a href="meaningfulxr.html">Meaningful XR</a></li>
-            <li><a href="team.html" aria-current="page">Team</a></li>
-        </ul>
-    </div>
-</nav>
-
-<header class="bms-page-hero">
-    <div class="bms-container">
-        <div class="bms-kicker-row">
-            <span class="bms-kicker-row__kicker">The Collective</span>
-            <span class="bms-kicker-row__flag">Six Institutions</span>
-        </div>
-        <h1 class="bms-page-hero__title">The Beyond Meet Space <em>team</em>.</h1>
-        <p class="bms-page-hero__lede">Principal investigators at six universities, faculty collaborators around the world, <em>doctoral alumni now leading their own research</em>, and current doctoral researchers driving the work forward.</p>
-    </div>
-</header>
-
-<!-- 1. Principal Investigators -->
-<section class="bms-section">
-    <div class="bms-container">
-        <div class="bms-fade-in">
-            <span class="eyebrow">Principal Investigators</span>
-            <h2>The leadership team.</h2>
-        </div>
-        <div class="bms-team-grid bms-team-grid--6 mt-8">
-            <a class="bms-team-card bms-fade-in" href="https://twitter.com/raratan" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/ratan.jpg" alt="Robby Ratan">
-                <h5>Robby Ratan</h5>
-                <small>Michigan State University</small>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://twitter.com/MaxwellFoxman" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/foxman.jpg" alt="Maxwell Foxman">
-                <h5>Maxwell Foxman</h5>
-                <small>University of Oregon</small>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://twitter.com/APLeith" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/leith.jpg" alt="Alex P. Leith">
-                <h5>Alex P. Leith</h5>
-                <small>SIU Edwardsville</small>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://twitter.com/AccidentalNinja" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/beyea.jpg" alt="David Beyea">
-                <h5>David Beyea</h5>
-                <small>UW-Whitewater</small>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://twitter.com/winnbrian" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/winn.jpg" alt="Brian Winn">
-                <h5>Brian Winn</h5>
-                <small>Michigan State University</small>
-            </a>
-            <a class="bms-team-card bms-fade-in" href="https://twitter.com/elmonodefuego" target="_blank" rel="noopener">
-                <img class="bms-team-card__photo" src="images/klebig.jpg" alt="Brian Klebig">
-                <h5>Brian Klebig</h5>
-                <small>Bethany Lutheran College</small>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- 2. Faculty Collaborators -->
-<section class="bms-section bms-section--muted">
-    <div class="bms-container">
-        <div class="bms-fade-in" style="max-width: 60ch;">
-            <span class="eyebrow">Faculty Collaborators</span>
-            <h2>Senior researchers across the field.</h2>
-            <p class="lead">Faculty collaborators who have been integral to specific Beyond Meet Space research products, special-issue editing, and ongoing intellectual exchange.</p>
-        </div>
-        <div class="bms-team-grid bms-team-grid--4 mt-8">
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://scholar.google.com/citations?user=ufwnoccAAAAJ" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/chen.jpg" alt="Vivian H. H. Chen">
-                    <h5>Vivian H. H. Chen</h5>
-                </a>
-                <small>Erasmus University Rotterdam</small>
-                <span class="bms-team-card__role">Co-editor, JMP special issue</span>
-                <span class="bms-team-links">
-                    <a href="https://scholar.google.com/citations?user=ufwnoccAAAAJ" target="_blank" rel="noopener">scholar</a>
-                    <a href="https://orcid.org/0000-0003-3818-4784" target="_blank" rel="noopener">orcid</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://vhil.stanford.edu/people/jeremy-bailenson" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/bailenson.jpg" alt="Jeremy Bailenson">
-                    <h5>Jeremy Bailenson</h5>
-                </a>
-                <small>Stanford University &middot; Virtual Human Interaction Lab</small>
-                <span class="bms-team-card__role">Co-author, foundational papers</span>
-                <span class="bms-team-links">
-                    <a href="https://vhil.stanford.edu/people/jeremy-bailenson" target="_blank" rel="noopener">vhil</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/dar-meshi" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/meshi.png" alt="Dar Meshi">
-                    <h5>Dar Meshi</h5>
-                </a>
-                <small>Michigan State University &middot; ComArtSci</small>
-                <span class="bms-team-card__role">Co-author, avatar &amp; play research</span>
-                <span class="bms-team-links">
-                    <a href="https://comartsci.msu.edu/our-people/dar-meshi" target="_blank" rel="noopener">profile</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://www.researchgate.net/profile/Oskar-Milik" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/milik.jpg" alt="Oskar Milik">
-                    <h5>Oskar Milik</h5>
-                </a>
-                <small>Michigan State University</small>
-                <span class="bms-team-card__role">First author, FG Methods (AoIR 2024)</span>
-                <span class="bms-team-links">
-                    <a href="https://www.researchgate.net/profile/Oskar-Milik" target="_blank" rel="noopener">researchgate</a>
-                </span>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- 3. Doctoral Alumni -->
-<section class="bms-section">
-    <div class="bms-container">
-        <div class="bms-fade-in" style="max-width: 60ch;">
-            <span class="eyebrow">Doctoral Alumni</span>
-            <h2>From the collective into the field.</h2>
-            <p class="lead">Researchers who completed their doctoral training while contributing to Beyond Meet Space, now leading their own work as postdocs and faculty.</p>
-        </div>
-        <div class="bms-team-grid bms-team-grid--4 mt-8" style="max-width: 720px;">
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://scholar.google.com/citations?user=hodrDYIAAAAJ" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/lim.png" alt="Chaeyun Lim">
-                    <h5>Chaeyun Lim</h5>
-                </a>
-                <small>Northwestern University &middot; Kellogg School of Management</small>
-                <span class="bms-team-card__role">Postdoctoral Research Fellow</span>
-                <span class="bms-team-links">
-                    <a href="https://scholar.google.com/citations?user=hodrDYIAAAAJ" target="_blank" rel="noopener">scholar</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://www.salina.k-state.edu/" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/bouzek.jpg" alt="Dalton Bouzek">
-                    <h5>Dalton Bouzek</h5>
-                </a>
-                <small>Kansas State University Salina &middot; Department of Integrated Studies</small>
-                <span class="bms-team-card__role">Assistant Teaching Professor, Communications</span>
-                <span class="bms-team-links">
-                    <a href="https://www.salina.k-state.edu/" target="_blank" rel="noopener">k-state salina</a>
-                </span>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- 4. Doctoral Researchers -->
-<section class="bms-section bms-section--muted">
-    <div class="bms-container">
-        <div class="bms-fade-in" style="max-width: 60ch;">
-            <span class="eyebrow">Doctoral Researchers</span>
-            <h2>The current PhD cohort.</h2>
-            <p class="lead">Doctoral researchers actively contributing to Beyond Meet Space publications and platform development.</p>
-        </div>
-        <div class="bms-team-grid bms-team-grid--5 mt-8">
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/dayeoun-jang" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/jang.jpg" alt="Dayeoun Jang">
-                    <h5>Dayeoun Jang</h5>
-                </a>
-                <small>Michigan State University &middot; ComArtSci</small>
-                <span class="bms-team-card__role">Doctoral Researcher</span>
-                <span class="bms-team-links">
-                    <a href="https://comartsci.msu.edu/our-people/dayeoun-jang" target="_blank" rel="noopener">profile</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/alex-lover" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/lover.png" alt="Alex Lover">
-                    <h5>Alex Lover</h5>
-                </a>
-                <small>Michigan State University &middot; ComArtSci</small>
-                <span class="bms-team-card__role">Doctoral Researcher</span>
-                <span class="bms-team-links">
-                    <a href="https://comartsci.msu.edu/our-people/alex-lover" target="_blank" rel="noopener">profile</a>
-                    <a href="https://scholar.google.com/citations?user=HWTkx_IAAAAJ" target="_blank" rel="noopener">scholar</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://sites.google.com/msu.edu/hanjieliu" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/liu.jpg" alt="Hanjie Liu">
-                    <h5>Hanjie Liu</h5>
-                </a>
-                <small>Michigan State University</small>
-                <span class="bms-team-card__role">Doctoral Researcher</span>
-                <span class="bms-team-links">
-                    <a href="https://sites.google.com/msu.edu/hanjieliu" target="_blank" rel="noopener">site</a>
-                    <a href="https://scholar.google.com/citations?user=l-gzhnkAAAAJ" target="_blank" rel="noopener">scholar</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://comartsci.msu.edu/our-people/yiming-skylar-lei" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/lei.jpg" alt="Yiming Skylar Lei">
-                    <h5>Yiming Skylar Lei</h5>
-                </a>
-                <small>Michigan State University &middot; ComArtSci</small>
-                <span class="bms-team-card__role">Doctoral Researcher</span>
-                <span class="bms-team-links">
-                    <a href="https://comartsci.msu.edu/our-people/yiming-skylar-lei" target="_blank" rel="noopener">profile</a>
-                    <a href="https://scholar.google.com/citations?user=eX1_2NMAAAAJ" target="_blank" rel="noopener">scholar</a>
-                </span>
-            </article>
-            <article class="bms-team-card bms-fade-in">
-                <a class="bms-team-card__link" href="https://scholar.google.com/citations?user=n2OJ_jIAAAAJ" target="_blank" rel="noopener">
-                    <img class="bms-team-card__photo" src="images/collaborators/lin.jpg" alt="Qiyang Minnie Lin">
-                    <h5>Qiyang &ldquo;Minnie&rdquo; Lin</h5>
-                </a>
-                <small>Michigan State University</small>
-                <span class="bms-team-card__role">Doctoral Researcher</span>
-                <span class="bms-team-links">
-                    <a href="https://scholar.google.com/citations?user=n2OJ_jIAAAAJ" target="_blank" rel="noopener">scholar</a>
-                </span>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- 5. Other personnel -->
-<section class="bms-section">
-    <div class="bms-container">
-        <div class="bms-fade-in" style="max-width: 60ch;">
-            <span class="eyebrow">Other personnel</span>
-            <h2>Members &amp; alumni.</h2>
-            <p class="lead">Additional researchers who have contributed to Beyond Meet Space across the project's lifespan.</p>
-        </div>
-        <div class="bms-grid bms-grid--2 mt-8">
-            <div class="bms-roster bms-fade-in">
-                <h4>Current Members</h4>
-                <ul>
-                    <li><strong>Daniele Gyekye</strong> <span>University of Oregon</span></li>
-                    <li><strong>Megan Denneny</strong> <span>University of Oregon</span></li>
-                    <li><strong>Jack Waier</strong> <span>Michigan State University</span></li>
-                </ul>
-            </div>
-            <div class="bms-roster bms-fade-in">
-                <h4>Former Members</h4>
-                <ul>
-                    <li><strong>Faria Shaikh</strong> <span>University of Oregon</span></li>
-                    <li><strong>Luis Graciano</strong> <span>Michigan State University</span></li>
-                    <li><strong>Gabriel Hales</strong> <span>Michigan State University</span></li>
-                    <li><strong>Olivia JuYoung Lee</strong> <span>Michigan State University</span></li>
-                    <li><strong>Mary Onuche</strong> <span>SIU Edwardsville</span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="bms-footer">
-    <div class="bms-container">
-        <div class="bms-footer__top">
-            <div class="bms-footer__brand">
-                <h3>Beyond Meet Space</h3>
-                <p>A research collective interested in the future of work and play beyond the limitations of physical space.</p>
-            </div>
-            <div>
-                <h6>Explore</h6>
-                <ul>
-                    <li><a href="info.html">About the collective</a></li>
-                    <li><a href="research.html">Research &amp; publications</a></li>
-                    <li><a href="platform.html">The BMS platform</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6>Outputs</h6>
-                <ul>
-                    <li><a href="special-issues.html">Special issues</a></li>
-                    <li><a href="meaningfulxr.html">Meaningful XR</a></li>
-                    <li><a href="media-kit.html">Media kit</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6>Connect</h6>
-                <ul>
-                    <li><a href="https://github.com/beyondmeetspace" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://vrchat.com/home/launch?worldId=wrld_6c18bfa4-c47f-4bb3-91da-9d2493583d8c" target="_blank" rel="noopener">Launch in VRChat</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="bms-footer__bottom">
-            <div class="bms-footer__awards">
-                <span>NSF Award Nos.</span>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128746" target="_blank" rel="noopener">2128746</a>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128803" target="_blank" rel="noopener">2128803</a>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128813" target="_blank" rel="noopener">2128813</a>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128991" target="_blank" rel="noopener">2128991</a>
-                <a href="https://www.nsf.gov/" target="_blank" rel="noopener" aria-label="NSF"><img src="images/nsf.png" alt="NSF"></a>
-            </div>
-            <div>&copy; 2026 Beyond Meet Space</div>
-        </div>
-    </div>
-</footer>
-
-<script src="js/bms-modern.js"></script>
+<header><div class="container nav"><a class="brand" href="index.html">Beyond <span>Meet Space</span></a><nav aria-label="Main"><ul><li><a href="info.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="platform.html">Platform</a></li><li><a href="meaningfulxr.html">Meaningful XR</a></li><li><a href="team.html" aria-current="page">Team</a></li></ul></nav></div></header>
+<main>
+<section class="banner"><div class="container cols">
+<h1 class="poster"><span>The</span> <span>team</span></h1>
+<div class="side"><p class="lead">Six principal investigators at five institutions, with faculty collaborators, doctoral alumni, and doctoral researchers.</p></div>
+</div></section>
+<section class="section flat"><div class="container">
+<h2>Principal investigators</h2>
+<ul class="people"><li class="person"><img src="images/people/ratan.jpg" alt="" width="720" height="960" loading="lazy"><h3><a href="https://twitter.com/raratan">Robby Ratan</a></h3><p>Michigan State University</p></li><li class="person"><img src="images/people/foxman.jpg" alt="" width="720" height="960" loading="lazy"><h3><a href="https://twitter.com/MaxwellFoxman">Maxwell Foxman</a></h3><p>University of Oregon</p></li><li class="person"><img src="images/people/leith.jpg" alt="" width="720" height="960" loading="lazy"><h3><a href="https://twitter.com/APLeith">Alex P. Leith</a></h3><p>Southern Illinois University Edwardsville</p></li><li class="person"><img src="images/people/beyea.jpg" alt="" width="720" height="960" loading="lazy"><h3><a href="https://twitter.com/AccidentalNinja">David Beyea</a></h3><p>University of Wisconsin-Whitewater</p></li><li class="person"><img src="images/people/winn.jpg" alt="" width="720" height="960" loading="lazy"><h3><a href="https://twitter.com/winnbrian">Brian Winn</a></h3><p>Michigan State University</p></li><li class="person"><img src="images/people/klebig.jpg" alt="" width="720" height="960" loading="lazy"><h3><a href="https://twitter.com/elmonodefuego">Brian Klebig</a></h3><p>Bethany Lutheran College</p></li></ul>
+</div></section>
+<section class="section hung"><div class="container cols">
+<h2>Faculty collaborators</h2>
+<div class="body"><ul class="people small"><li class="person"><img src="images/collaborators/chen.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://scholar.google.com/citations?user=ufwnoccAAAAJ">Vivian H. H. Chen</a></h3><p>Erasmus University Rotterdam. Co-editor of the Journal of Media Psychology special issue.</p></li><li class="person"><img src="images/collaborators/bailenson.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://vhil.stanford.edu/people/jeremy-bailenson">Jeremy Bailenson</a></h3><p>Stanford University, Virtual Human Interaction Lab. Co-author of foundational papers.</p></li><li class="person"><img src="images/collaborators/meshi.png" alt="" width="400" height="400" loading="lazy"><h3><a href="https://comartsci.msu.edu/our-people/dar-meshi">Dar Meshi</a></h3><p>Michigan State University. Co-author of avatar and play research.</p></li><li class="person"><img src="images/collaborators/milik.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://www.researchgate.net/profile/Oskar-Milik">Oskar Milik</a></h3><p>Michigan State University. First author of the focus group methods paper.</p></li></ul></div>
+</div></section>
+<section class="section hung"><div class="container cols">
+<h2>Doctoral alumni</h2>
+<div class="body"><ul class="people small"><li class="person"><img src="images/collaborators/lim.png" alt="" width="400" height="400" loading="lazy"><h3><a href="https://scholar.google.com/citations?user=hodrDYIAAAAJ">Chaeyun Lim</a></h3><p>Postdoctoral research fellow, Northwestern University, Kellogg School of Management.</p></li><li class="person"><img src="images/collaborators/bouzek.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://www.salina.k-state.edu/">Dalton Bouzek</a></h3><p>Assistant teaching professor of communications, Kansas State University Salina.</p></li></ul></div>
+</div></section>
+<section class="section hung"><div class="container cols">
+<h2>Doctoral researchers</h2>
+<div class="body"><p>All at Michigan State University.</p><ul class="people small"><li class="person"><img src="images/collaborators/jang.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://comartsci.msu.edu/our-people/dayeoun-jang">Dayeoun Jang</a></h3></li><li class="person"><img src="images/collaborators/lover.png" alt="" width="400" height="400" loading="lazy"><h3><a href="https://comartsci.msu.edu/our-people/alex-lover">Alex Lover</a></h3></li><li class="person"><img src="images/collaborators/liu.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://sites.google.com/msu.edu/hanjieliu">Hanjie Liu</a></h3></li><li class="person"><img src="images/collaborators/lei.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://comartsci.msu.edu/our-people/yiming-skylar-lei">Yiming Skylar Lei</a></h3></li><li class="person"><img src="images/collaborators/lin.jpg" alt="" width="400" height="400" loading="lazy"><h3><a href="https://scholar.google.com/citations?user=n2OJ_jIAAAAJ">Qiyang “Minnie” Lin</a></h3></li></ul></div>
+</div></section>
+<section class="section hung"><div class="container cols">
+<h2>Members</h2>
+<div class="body names"><div><h3>Current</h3><ul><li>Daniele Gyekye <span>University of Oregon</span></li><li>Megan Denneny <span>University of Oregon</span></li><li>Jack Waier <span>Michigan State University</span></li></ul></div><div><h3>Former</h3><ul><li>Faria Shaikh <span>University of Oregon</span></li><li>Luis Graciano <span>Michigan State University</span></li><li>Gabriel Hales <span>Michigan State University</span></li><li>Olivia JuYoung Lee <span>Michigan State University</span></li><li>Mary Onuche <span>Southern Illinois University Edwardsville</span></li></ul></div></div>
+</div></section>
+</main>
+<footer class="foot"><div class="container">
+<p class="mast">Beyond <span>Meet Space</span></p>
+<nav aria-label="Footer"><ul><li><a href="info.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="platform.html">Platform</a></li><li><a href="meaningfulxr.html">Meaningful XR</a></li><li><a href="special-issues.html">Special issues</a></li><li><a href="media-kit.html">Media kit</a></li><li><a href="team.html">Team</a></li></ul></nav>
+<p class="note">Supported from 2021 to 2025 by U.S. National Science Foundation awards 2128746, 2128803, 2128813, and 2128991.</p>
+</div></footer>
 </body>
 </html>

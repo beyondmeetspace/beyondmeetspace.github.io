@@ -1,220 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Platform — Beyond Meet Space</title>
-
-    <meta name="description" content="A publicly accessible prototype virtual meeting platform in VRChat, implementing five research-grounded design principles: immersive platforms, avatars, flexible audio, hybrid tools, and playfulness.">
-    <meta property="og:title" content="The BMS Platform — Beyond Meet Space">
-    <meta property="og:description" content="A publicly accessible virtual meeting platform in VRChat, built on research-grounded design principles.">
-    <meta property="og:url" content="https://beyondmeet.space/platform.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://beyondmeet.space/images/platform/colloseum01-entry.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://beyondmeet.space/images/platform/colloseum01-entry.jpg">
-
-    <link rel="shortcut icon" type="image/png" href="favico.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link href="css/bms-modern.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platform | Beyond Meet Space</title>
+<meta name="description" content="A free prototype meeting platform in VRChat that puts the design principles from the Beyond Meet Space research into use.">
+<meta property="og:title" content="Platform | Beyond Meet Space">
+<meta property="og:description" content="A free prototype meeting platform in VRChat that puts the design principles from the Beyond Meet Space research into use.">
+<meta property="og:url" content="https://beyondmeet.space/platform.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://beyondmeet.space/images/world.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favico.png">
+<link rel="stylesheet" href="css/overprint.css">
 </head>
 <body>
-
-<nav class="bms-nav" aria-label="Primary">
-    <div class="bms-nav__inner">
-        <a href="index.html" class="bms-nav__brand">
-            <img src="images/bms_logo_tiny.png" alt="">
-            Beyond Meet Space
-        </a>
-        <button class="bms-nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
-        <ul class="bms-nav__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="info.html">About</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="platform.html" aria-current="page">Platform</a></li>
-            <li><a href="meaningfulxr.html">Meaningful XR</a></li>
-            <li><a href="team.html">Team</a></li>
-        </ul>
-    </div>
-</nav>
-
-<header class="bms-page-hero">
-    <div class="bms-container">
-        <div class="bms-kicker-row">
-            <span class="bms-kicker-row__kicker">The Platform</span>
-            <span class="bms-kicker-row__flag">Built in VRChat &middot; 2024&ndash;</span>
-        </div>
-        <h1 class="bms-page-hero__title">A <em>meeting place</em>, not just a meeting tool.</h1>
-        <p class="bms-page-hero__lede">Our prototype meeting platform, built in Unity and hosted in VRChat, implements <em>the design principles our research identified</em>. Free, publicly accessible, open to researchers and educators.</p>
-        <p class="mt-8">
-            <a href="https://vrchat.com/home/launch?worldId=wrld_6c18bfa4-c47f-4bb3-91da-9d2493583d8c" target="_blank" rel="noopener" class="btn-bms btn-bms--primary btn-bms--lg">Join the Platform in VRChat &rarr;</a>
-        </p>
-        <p><small><code>wrld_6c18bfa4-c47f-4bb3-91da-9d2493583d8c</code> &middot; works on desktop or VR &middot; requires a free VRChat account</small></p>
-    </div>
-</header>
-
-<section class="bms-section">
-    <div class="bms-container">
-        <div class="bms-fade-in" style="max-width: 60ch;">
-            <span class="eyebrow">Design principles</span>
-            <h2>Five principles, one platform.</h2>
-            <p class="lead">Derived from our five-year research program and implemented as features you can use today.</p>
-        </div>
-        <div class="bms-grid bms-grid--3 mt-8">
-            <article class="bms-card bms-fade-in">
-                <span class="bms-card__eyebrow">Principle 01</span>
-                <h3 class="bms-card__title">Immersive platforms for social presence</h3>
-                <p class="bms-card__body">Virtual meetings feel better in immersive environments that support embodied interaction. Social presence improves; emotional connection strengthens; fatigue drops.</p>
-            </article>
-            <article class="bms-card bms-fade-in">
-                <span class="bms-card__eyebrow">Principle 02</span>
-                <h3 class="bms-card__title">Avatars for impression management</h3>
-                <p class="bms-card__body">Stylized avatars optimize self-presentation, reduce self-view fatigue, and give users control over how they show up — especially valuable for women and people of color.</p>
-            </article>
-            <article class="bms-card bms-fade-in">
-                <span class="bms-card__eyebrow">Principle 03</span>
-                <h3 class="bms-card__title">Flexible audio tools</h3>
-                <p class="bms-card__body">Modular audio lets users form real-time subgroups, broadcast globally, or maintain spatial audio. Moves beyond the skeuomorphic replication of physical-room conversation.</p>
-            </article>
-            <article class="bms-card bms-fade-in">
-                <span class="bms-card__eyebrow">Principle 04</span>
-                <h3 class="bms-card__title">Hybrid participation tools</h3>
-                <p class="bms-card__body">Features that anticipate hybrid meetings: physical-room streaming into the virtual world, audio muting between co-located users to avoid feedback, and live viewing for remote participants.</p>
-            </article>
-            <article class="bms-card bms-fade-in">
-                <span class="bms-card__eyebrow">Principle 05</span>
-                <h3 class="bms-card__title">Playfulness for engagement</h3>
-                <p class="bms-card__body">Ambient playful interactions like virtual fidget objects, sketch pens, and expressive gestures. Optional by default, visible only when users opt in. Supports emotional regulation and psychological safety.</p>
-            </article>
-            <article class="bms-card bms-fade-in">
-                <span class="bms-card__eyebrow">Open to use</span>
-                <h3 class="bms-card__title">Research-ready</h3>
-                <p class="bms-card__body">Focus groups, controlled experiments, classroom sessions, poster critiques, hybrid conferences. The platform has hosted all of these. <a href="#collaborate">Contact us</a> to discuss your use case.</p>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="bms-section bms-section--muted">
-    <div class="bms-container">
-        <div class="bms-fade-in" style="max-width: 60ch;">
-            <span class="eyebrow">Inside the platform</span>
-            <h2>A dozen environments, one continuous world.</h2>
-            <p class="lead">From an amphitheater to an elevator atrium, each space is designed to support different scales and tones of meeting.</p>
-        </div>
-        <div class="bms-gallery mt-8 bms-fade-in">
-            <div class="bms-gallery__item">
-                <img src="images/platform/colloseum01-entry.jpg" alt="Amphitheater entry" loading="lazy">
-                <div class="bms-gallery__caption">Amphitheater: entry</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/colloseum02-upper_dome.jpg" alt="Upper dome seating" loading="lazy">
-                <div class="bms-gallery__caption">Amphitheater: upper-dome seating</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/pantheon01.jpg" alt="Pantheon" loading="lazy">
-                <div class="bms-gallery__caption">Pantheon: formal presentation space</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/pagoda01.jpg" alt="Pagoda" loading="lazy">
-                <div class="bms-gallery__caption">Pagoda: small-group gathering</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/elevator01.jpg" alt="Elevator atrium" loading="lazy">
-                <div class="bms-gallery__caption">Elevator atrium: hub and connector</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/ship02.jpg" alt="Spawn ship" loading="lazy">
-                <div class="bms-gallery__caption">Spawn ship: primary entry environment</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/basketball01.jpg" alt="Basketball court" loading="lazy">
-                <div class="bms-gallery__caption">Basketball court: informal / playful</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/cabana01.jpg" alt="Cabana" loading="lazy">
-                <div class="bms-gallery__caption">Cabana: casual meeting space</div>
-            </div>
-            <div class="bms-gallery__item">
-                <img src="images/platform/map01.jpg" alt="Orientation map" loading="lazy">
-                <div class="bms-gallery__caption">Orientation map</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bms-section" id="collaborate">
-    <div class="bms-container">
-        <div class="bms-grid bms-grid--2" style="align-items: center;">
-            <div class="bms-fade-in">
-                <span class="eyebrow">For researchers &amp; educators</span>
-                <h2>Use the platform for your work.</h2>
-                <p>The Beyond Meet Space platform has hosted the Meaningful XR conference, academic poster sessions, our own focus-group studies, and classroom engagements. It's open to external research use.</p>
-                <ul class="bms-pill-list" style="margin: var(--s-6) 0;">
-                    <li>Virtual focus groups</li>
-                    <li>Controlled experiments</li>
-                    <li>Classroom sessions</li>
-                    <li>Poster critiques</li>
-                    <li>Hybrid conferences</li>
-                </ul>
-                <p><a href="team.html" class="btn-bms btn-bms--primary">Contact a PI &rarr;</a></p>
-            </div>
-            <div class="bms-fade-in">
-                <img src="images/aerial/aerial_01.png" alt="Aerial view of the BMS platform" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="bms-footer">
-    <div class="bms-container">
-        <div class="bms-footer__top">
-            <div class="bms-footer__brand">
-                <h3>Beyond Meet Space</h3>
-                <p>A research collective interested in the future of work and play beyond the limitations of physical space.</p>
-            </div>
-            <div>
-                <h6>Explore</h6>
-                <ul>
-                    <li><a href="info.html">About the collective</a></li>
-                    <li><a href="research.html">Research &amp; publications</a></li>
-                    <li><a href="platform.html">The BMS platform</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6>Outputs</h6>
-                <ul>
-                    <li><a href="special-issues.html">Special issues</a></li>
-                    <li><a href="meaningfulxr.html">Meaningful XR</a></li>
-                    <li><a href="media-kit.html">Media kit</a></li>
-                </ul>
-            </div>
-            <div>
-                <h6>Connect</h6>
-                <ul>
-                    <li><a href="https://github.com/beyondmeetspace" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://vrchat.com/home/launch?worldId=wrld_6c18bfa4-c47f-4bb3-91da-9d2493583d8c" target="_blank" rel="noopener">Launch in VRChat</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="bms-footer__bottom">
-            <div class="bms-footer__awards">
-                <span>NSF Award Nos.</span>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128746" target="_blank" rel="noopener">2128746</a>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128803" target="_blank" rel="noopener">2128803</a>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128813" target="_blank" rel="noopener">2128813</a>
-                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2128991" target="_blank" rel="noopener">2128991</a>
-                <a href="https://www.nsf.gov/" target="_blank" rel="noopener" aria-label="NSF"><img src="images/nsf.png" alt="NSF"></a>
-            </div>
-            <div>&copy; 2026 Beyond Meet Space</div>
-        </div>
-    </div>
-</footer>
-
-<script src="js/bms-modern.js"></script>
+<header><div class="container nav"><a class="brand" href="index.html">Beyond <span>Meet Space</span></a><nav aria-label="Main"><ul><li><a href="info.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="platform.html" aria-current="page">Platform</a></li><li><a href="meaningfulxr.html">Meaningful XR</a></li><li><a href="team.html">Team</a></li></ul></nav></div></header>
+<main>
+<section class="banner"><div class="container cols">
+<h1 class="poster"><span>A meeting world</span> <span>in VRChat</span></h1>
+<div class="side"><p class="lead">A free prototype meeting platform, built in Unity and hosted in VRChat, that puts the design principles from our research into use.</p><div class="actions"><a class="btn primary" href="https://vrchat.com/home/launch?worldId=wrld_6c18bfa4-c47f-4bb3-91da-9d2493583d8c">Join the platform in VRChat</a></div><p class="note">Works on a desktop or in a headset with a free VRChat account.</p></div>
+</div></section>
+<section class="section wide"><div class="container">
+<figure><img src="images/world.jpg" alt="An aerial view of an island with meeting buildings, the group world in VRChat" width="1400" height="788"><figcaption>The meeting world from above.</figcaption></figure>
+</div></section>
+<section class="studies"><div class="container">
+<h2>Five design principles</h2>
+<ol><li class="cols"><span class="n">1</span><h3>Immersive platforms for social presence</h3><p>Immersive environments that support embodied interaction may improve social presence and emotional connection and may reduce fatigue.</p></li><li class="cols"><span class="n">2</span><h3>Avatars for impression management</h3><p>Stylized avatars let users control how they present themselves. Women and people of color place higher value on this customization (Lim et al., 2024).</p></li><li class="cols"><span class="n">3</span><h3>Flexible audio tools</h3><p>Users can form subgroups, broadcast to everyone, or keep spatial audio.</p></li><li class="cols"><span class="n">4</span><h3>Hybrid participation tools</h3><p>A physical room can stream into the world, co-located users are muted to each other to avoid feedback, and remote participants watch live.</p></li><li class="cols"><span class="n">5</span><h3>Playfulness for engagement</h3><p>Optional fidget objects, sketch pens, and expressive gestures, visible only to users who opt in.</p></li></ol>
+</div></section>
+<section class="section"><div class="container">
+<h2>Inside the world</h2>
+<ul class="gallery"><li><figure><img src="images/platform/colloseum01-entry.jpg" alt="Screenshot of the amphitheater entry in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Amphitheater entry</figcaption></figure></li><li><figure><img src="images/platform/colloseum02-upper_dome.jpg" alt="Screenshot of the amphitheater upper seating in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Amphitheater upper seating</figcaption></figure></li><li><figure><img src="images/platform/pantheon01.jpg" alt="Screenshot of the pantheon in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Pantheon, for formal presentations</figcaption></figure></li><li><figure><img src="images/platform/pagoda01.jpg" alt="Screenshot of the pagoda in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Pagoda, for small groups</figcaption></figure></li><li><figure><img src="images/platform/elevator01.jpg" alt="Screenshot of the elevator atrium in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Elevator atrium, the hub</figcaption></figure></li><li><figure><img src="images/platform/ship02.jpg" alt="Screenshot of the spawn ship in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Spawn ship, where visitors arrive</figcaption></figure></li><li><figure><img src="images/platform/basketball01.jpg" alt="Screenshot of the basketball court in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Basketball court</figcaption></figure></li><li><figure><img src="images/platform/cabana01.jpg" alt="Screenshot of the cabana in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Cabana</figcaption></figure></li><li><figure><img src="images/platform/map01.jpg" alt="Screenshot of the orientation map in the meeting world" width="1920" height="1080" loading="lazy"><figcaption>Orientation map</figcaption></figure></li></ul>
+</div></section>
+<section class="section hung"><div class="container cols">
+<h2>Use it for your work</h2>
+<div class="body"><p class="lead">The platform has hosted the Meaningful XR conference, poster sessions, focus groups, experiments, and class sessions. It is open to outside researchers and educators.</p><a class="btn primary" href="team.html">See the team</a></div>
+</div></section>
+</main>
+<footer class="foot"><div class="container">
+<p class="mast">Beyond <span>Meet Space</span></p>
+<nav aria-label="Footer"><ul><li><a href="info.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="platform.html">Platform</a></li><li><a href="meaningfulxr.html">Meaningful XR</a></li><li><a href="special-issues.html">Special issues</a></li><li><a href="media-kit.html">Media kit</a></li><li><a href="team.html">Team</a></li></ul></nav>
+<p class="note">Supported from 2021 to 2025 by U.S. National Science Foundation awards 2128746, 2128803, 2128813, and 2128991.</p>
+</div></footer>
 </body>
 </html>
